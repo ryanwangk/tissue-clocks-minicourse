@@ -98,11 +98,48 @@
 
   <p class="lede">Aging doesn't happen evenly. Your liver, your skin, and your lungs can each be biologically "older" or "younger" than your birth certificate says — and those differences matter clinically, because organs aging faster are organs at higher risk.</p>
 
+  <p>Different tissues age at different rates because they face different kinds of wear. Skin absorbs decades of UV exposure directly. Lungs filter every inhaled particle and pathogen a person ever breathes. The colon lining replaces itself every few days, giving cellular errors many more chances to accumulate over a lifetime than a barely-dividing tissue like the brain. Same person, same birthday, but each organ is running its own, separate clock, shaped by its own history of damage and repair.</p>
+
+  <figure class="diagram-card">
+    <svg viewBox="0 0 680 210" role="img" aria-label="Diagram: for one 55-year-old donor, skin and colon read biologically younger than their chronological age while brain and lung read older">
+      <line x1="60" y1="150" x2="620" y2="150" stroke="var(--baseline-axis)" stroke-width="1.5"/>
+      <line x1="340" y1="40" x2="340" y2="160" stroke="var(--text-muted)" stroke-width="1.5" stroke-dasharray="3 3"/>
+      <text x="340" y="28" text-anchor="middle" font-size="12" font-weight="700" style="fill:var(--text-primary)">chronological age: 55</text>
+
+      <line x1="220" y1="150" x2="220" y2="95" stroke="var(--accent-aqua)" stroke-width="2"/>
+      <circle cx="220" cy="150" r="5" style="fill:var(--accent-aqua)"/>
+      <text x="220" y="82" text-anchor="middle" font-size="12" font-weight="700" style="fill:var(--text-primary)">Skin</text>
+
+      <line x1="290" y1="150" x2="290" y2="118" stroke="var(--accent-aqua)" stroke-width="2"/>
+      <circle cx="290" cy="150" r="5" style="fill:var(--accent-aqua)"/>
+      <text x="290" y="105" text-anchor="middle" font-size="12" font-weight="700" style="fill:var(--text-primary)">Colon</text>
+
+      <line x1="390" y1="150" x2="390" y2="112" stroke="var(--accent-orange)" stroke-width="2"/>
+      <circle cx="390" cy="150" r="5" style="fill:var(--accent-orange)"/>
+      <text x="390" y="99" text-anchor="middle" font-size="12" font-weight="700" style="fill:var(--text-primary)">Brain</text>
+
+      <line x1="460" y1="150" x2="460" y2="80" stroke="var(--accent-orange)" stroke-width="2"/>
+      <circle cx="460" cy="150" r="5" style="fill:var(--accent-orange)"/>
+      <text x="460" y="67" text-anchor="middle" font-size="12" font-weight="700" style="fill:var(--text-primary)">Lung</text>
+
+      <text x="80" y="178" text-anchor="start" font-size="12" font-weight="700" style="fill:var(--accent-aqua)">← reads younger</text>
+      <text x="600" y="178" text-anchor="end" font-size="12" font-weight="700" style="fill:var(--accent-orange)">reads older →</text>
+    </svg>
+    <figcaption>One hypothetical 55-year-old donor: each tissue's predicted age diverges from the shared chronological-age line by a different amount and in a different direction — the core observation a tissue clock is built to measure.</figcaption>
+  </figure>
+
   <p>Most of what we know about measuring this comes from blood: methylation clocks, protein panels, blood-based organ-age scores. A paper published four days before we wrote this course (Abila, Buljan, Zheng et al., <em>Nature Medicine</em>, Aug 14 2026) asked a different question: <strong>can you read biological age directly off the tissue itself, from an ordinary pathology slide?</strong></p>
 
-  <p>They analyzed 25,712 whole-slide histopathology images across 40 tissue types from 983 people in the GTEx cohort, and built "tissue clocks" — deep-learning predictors of biological age from tissue architecture alone. Their clocks correlated with telomere attrition, subclinical pathology, and comorbidities, and predicted disease-relevant organ aging across eight conditions including Alzheimer's disease, stroke, and Crohn's disease. Mean prediction error: <strong>4.9 years</strong>.</p>
+  <div class="stat-strip">
+    <div class="stat"><div class="num">25,712</div><div class="label">whole-slide images analyzed</div></div>
+    <div class="stat"><div class="num">40</div><div class="label">tissue types</div></div>
+    <div class="stat"><div class="num">983</div><div class="label">individuals (GTEx)</div></div>
+    <div class="stat"><div class="num">4.9 yr</div><div class="label">mean prediction error</div></div>
+  </div>
 
-  <p>This minicourse builds a small version of that idea ourselves, end to end, on real data, with real (if humbler) results, and shows you exactly where the real engineering effort in a project like this actually goes.</p>
+  <p>They analyzed those 25,712 whole-slide histopathology images across 40 tissue types from 983 people in the GTEx cohort, and built "tissue clocks" — deep-learning predictors of biological age from tissue architecture alone, with no molecular assay involved. Their clocks correlated with telomere attrition, subclinical pathology, and comorbidities, and predicted disease-relevant organ aging across eight conditions including Alzheimer's disease, stroke, and Crohn's disease.</p>
+
+  <p>This minicourse builds a small version of that idea ourselves, end to end, on real data, with real (if humbler) results, and shows you exactly where the real engineering effort in a project like this actually goes — from a raw gigapixel image, through a foundation model, to a number you can sanity-check against clinical metadata the model never saw.</p>
 
   <details class="check-understanding">
     <summary>Check your understanding</summary>
@@ -126,7 +163,45 @@
 
   <p>A positive age gap means the model thinks that person (or that specific tissue) looks older than their birthday says; a negative gap means it looks younger. The entire premise of the field is that this gap isn't noise: it correlates with real outcomes like mortality, disease risk, and organ function.</p>
 
-  <p>Most aging clocks are built from molecular data. DNA methylation patterns ("epigenetic clocks") and blood protein levels ("proteomic clocks") are the two most established families. A <strong>tissue clock</strong>, the kind this course builds, is a newer, third approach: instead of a molecular signal, it reads the physical structure of tissue itself, captured in a pathology image, and predicts age from what that tissue looks like under a microscope. Section 09 puts this in context against the wider clock landscape.</p>
+  <p>Most aging clocks are built from molecular data. DNA methylation patterns ("epigenetic clocks," like the well-known Horvath clock) and blood protein levels ("proteomic clocks") are the two most established families — both work from a blood or saliva sample run through a lab assay. A <strong>tissue clock</strong>, the kind this course builds, is a newer, third approach: instead of a molecular signal, it reads the physical structure of tissue itself, captured in a pathology image, and predicts age from what that tissue looks like under a microscope. Section 09 puts this in context against the wider clock landscape.</p>
+
+  <figure class="diagram-card">
+    <svg viewBox="0 0 680 190" role="img" aria-label="Diagram comparing three aging clock families: epigenetic clocks from DNA methylation, proteomic clocks from blood protein levels, and tissue clocks from histology images, the approach this course builds">
+      <line x1="60" y1="55" x2="160" y2="55" stroke="var(--border-hairline)" stroke-width="2"/>
+      <circle cx="70"  cy="55" r="5" style="fill:var(--accent-blue)"/>
+      <circle cx="90"  cy="55" r="5" style="fill:var(--surface-1);stroke:var(--accent-blue)" stroke-width="1.5"/>
+      <circle cx="110" cy="55" r="5" style="fill:var(--accent-blue)"/>
+      <circle cx="130" cy="55" r="5" style="fill:var(--surface-1);stroke:var(--accent-blue)" stroke-width="1.5"/>
+      <circle cx="150" cy="55" r="5" style="fill:var(--accent-blue)"/>
+      <text x="110" y="100" text-anchor="middle" font-size="13" font-weight="700" style="fill:var(--text-primary)">Epigenetic</text>
+      <text x="110" y="118" text-anchor="middle" font-size="11" style="fill:var(--text-secondary)">DNA methylation pattern</text>
+      <text x="110" y="136" text-anchor="middle" font-size="10.5" style="fill:var(--text-muted)">input: blood / saliva</text>
+
+      <circle cx="310" cy="50" r="7" style="fill:var(--accent-blue);fill-opacity:1"/>
+      <circle cx="335" cy="63" r="5" style="fill:var(--accent-blue);fill-opacity:0.65"/>
+      <circle cx="356" cy="44" r="6" style="fill:var(--accent-blue);fill-opacity:0.85"/>
+      <circle cx="371" cy="60" r="4" style="fill:var(--accent-blue);fill-opacity:0.55"/>
+      <circle cx="326" cy="38" r="4" style="fill:var(--accent-blue);fill-opacity:0.75"/>
+      <text x="340" y="100" text-anchor="middle" font-size="13" font-weight="700" style="fill:var(--text-primary)">Proteomic</text>
+      <text x="340" y="118" text-anchor="middle" font-size="11" style="fill:var(--text-secondary)">Blood protein panel</text>
+      <text x="340" y="136" text-anchor="middle" font-size="10.5" style="fill:var(--text-muted)">input: blood draw</text>
+
+      <rect x="470" y="12" width="200" height="160" rx="4" style="fill:var(--accent-orange);fill-opacity:0.07;stroke:var(--accent-orange);stroke-opacity:0.4"/>
+      <rect x="543" y="28" width="16" height="16" rx="2" style="fill:var(--accent-blue);fill-opacity:1"/>
+      <rect x="562" y="28" width="16" height="16" rx="2" style="fill:var(--accent-blue);fill-opacity:0.6"/>
+      <rect x="581" y="28" width="16" height="16" rx="2" style="fill:var(--accent-blue);fill-opacity:0.8"/>
+      <rect x="543" y="47" width="16" height="16" rx="2" style="fill:var(--accent-blue);fill-opacity:0.7"/>
+      <rect x="562" y="47" width="16" height="16" rx="2" style="fill:var(--accent-blue);fill-opacity:1"/>
+      <rect x="581" y="47" width="16" height="16" rx="2" style="fill:var(--accent-blue);fill-opacity:0.5"/>
+      <rect x="543" y="66" width="16" height="16" rx="2" style="fill:var(--accent-blue);fill-opacity:0.85"/>
+      <rect x="562" y="66" width="16" height="16" rx="2" style="fill:var(--accent-blue);fill-opacity:0.6"/>
+      <rect x="581" y="66" width="16" height="16" rx="2" style="fill:var(--accent-blue);fill-opacity:1"/>
+      <text x="570" y="100" text-anchor="middle" font-size="13" font-weight="700" style="fill:var(--accent-orange)">Tissue (this course)</text>
+      <text x="570" y="118" text-anchor="middle" font-size="11" style="fill:var(--text-secondary)">Histology image structure</text>
+      <text x="570" y="136" text-anchor="middle" font-size="10.5" style="fill:var(--text-muted)">input: pathology slide</text>
+    </svg>
+    <figcaption>Three families of aging clock, distinguished by what signal they read: methylation marks, circulating proteins, or — the approach this course builds — the physical structure of tissue itself.</figcaption>
+  </figure>
 
   <details class="check-understanding">
     <summary>Check your understanding</summary>
@@ -140,6 +215,8 @@
   <h2 class="section-title">What is a whole-slide image?</h2>
 
   <p class="lede">Before any model, it's worth actually looking at what we're working with. We pulled one real, de-identified slide from the GTEx histology archive.</p>
+
+  <p>A whole-slide image starts as a thin physical section of tissue, cut from a biopsy or autopsy sample, mounted on a glass slide and stained so structures that would otherwise be near-transparent become visible under a microscope. GTEx, like most pathology archives, uses <strong>H&amp;E staining</strong> (hematoxylin and eosin): hematoxylin binds to DNA and stains cell nuclei blue-purple, eosin stains proteins and other structures pink, and the contrast between the two is what lets a pathologist, or a model, read tissue architecture at all. A slide scanner then digitizes the whole glass slide at gigapixel resolution — that digitized file is the "whole-slide image" (WSI) this section is about.</p>
 
   <div class="slide-compare">
     <div class="figure" style="margin:0;">
@@ -156,7 +233,26 @@
     </dl>
   </div>
 
-  <p>That image looks small on this page. It isn't. The actual file is <strong>41,831 × 20,575 pixels — about 861 megapixels.</strong> A typical phone photo is around 12 megapixels; this single slide is roughly 70 phone photos' worth of pixels, and pathology labs generate thousands of these. That scale is <em>why</em> whole-slide image (WSI) analysis is its own subfield of medical image computing: you cannot simply feed an image this size into a neural network. It has to be broken into tiles.</p>
+  <p>That image looks small on this page. It isn't. The actual file is <strong>41,831 × 20,575 pixels — about 861 megapixels.</strong> A typical phone photo is around 12 megapixels; this single slide is roughly 70 phone photos' worth of pixels, and pathology labs generate thousands of these. That scale is <em>why</em> whole-slide image (WSI) analysis is its own subfield of medical image computing: you cannot simply feed an image this size into a neural network, and you can't even display it on a normal screen at full resolution. Both problems are solved the same way image mapping software solves them: the file isn't stored as one flat image, but as a <strong>pyramid</strong> of the same slide at several resolutions.</p>
+
+  <figure class="diagram-card">
+    <svg viewBox="0 0 640 260" role="img" aria-label="Diagram of a whole-slide image pyramid: the same slide stored at five resolutions, from a full-resolution tiled base up to a small thumbnail">
+      <rect x="50"  y="220" width="420" height="30" rx="2" style="fill:var(--accent-blue);fill-opacity:1"   stroke="var(--border-hairline)"/>
+      <rect x="100" y="184" width="320" height="30" rx="2" style="fill:var(--accent-blue);fill-opacity:0.8" stroke="var(--border-hairline)"/>
+      <rect x="145" y="148" width="230" height="30" rx="2" style="fill:var(--accent-blue);fill-opacity:0.65" stroke="var(--border-hairline)"/>
+      <rect x="185" y="112" width="150" height="30" rx="2" style="fill:var(--accent-blue);fill-opacity:0.5" stroke="var(--border-hairline)"/>
+      <rect x="215" y="76"  width="90"  height="30" rx="2" style="fill:var(--accent-blue);fill-opacity:0.35" stroke="var(--border-hairline)"/>
+
+      <text x="485" y="239" font-size="12" font-weight="700" style="fill:var(--text-primary)">Level 0</text>
+      <text x="485" y="253" font-size="10.5" style="fill:var(--text-muted)">full resolution, tiled</text>
+      <text x="485" y="203" font-size="12" font-weight="700" style="fill:var(--text-primary)">Level 1</text>
+      <text x="485" y="167" font-size="12" font-weight="700" style="fill:var(--text-primary)">Level 2</text>
+      <text x="485" y="131" font-size="12" font-weight="700" style="fill:var(--text-primary)">Level 3</text>
+      <text x="485" y="95"  font-size="12" font-weight="700" style="fill:var(--text-primary)">Level 4</text>
+      <text x="485" y="109" font-size="10.5" style="fill:var(--text-muted)">thumbnail</text>
+    </svg>
+    <figcaption>A whole-slide image is stored as a pyramid, the same slide downsampled at each level, so a viewer can fetch only the resolution and region it currently needs. GTEx Portal's Deep Zoom tile server is what let us fetch both the low-resolution overview and the full-resolution crop above without downloading the entire 861-megapixel file.</figcaption>
+  </figure>
 
   <p>Zoom into the exact same slide, and here's what one tiny patch actually looks like at full resolution:</p>
 
@@ -179,7 +275,78 @@
 
   <p><strong>Step 2: embed.</strong> Each tile is fed through a <em>pathology foundation model</em>, a neural network pretrained on massive amounts of histology data, which outputs a compact numerical fingerprint (an "embedding") capturing what's visually and structurally in that tile. The paper tested this step with 25 different feature extractors: 18 pathology foundation models (including CONCH, UNI, GigaPath, Virchow, TITAN, Phikon, and PRISM — several of the most prominent models in computational pathology today), a vision-language model, 5 ImageNet-pretrained CNNs, and one model fine-tuned by the authors themselves on GTEx.</p>
 
-  <p>We use <strong>CONCH</strong> (Lu et al., <em>Nature Medicine</em> 2024, Mahmood Lab), a vision-language model pretrained via contrastive learning on 1.17 million histopathology image-caption pairs. CONCH turns each 224×224 tile into a 512-dimensional vector. All the tile-level vectors for one slide are then mean-pooled into a single 512-dimensional slide-level embedding — one number per slide, per dimension, summarizing the whole tissue.</p>
+  <p>We use <strong>CONCH</strong> (Lu et al., <em>Nature Medicine</em> 2024, Mahmood Lab), a vision-language model pretrained via contrastive learning on 1.17 million histopathology image-caption pairs. In plain terms: during pretraining, CONCH saw millions of (tile image, pathologist caption) pairs and learned to pull the two into the same numeric space, so tiles that look structurally similar end up with similar vectors, whether or not they came from the same slide. That's what makes the output useful downstream — "similar tissue" becomes "nearby vectors," a shape a classifier can learn from. CONCH turns each 224×224 tile into a 512-dimensional vector. All the tile-level vectors for one slide are then mean-pooled into a single 512-dimensional slide-level embedding — one number per slide, per dimension, summarizing the whole tissue.</p>
+
+  <figure class="diagram-card wide">
+    <svg viewBox="0 0 720 240" role="img" aria-label="Diagram: a grid of thousands of tissue tiles is embedded tile-by-tile by CONCH into many 512-dimensional vectors, which are then mean-pooled into one slide-level embedding">
+      <g transform="translate(95,0)">
+      <g>
+        <rect x="20" y="60"  width="24" height="24" rx="2" style="fill:var(--accent-blue);fill-opacity:1"   stroke="var(--border-hairline)"/>
+        <rect x="47" y="60"  width="24" height="24" rx="2" style="fill:var(--accent-blue);fill-opacity:0.6" stroke="var(--border-hairline)"/>
+        <rect x="74" y="60"  width="24" height="24" rx="2" style="fill:var(--accent-blue);fill-opacity:0.85" stroke="var(--border-hairline)"/>
+        <rect x="101" y="60" width="24" height="24" rx="2" style="fill:var(--accent-blue);fill-opacity:0.5" stroke="var(--border-hairline)"/>
+        <rect x="20" y="87"  width="24" height="24" rx="2" style="fill:var(--accent-blue);fill-opacity:0.7" stroke="var(--border-hairline)"/>
+        <rect x="47" y="87"  width="24" height="24" rx="2" style="fill:var(--accent-blue);fill-opacity:1"   stroke="var(--border-hairline)"/>
+        <rect x="74" y="87"  width="24" height="24" rx="2" style="fill:var(--accent-blue);fill-opacity:0.55" stroke="var(--border-hairline)"/>
+        <rect x="101" y="87" width="24" height="24" rx="2" style="fill:var(--accent-blue);fill-opacity:0.8" stroke="var(--border-hairline)"/>
+        <rect x="20" y="114" width="24" height="24" rx="2" style="fill:var(--accent-blue);fill-opacity:0.85" stroke="var(--border-hairline)"/>
+        <rect x="47" y="114" width="24" height="24" rx="2" style="fill:var(--accent-blue);fill-opacity:0.6" stroke="var(--border-hairline)"/>
+        <rect x="74" y="114" width="24" height="24" rx="2" style="fill:var(--accent-blue);fill-opacity:1"   stroke="var(--border-hairline)"/>
+        <rect x="101" y="114" width="24" height="24" rx="2" style="fill:var(--accent-blue);fill-opacity:0.65" stroke="var(--border-hairline)"/>
+        <rect x="20" y="141" width="24" height="24" rx="2" style="fill:var(--accent-blue);fill-opacity:0.5" stroke="var(--border-hairline)"/>
+        <rect x="47" y="141" width="24" height="24" rx="2" style="fill:var(--accent-blue);fill-opacity:0.9" stroke="var(--border-hairline)"/>
+        <rect x="74" y="141" width="24" height="24" rx="2" style="fill:var(--accent-blue);fill-opacity:0.7" stroke="var(--border-hairline)"/>
+        <rect x="101" y="141" width="24" height="24" rx="2" style="fill:var(--accent-blue);fill-opacity:1"   stroke="var(--border-hairline)"/>
+      </g>
+      <text x="72" y="180" text-anchor="middle" font-size="11" style="fill:var(--text-muted)">thousands of 224×224 tiles</text>
+
+      <g stroke="var(--text-muted)" stroke-width="2" fill="none">
+        <line x1="140" y1="110" x2="178" y2="110"/>
+        <polyline points="170,103 178,110 170,117"/>
+      </g>
+
+      <rect x="182" y="75" width="90" height="70" rx="4" style="fill:var(--surface-1);stroke:var(--text-primary)" stroke-width="2"/>
+      <text x="227" y="106" text-anchor="middle" font-size="13" font-weight="700" style="fill:var(--text-primary)">CONCH</text>
+      <text x="227" y="122" text-anchor="middle" font-size="9.5" style="fill:var(--text-muted)">foundation</text>
+      <text x="227" y="133" text-anchor="middle" font-size="9.5" style="fill:var(--text-muted)">model</text>
+
+      <g stroke="var(--text-muted)" stroke-width="2" fill="none">
+        <line x1="274" y1="110" x2="310" y2="110"/>
+        <polyline points="302,103 310,110 302,117"/>
+      </g>
+
+      <g style="fill:var(--accent-aqua)">
+        <rect x="316" y="70"  width="60" height="7" rx="1.5" fill-opacity="0.9"/>
+        <rect x="316" y="84"  width="60" height="7" rx="1.5" fill-opacity="0.6"/>
+        <rect x="316" y="98"  width="60" height="7" rx="1.5" fill-opacity="0.8"/>
+        <rect x="316" y="112" width="60" height="7" rx="1.5" fill-opacity="0.5"/>
+      </g>
+      <text x="346" y="132" text-anchor="middle" font-size="16" style="fill:var(--text-muted)">⋮</text>
+      <text x="346" y="152" text-anchor="middle" font-size="10.5" style="fill:var(--text-muted)">N × 512-dim</text>
+      <text x="346" y="165" text-anchor="middle" font-size="10.5" style="fill:var(--text-muted)">tile embeddings</text>
+
+      <g stroke="var(--text-muted)" stroke-width="2" fill="none">
+        <line x1="384" y1="110" x2="430" y2="110"/>
+        <polyline points="422,103 430,110 422,117"/>
+      </g>
+      <text x="407" y="95" text-anchor="middle" font-size="10.5" font-weight="700" style="fill:var(--text-primary)">mean pool</text>
+      <text x="407" y="132" text-anchor="middle" font-size="10" style="fill:var(--text-muted)">(Σ / N)</text>
+
+      <g style="fill:var(--accent-aqua)">
+        <rect x="444" y="90"  width="9" height="50" rx="1.5"/>
+        <rect x="457" y="65"  width="9" height="75" rx="1.5" fill-opacity="0.8"/>
+        <rect x="470" y="100" width="9" height="40" rx="1.5" fill-opacity="0.6"/>
+        <rect x="483" y="55"  width="9" height="85" rx="1.5"/>
+        <rect x="496" y="80"  width="9" height="60" rx="1.5" fill-opacity="0.75"/>
+        <rect x="509" y="45"  width="9" height="95" rx="1.5"/>
+        <rect x="522" y="95"  width="9" height="45" rx="1.5" fill-opacity="0.65"/>
+      </g>
+      <text x="483" y="165" text-anchor="middle" font-size="10.5" style="fill:var(--text-muted)">1 × 512-dim</text>
+      <text x="483" y="180" text-anchor="middle" font-size="10.5" style="fill:var(--text-muted)">slide embedding</text>
+      </g>
+    </svg>
+    <figcaption>Every tile in a slide gets its own 512-dimensional CONCH embedding; averaging all of them together produces one slide-level vector that summarizes the whole tissue sample, not just one arbitrarily chosen patch.</figcaption>
+  </figure>
 
   <div class="callout">
     <strong>What we skip, and why</strong>
@@ -199,6 +366,8 @@
 
   <p class="lede">We use the exact CONCH embedding file the paper's own authors published, openly archived on Zenodo (10.5281/zenodo.20709093), 10.6&nbsp;MB.</p>
 
+  <p>That embedding file traces back to <strong>GTEx</strong> (the Genotype-Tissue Expression project), a large NIH-funded resource built from post-mortem tissue donations across dozens of organs from roughly 1,000 donors. GTEx's original purpose was studying how genetic variation shapes gene expression across tissues, not aging, but every sample that goes through the pipeline gets a histology slide captured as a routine quality-control step, checked by a pathologist before the tissue is approved for the genomic assays GTEx is actually built for. That quality-control side effect is why a large, richly-annotated, openly-licensed histology archive exists at all, and it's what the tissue-clocks paper (and this course) repurposes for an entirely different question.</p>
+
   <div class="stat-strip">
     <div class="stat"><div class="num">4,791</div><div class="label">slides</div></div>
     <div class="stat"><div class="num">971</div><div class="label">donors</div></div>
@@ -206,7 +375,18 @@
     <div class="stat"><div class="num">512</div><div class="label">embedding dims</div></div>
   </div>
 
-  <p>Also bundled in the same file, for free: <strong>Sex</strong>, <strong>Hardy Scale</strong> (a 5-category classification of how the donor died, from sudden/violent to prolonged illness), and free-text pathology notes from the original slide review. Age is bucketed into six brackets for donor privacy (20–29 through 70–79) — a real constraint we work within, not a simplification we chose.</p>
+  <p>Also bundled in the same file, for free: <strong>Sex</strong>, <strong>Hardy Scale</strong> (a standardized 5-category classification of the circumstances of death, used throughout GTEx), and free-text pathology notes from the original slide review. Age is bucketed into six brackets for donor privacy (20–29 through 70–79) — a real constraint we work within, not a simplification we chose. We don't use Hardy Scale as a model input; we hold it in reserve to sanity-check the model's predictions later, in Evaluation.</p>
+
+  <table class="data-table">
+    <thead><tr><th>Hardy Scale category</th><th>What it means</th></tr></thead>
+    <tbody>
+      <tr><td>Violent / fast death</td><td>Sudden death from trauma or accident</td></tr>
+      <tr><td>Fast death of natural causes</td><td>Rapid natural death, onset to death under ~1 hour</td></tr>
+      <tr><td>Intermediate death</td><td>Terminal phase lasted roughly 1–24 hours</td></tr>
+      <tr><td>Slow death</td><td>Ill for more than 24 hours before death</td></tr>
+      <tr><td>Ventilator case</td><td>On a ventilator before death, regardless of underlying cause — a marker of prolonged critical illness</td></tr>
+    </tbody>
+  </table>
 
   <div class="two-up">
     <div class="chart-wrap">
@@ -233,7 +413,59 @@
 
   <p>Using only the pre-extracted CONCH vectors and the bundled age-bracket labels, we train a small model (gradient-boosted trees, <code>HistGradientBoostingClassifier</code>, scikit-learn) to predict a slide's age bracket from its 512-dimensional embedding.</p>
 
+  <p><strong>Why gradient-boosted trees, not another neural network?</strong> All the heavy image-understanding work already happened inside CONCH — by this point, each slide is just a 512-number vector, a structured, tabular input, not a raw image. Gradient boosting builds an ensemble of small decision trees one at a time, where each new tree is trained specifically to correct the errors the ensemble has made so far, and the final prediction sums their votes. On tabular inputs like this, that approach is a standard, fast, strong baseline, and it trains on 4,791 samples in seconds rather than the hours a deep network would need — a deliberate choice given this is an afternoon tutorial, not a production pipeline.</p>
+
   <p>We train <strong>one model per tissue</strong>, matching the paper's own tissue-specific framing (a "tissue clock," not one clock for all organs) — and we split by <strong>donor</strong>, not by slide, putting all of one person's samples entirely in either train or test.</p>
+
+  <figure class="diagram-card wide">
+    <svg viewBox="0 0 680 220" role="img" aria-label="Diagram comparing a slide-level split, where one donor's samples leak across train and test, against a donor-level split, where every sample from one donor stays entirely on one side">
+      <text x="160" y="24" text-anchor="middle" font-size="13" font-weight="700" style="fill:var(--accent-red)">✗ Slide-level split</text>
+      <text x="160" y="40" text-anchor="middle" font-size="10.5" style="fill:var(--text-muted)">what not to do</text>
+
+      <text x="130" y="60" text-anchor="middle" font-size="10.5" style="fill:var(--text-secondary)">Donor A — 3 samples</text>
+      <circle cx="100" cy="76" r="5" style="fill:var(--accent-blue)"/>
+      <circle cx="130" cy="74" r="5" style="fill:var(--accent-blue)"/>
+      <circle cx="160" cy="76" r="5" style="fill:var(--accent-blue)"/>
+
+      <rect x="40"  y="110" width="110" height="60" rx="3" style="fill:none;stroke:var(--border-hairline)" stroke-width="1.5"/>
+      <rect x="180" y="110" width="110" height="60" rx="3" style="fill:none;stroke:var(--border-hairline)" stroke-width="1.5"/>
+      <text x="95"  y="126" text-anchor="middle" font-size="10.5" font-weight="700" style="fill:var(--text-secondary)">Train</text>
+      <text x="235" y="126" text-anchor="middle" font-size="10.5" font-weight="700" style="fill:var(--text-secondary)">Test</text>
+
+      <line x1="100" y1="81" x2="90"  y2="110" stroke="var(--accent-red)" stroke-width="1.5"/>
+      <line x1="130" y1="79" x2="120" y2="110" stroke="var(--accent-red)" stroke-width="1.5"/>
+      <line x1="160" y1="81" x2="230" y2="110" stroke="var(--accent-red)" stroke-width="1.5"/>
+
+      <text x="160" y="196" text-anchor="middle" font-size="10.5" style="fill:var(--accent-red)">Donor A's tissue lands in both sets</text>
+
+      <line x1="340" y1="10" x2="340" y2="210" stroke="var(--border-hairline)" stroke-width="1"/>
+
+      <text x="520" y="24" text-anchor="middle" font-size="13" font-weight="700" style="fill:var(--accent-aqua)">✓ Donor-level split</text>
+      <text x="520" y="40" text-anchor="middle" font-size="10.5" style="fill:var(--text-muted)">what we do</text>
+
+      <text x="450" y="60" text-anchor="middle" font-size="10.5" style="fill:var(--text-secondary)">Donor A</text>
+      <circle cx="430" cy="76" r="5" style="fill:var(--accent-blue)"/>
+      <circle cx="455" cy="74" r="5" style="fill:var(--accent-blue)"/>
+      <circle cx="480" cy="76" r="5" style="fill:var(--accent-blue)"/>
+      <text x="590" y="60" text-anchor="middle" font-size="10.5" style="fill:var(--text-secondary)">Donor B</text>
+      <circle cx="578" cy="76" r="5" style="fill:var(--accent-blue)"/>
+      <circle cx="602" cy="76" r="5" style="fill:var(--accent-blue)"/>
+
+      <rect x="400" y="110" width="110" height="60" rx="3" style="fill:none;stroke:var(--border-hairline)" stroke-width="1.5"/>
+      <rect x="540" y="110" width="110" height="60" rx="3" style="fill:none;stroke:var(--border-hairline)" stroke-width="1.5"/>
+      <text x="455" y="126" text-anchor="middle" font-size="10.5" font-weight="700" style="fill:var(--text-secondary)">Train</text>
+      <text x="595" y="126" text-anchor="middle" font-size="10.5" font-weight="700" style="fill:var(--text-secondary)">Test</text>
+
+      <line x1="430" y1="81" x2="435" y2="110" stroke="var(--accent-aqua)" stroke-width="1.5"/>
+      <line x1="455" y1="79" x2="455" y2="110" stroke="var(--accent-aqua)" stroke-width="1.5"/>
+      <line x1="480" y1="81" x2="475" y2="110" stroke="var(--accent-aqua)" stroke-width="1.5"/>
+      <line x1="578" y1="81" x2="588" y2="110" stroke="var(--accent-aqua)" stroke-width="1.5"/>
+      <line x1="602" y1="81" x2="602" y2="110" stroke="var(--accent-aqua)" stroke-width="1.5"/>
+
+      <text x="520" y="196" text-anchor="middle" font-size="10.5" style="fill:var(--accent-aqua)">every donor stays entirely on one side</text>
+    </svg>
+    <figcaption>The mistake in the left panel: a donor's tissue samples get scattered across train and test, so the model can implicitly memorize that donor and report misleadingly good numbers. Grouping by donor, right panel, closes that leak.</figcaption>
+  </figure>
 
   <div class="callout">
     <strong>A mistake worth naming</strong>
@@ -253,6 +485,8 @@ train_idx, test_idx = <span class="k">next</span>(gss.split(X, groups=obs[<span 
   <h2 class="section-title">What actually worked, and what didn't</h2>
 
   <p class="lede">Reporting only the wins would be dishonest, so here's everything — including the parts that didn't work well.</p>
+
+  <p>We report two metrics throughout. <strong>Mean absolute error (MAE)</strong> is the average, across all held-out test slides, of how many years off the model's prediction was from the true age, in either direction, in years — smaller is better, and it's directly comparable to the baseline in the same units. The confusion matrix below is <strong>row-normalized</strong>, meaning each row (one true age bracket) sums to 1.0, so a cell's value is "of the slides that were actually this age, what fraction did the model predict as that age," not a raw count that would be dominated by whichever bracket has the most slides.</p>
 
   <div class="chart-wrap">
     <div class="chart-title">Mean absolute error: our tissue clock vs. a naive baseline</div>
@@ -298,6 +532,46 @@ train_idx, test_idx = <span class="k">next</span>(gss.split(X, groups=obs[<span 
 
   <p class="lede">Everything above is reproducible in a few minutes, no GPU required.</p>
 
+  <figure class="diagram-card wide">
+    <svg viewBox="0 0 720 130" role="img" aria-label="Diagram of the full pipeline: fetch embeddings, load with anndata, split by donor, train per-tissue models, evaluate with MAE and a confusion matrix, then interpret against Hardy Scale">
+      <g font-size="10.5">
+        <rect x="14"  y="40" width="92" height="55" rx="4" style="fill:var(--surface-1);stroke:var(--border-hairline)" stroke-width="1.5"/>
+        <text x="60" y="64" text-anchor="middle" font-weight="700" style="fill:var(--text-primary)">Fetch</text>
+        <text x="60" y="80" text-anchor="middle" font-size="9" style="fill:var(--text-muted)">Zenodo embeddings</text>
+
+        <rect x="134" y="40" width="92" height="55" rx="4" style="fill:var(--surface-1);stroke:var(--border-hairline)" stroke-width="1.5"/>
+        <text x="180" y="64" text-anchor="middle" font-weight="700" style="fill:var(--text-primary)">Load</text>
+        <text x="180" y="80" text-anchor="middle" font-size="9" style="fill:var(--text-muted)">anndata .h5ad</text>
+
+        <rect x="254" y="40" width="92" height="55" rx="4" style="fill:var(--surface-1);stroke:var(--border-hairline)" stroke-width="1.5"/>
+        <text x="300" y="64" text-anchor="middle" font-weight="700" style="fill:var(--text-primary)">Split</text>
+        <text x="300" y="80" text-anchor="middle" font-size="9" style="fill:var(--text-muted)">by donor</text>
+
+        <rect x="374" y="40" width="92" height="55" rx="4" style="fill:var(--surface-1);stroke:var(--accent-orange)" stroke-width="1.5"/>
+        <text x="420" y="64" text-anchor="middle" font-weight="700" style="fill:var(--text-primary)">Train</text>
+        <text x="420" y="80" text-anchor="middle" font-size="9" style="fill:var(--text-muted)">per-tissue models</text>
+
+        <rect x="494" y="40" width="92" height="55" rx="4" style="fill:var(--surface-1);stroke:var(--border-hairline)" stroke-width="1.5"/>
+        <text x="540" y="64" text-anchor="middle" font-weight="700" style="fill:var(--text-primary)">Evaluate</text>
+        <text x="540" y="80" text-anchor="middle" font-size="9" style="fill:var(--text-muted)">MAE, confusion matrix</text>
+
+        <rect x="614" y="40" width="92" height="55" rx="4" style="fill:var(--surface-1);stroke:var(--border-hairline)" stroke-width="1.5"/>
+        <text x="660" y="64" text-anchor="middle" font-weight="700" style="fill:var(--text-primary)">Interpret</text>
+        <text x="660" y="80" text-anchor="middle" font-size="9" style="fill:var(--text-muted)">Hardy Scale check</text>
+      </g>
+      <g stroke="var(--text-muted)" stroke-width="1.5" fill="none">
+        <line x1="106" y1="67" x2="130" y2="67"/><polyline points="123,61 130,67 123,73"/>
+        <line x1="226" y1="67" x2="250" y2="67"/><polyline points="243,61 250,67 243,73"/>
+        <line x1="346" y1="67" x2="370" y2="67"/><polyline points="363,61 370,67 363,73"/>
+        <line x1="466" y1="67" x2="490" y2="67"/><polyline points="483,61 490,67 483,73"/>
+        <line x1="586" y1="67" x2="610" y2="67"/><polyline points="603,61 610,67 603,73"/>
+      </g>
+    </svg>
+    <figcaption>The full pipeline behind every number and figure on this page, in the order the notebook runs it — the same six steps described below.</figcaption>
+  </figure>
+
+  <p>Concretely, the notebook: <strong>(1)</strong> downloads the 10.6 MB embeddings file directly from Zenodo, no authentication needed; <strong>(2)</strong> loads it with <code>anndata</code>, giving you the 512-dim CONCH vectors in <code>adata.X</code> and the Sex / Hardy Scale / Age Bracket / Tissue metadata in <code>adata.obs</code>; <strong>(3)</strong> builds the donor-level train/test split from Section 06; <strong>(4)</strong> trains one <code>HistGradientBoostingClassifier</code> per tissue on the training donors; <strong>(5)</strong> evaluates each model on its held-out donors, computing MAE against the naive baseline and the confusion matrix from Section 07; and <strong>(6)</strong> joins the test-set predictions back to Hardy Scale to reproduce the clinical-relevance check. Every chart on this page was generated by this exact code, not a separate, cleaned-up version of it.</p>
+
   <div class="code-block"><span class="c"># 1. fetch the real embeddings (10.6 MB, open access)</span>
 !wget -q https://zenodo.org/records/20709093/files/gtex.4_tissues.0.5mpp.224px.conch.h5ad
 
@@ -317,6 +591,8 @@ adata = ad.read_h5ad(<span class="s">"gtex.4_tissues.0.5mpp.224px.conch.h5ad"</s
   <h2 class="section-title">Tissue clocks are one of many</h2>
 
   <p class="lede">Tissue clocks are one of roughly 30 biological aging clocks we catalogued while researching this course — spanning epigenetic (DNA methylation), proteomic (blood protein), and other modalities, in a companion open-source repository with ~19 of them vendored as ready-to-run Python packages.</p>
+
+  <p>A few concrete points of comparison: the original Horvath clock (2013) and its epigenetic successors like PhenoAge and GrimAge predict age, and in GrimAge's case mortality risk, purely from DNA methylation marks measured in blood. OrganAge (Oh et al., <em>Nature</em> 2023) is proteomic but organ-specific, much like this course's tissue clock, except it infers organ-level aging from blood protein panels rather than from imaging the organ's tissue directly — the same underlying question, answered from a completely different signal.</p>
 
   <p>One connection worth naming: the same paper that gives us tissue clocks also showed that tissue-specific age gaps can be <em>predicted from blood gene-expression data alone</em>, once you know the histology-derived age gap to train against — bridging the imaging-based approach in this course back to the blood-based omics clocks that dominate the rest of the field. Different data type, same underlying question: is this person's tissue aging faster than their birthday says?</p>
 
