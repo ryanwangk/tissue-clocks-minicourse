@@ -25,16 +25,63 @@
 </nav>
 
 <header class="hero" id="top">
-  <div class="kicker">MICCAI Educational Challenge · Minicourse</div>
-  <h1>Tissue Clocks</h1>
-  <p class="subtitle">What a lung biopsy can tell you about how fast you're aging — building our own tissue-specific age predictor on real, pre-extracted pathology foundation model embeddings from 4,791 real GTEx tissue slides.</p>
-  <div class="authors">Ryan Khalloqi<sup>1</sup> · Jun Ma<sup>2</sup><br>
-    <span class="affil"><sup>1</sup>Department of Electrical and Computer Engineering, Carnegie Mellon University · <sup>2</sup>Princess Margaret Cancer Centre &amp; AI Hub, University Health Network</span>
-  </div>
-  <div class="cta-row">
-    <a href="#handson" class="btn btn-primary">Open in Colab ↗</a>
-    <a href="https://github.com/ryanwangk/tissue-clocks-minicourse" class="btn btn-secondary">Course repository</a>
-    <a href="https://doi.org/10.1038/s41591-026-04566-5" class="btn btn-secondary">Read the paper</a>
+  <div class="hero-top">
+    <div class="hero-copy">
+      <div class="kicker">MICCAI Educational Challenge · Minicourse</div>
+      <h1>Tissue Clocks</h1>
+      <p class="subtitle">What a lung biopsy can tell you about how fast you're aging — building our own tissue-specific age predictor on real, pre-extracted pathology foundation model embeddings from 4,791 real GTEx tissue slides.</p>
+      <div class="authors">Ryan Khalloqi<sup>1</sup> · Jun Ma<sup>2</sup><br>
+        <span class="affil"><sup>1</sup>Department of Electrical and Computer Engineering, Carnegie Mellon University · <sup>2</sup>Princess Margaret Cancer Centre &amp; AI Hub, University Health Network</span>
+      </div>
+      <div class="cta-row">
+        <a href="#handson" class="btn btn-primary">Open in Colab ↗</a>
+        <a href="https://github.com/ryanwangk/tissue-clocks-minicourse" class="btn btn-secondary">Course repository</a>
+        <a href="https://doi.org/10.1038/s41591-026-04566-5" class="btn btn-secondary">Read the paper</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <svg viewBox="0 0 360 240" role="img" aria-label="Diagram: whole-slide tiles are embedded by a foundation model into a vector, which a classifier turns into a predicted age">
+        <g>
+          <rect x="10"  y="77"  width="26" height="26" rx="2" style="fill:var(--accent-blue);fill-opacity:1"   stroke="var(--border-hairline)"/>
+          <rect x="40"  y="77"  width="26" height="26" rx="2" style="fill:var(--accent-blue);fill-opacity:0.55" stroke="var(--border-hairline)"/>
+          <rect x="70"  y="77"  width="26" height="26" rx="2" style="fill:var(--accent-blue);fill-opacity:0.8"  stroke="var(--border-hairline)"/>
+          <rect x="10"  y="107" width="26" height="26" rx="2" style="fill:var(--accent-blue);fill-opacity:0.7"  stroke="var(--border-hairline)"/>
+          <rect x="40"  y="107" width="26" height="26" rx="2" style="fill:var(--accent-blue);fill-opacity:1"    stroke="var(--border-hairline)"/>
+          <rect x="70"  y="107" width="26" height="26" rx="2" style="fill:var(--accent-blue);fill-opacity:0.5"  stroke="var(--border-hairline)"/>
+          <rect x="10"  y="137" width="26" height="26" rx="2" style="fill:var(--accent-blue);fill-opacity:0.85" stroke="var(--border-hairline)"/>
+          <rect x="40"  y="137" width="26" height="26" rx="2" style="fill:var(--accent-blue);fill-opacity:0.6"  stroke="var(--border-hairline)"/>
+          <rect x="70"  y="137" width="26" height="26" rx="2" style="fill:var(--accent-blue);fill-opacity:1"    stroke="var(--border-hairline)"/>
+        </g>
+        <g style="stroke:var(--text-muted)" stroke-width="2" fill="none">
+          <line x1="104" y1="120" x2="134" y2="120"/>
+          <polyline points="126,113 134,120 126,127"/>
+        </g>
+        <g style="fill:var(--accent-aqua)">
+          <rect x="144" y="100" width="9" height="40" rx="1.5"/>
+          <rect x="157" y="75"  width="9" height="65" rx="1.5" fill-opacity="0.8"/>
+          <rect x="170" y="110" width="9" height="30" rx="1.5" fill-opacity="0.6"/>
+          <rect x="183" y="60"  width="9" height="80" rx="1.5"/>
+          <rect x="196" y="90"  width="9" height="50" rx="1.5" fill-opacity="0.75"/>
+          <rect x="209" y="50"  width="9" height="90" rx="1.5"/>
+          <rect x="222" y="105" width="9" height="35" rx="1.5" fill-opacity="0.65"/>
+          <rect x="235" y="80"  width="9" height="60" rx="1.5" fill-opacity="0.85"/>
+        </g>
+        <g style="stroke:var(--text-muted)" stroke-width="2" fill="none">
+          <line x1="252" y1="120" x2="282" y2="120"/>
+          <polyline points="274,113 282,120 274,127"/>
+        </g>
+        <g>
+          <circle cx="320" cy="120" r="34" style="fill:var(--surface-1);stroke:var(--text-primary)" stroke-width="2"/>
+          <line x1="320" y1="120" x2="331" y2="109" style="stroke:var(--accent-orange)" stroke-width="3" stroke-linecap="round"/>
+          <line x1="320" y1="120" x2="299" y2="108" style="stroke:var(--accent-orange)" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="320" cy="120" r="3" style="fill:var(--accent-orange)"/>
+        </g>
+        <text x="48"  y="185" text-anchor="middle" font-size="10" style="fill:var(--text-muted)">tiles</text>
+        <text x="192" y="185" text-anchor="middle" font-size="10" style="fill:var(--text-muted)">embedding</text>
+        <text x="320" y="185" text-anchor="middle" font-size="10" style="fill:var(--text-muted)">age gap</text>
+      </svg>
+      <div class="hero-visual-caption">Whole-slide tiles → foundation-model embedding → predicted age</div>
+    </div>
   </div>
   <div class="hero-stats">
     <div class="hero-stat"><div class="num">4,791</div><div class="label">real slides used</div></div>
@@ -304,6 +351,36 @@ adata = ad.read_h5ad(<span class="s">"gtex.4_tissues.0.5mpp.224px.conch.h5ad"</s
       <button class="quiz-option" data-correct="false">Lung: because lung tissue is structurally too uniform</button>
       <button class="quiz-option" data-correct="true">Brain-Cortex: because it had the smallest training set</button>
       <button class="quiz-option" data-correct="false">Skin: because sun exposure adds noise</button>
+    </div>
+    <div class="quiz-feedback"></div>
+  </div>
+
+  <div class="quiz-block" data-explain="a slide can contain thousands of tiles capturing different parts of the tissue; mean-pooling combines signal from all of them into one representative vector instead of betting on a single patch.">
+    <div class="quiz-q">Why mean-pool tile-level embeddings into one slide-level vector instead of keeping just the single "most interesting" tile?</div>
+    <div class="quiz-options">
+      <button class="quiz-option" data-correct="false">Mean pooling is required by scikit-learn's input format</button>
+      <button class="quiz-option" data-correct="true">It summarizes signal from the whole tissue sample instead of depending on one arbitrarily chosen patch</button>
+      <button class="quiz-option" data-correct="false">It makes the embeddings file smaller</button>
+    </div>
+    <div class="quiz-feedback"></div>
+  </div>
+
+  <div class="quiz-block" data-explain="a single pooled number averages over tissues and hides exactly the kind of per-group failure — Brain-Cortex barely beating a naive baseline — that the honest, tissue-by-tissue breakdown surfaces.">
+    <div class="quiz-q">If we had only reported one pooled, all-tissue accuracy number instead of the per-tissue breakdown, what real finding would it have hidden?</div>
+    <div class="quiz-options">
+      <button class="quiz-option" data-correct="false">That CONCH embeddings are 512-dimensional</button>
+      <button class="quiz-option" data-correct="true">That Brain-Cortex performed no better than guessing the majority age bracket, while five other tissues clearly beat that baseline</button>
+      <button class="quiz-option" data-correct="false">That the model trains in under a minute</button>
+    </div>
+    <div class="quiz-feedback"></div>
+  </div>
+
+  <div class="quiz-block" data-explain="age gap = predicted age − chronological age, so 48 − 55 = −7: this specific tissue looks younger than the donor's actual age.">
+    <div class="quiz-q">A tissue clock predicts age 48 for a sample from a 55-year-old donor. What's the age gap, and what does it suggest?</div>
+    <div class="quiz-options">
+      <button class="quiz-option" data-correct="false">+7 years — the tissue looks older than the donor's chronological age</button>
+      <button class="quiz-option" data-correct="true">−7 years — that tissue appears to be aging slower than the donor's chronological age</button>
+      <button class="quiz-option" data-correct="false">0 — predicted and chronological age always average out</button>
     </div>
     <div class="quiz-feedback"></div>
   </div>

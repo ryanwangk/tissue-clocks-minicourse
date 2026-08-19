@@ -58,6 +58,35 @@ function css(name) {
   return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
 }
 
+function isDarkMode() {
+  const current = document.documentElement.getAttribute("data-theme");
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  return current ? current === "dark" : prefersDark;
+}
+
+function hexToRgb(hex) {
+  hex = hex.replace("#", "");
+  if (hex.length === 3) hex = hex.split("").map(c => c + c).join("");
+  const num = parseInt(hex, 16);
+  return [(num >> 16) & 255, (num >> 8) & 255, num & 255];
+}
+
+function mixRgb(rgbA, rgbB, t) {
+  return [0, 1, 2].map(i => Math.round(rgbA[i] * t + rgbB[i] * (1 - t)));
+}
+
+// relative luminance -> best text color, using the exact crossover point
+// where black-on-bg and white-on-bg contrast ratios are equal (~0.179),
+// not a naive 0.5 midpoint.
+function textColorFor(rgb) {
+  const [r, g, b] = rgb.map(v => {
+    const c = v / 255;
+    return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
+  });
+  const lum = 0.2126 * r + 0.7152 * g + 0.0722 * b;
+  return lum > 0.179 ? "#0b0b0b" : "#ffffff";
+}
+
 function makeTooltip(container) {
   const el = document.createElement("div");
   el.className = "tooltip";
@@ -257,44 +286,54 @@ function renderConfusionMatrix(containerId, data) {
   svg.style.display = "block";
   svg.style.margin = "0 auto";
 
-  const seqStops = ["#fcfcfb", "#cde2fb", "#86b6ef", "#3987e5", "#1c5cab", "#0d366b"];
-  function colorFor(v) {
-    const idx = Math.min(seqStops.length - 1, Math.floor(v * (seqStops.length - 1)));
-    return seqStops[idx];
+  const dark = isDarkMode();
+  const gridlineRgb = hexToRgb(css("--gridline"));
+  // continuous blend in both themes, not discrete buckets — a 6-bucket lookup put
+  // every v below 0.2 in the same bucket as v=0, so low-but-nonzero cells were
+  // indistinguishable from empty ones.
+  const ceilingRgb = dark ? hexToRgb(css("--accent-blue")) : hexToRgb("#0d366b");
+
+  function bgRgbFor(v) {
+    // floor at --gridline, not --surface-1: the surface tone is literally the
+    // card background, so a v=0 cell would be invisible against it in either theme.
+    return mixRgb(ceilingRgb, gridlineRgb, v);
   }
 
   data.matrix.forEach((row, ri) => {
     row.forEach((v, ci) => {
       const x = marginL + ci * cellW;
       const y = marginT + ri * cellH;
+      const bgRgb = bgRgbFor(v);
       const rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
       rect.setAttribute("class", "cm-cell");
       rect.setAttribute("x", x + 1);
       rect.setAttribute("y", y + 1);
       rect.setAttribute("width", cellW - 2);
       rect.setAttribute("height", cellH - 2);
-      rect.setAttribute("fill", colorFor(v));
+      rect.setAttribute("fill", `rgb(${bgRgb.join(",")})`);
       rect.setAttribute("stroke", css("--surface-1"));
       rect.setAttribute("rx", 2);
       svg.appendChild(rect);
 
-      if (v > 0) {
-        const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
-        text.setAttribute("x", x + cellW / 2);
-        text.setAttribute("y", y + cellH / 2 + 4);
-        text.setAttribute("text-anchor", "middle");
-        text.setAttribute("font-size", "11.5");
-        text.setAttribute("font-weight", "600");
-        text.setAttribute("fill", v > 0.5 ? "#ffffff" : css("--text-primary"));
-        text.textContent = v.toFixed(2);
-        text.style.pointerEvents = "none";
-        svg.appendChild(text);
-      }
+      const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+      text.setAttribute("x", x + cellW / 2);
+      text.setAttribute("y", y + cellH / 2 + 4);
+      text.setAttribute("text-anchor", "middle");
+      text.setAttribute("font-size", "11.5");
+      text.setAttribute("font-weight", "600");
+      text.setAttribute("fill", textColorFor(bgRgb));
+      text.textContent = v.toFixed(2);
+      text.style.pointerEvents = "none";
+      svg.appendChild(text);
 
       rect.addEventListener("mouseenter", () => {
-        const rect2 = container.getBoundingClientRect();
-        const scaleX = rect2.width / w;
-        tooltip.show((x + cellW / 2) * scaleX, (y) * scaleX,
+        const containerRect = container.getBoundingClientRect();
+        const svgRect = svg.getBoundingClientRect();
+        const scaleX = svgRect.width / w;
+        const scaleY = svgRect.height / h;
+        const offsetX = svgRect.left - containerRect.left;
+        const offsetY = svgRect.top - containerRect.top;
+        tooltip.show(offsetX + (x + cellW / 2) * scaleX, offsetY + y * scaleY,
           `Actual <strong>${data.labels[ri]}</strong> &rarr; predicted <strong>${data.labels[ci]}</strong><br>${(v*100).toFixed(0)}% of slides in this row`);
       });
       rect.addEventListener("mouseleave", () => tooltip.hide());
@@ -400,6 +439,21 @@ function initQuiz() {
   document.querySelectorAll(".quiz-block").forEach(block => {
     const options = block.querySelectorAll(".quiz-option");
     const feedback = block.querySelector(".quiz-feedback");
+
+    const reset = document.createElement("button");
+    reset.type = "button";
+    reset.className = "quiz-reset";
+    reset.textContent = "Try again";
+    reset.hidden = true;
+    feedback.insertAdjacentElement("afterend", reset);
+
+    reset.addEventListener("click", () => {
+      delete block.dataset.answered;
+      options.forEach(o => o.classList.remove("correct", "incorrect"));
+      feedback.textContent = "";
+      reset.hidden = true;
+    });
+
     options.forEach(opt => {
       opt.addEventListener("click", () => {
         if (block.dataset.answered) return;
@@ -412,6 +466,7 @@ function initQuiz() {
         feedback.textContent = isCorrect
           ? "Correct — " + block.dataset.explain
           : "Not quite — " + block.dataset.explain;
+        reset.hidden = false;
       });
     });
   });
