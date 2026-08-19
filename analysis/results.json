@@ -1,0 +1,67 @@
+{
+  "per_tissue": {
+    "Brain - Cortex": {
+      "n_train": 337,
+      "n_test": 86,
+      "accuracy": 0.4419,
+      "balanced_accuracy": 0.1708,
+      "mae_years": 7.44,
+      "baseline_mae_years": 7.33,
+      "majority_bracket": "60-69"
+    },
+    "Colon - Sigmoid": {
+      "n_train": 633,
+      "n_test": 159,
+      "accuracy": 0.327,
+      "balanced_accuracy": 0.2177,
+      "mae_years": 10.0,
+      "baseline_mae_years": 13.27,
+      "majority_bracket": "60-69"
+    },
+    "Colon - Transverse": {
+      "n_train": 740,
+      "n_test": 188,
+      "accuracy": 0.367,
+      "balanced_accuracy": 0.2353,
+      "mae_years": 9.26,
+      "baseline_mae_years": 13.24,
+      "majority_bracket": "60-69"
+    },
+    "Lung": {
+      "n_train": 681,
+      "n_test": 169,
+      "accuracy": 0.4497,
+      "balanced_accuracy": 0.3232,
+      "mae_years": 7.93,
+      "baseline_mae_years": 12.13,
+      "majority_bracket": "60-69"
+    },
+    "Skin - Not Sun Exposed (Suprapubic)": {
+      "n_train": 646,
+      "n_test": 162,
+      "accuracy": 0.3889,
+      "balanced_accuracy": 0.2785,
+      "mae_years": 8.33,
+      "baseline_mae_years": 12.9,
+      "majority_bracket": "60-69"
+    },
+    "Skin - Sun Exposed (Lower leg)": {
+      "n_train": 795,
+      "n_test": 195,
+      "accuracy": 0.3897,
+      "balanced_accuracy": 0.3056,
+      "mae_years": 7.79,
+      "baseline_mae_years": 13.18,
+      "majority_bracket": "60-69"
+    }
+  },
+  "pooled": {
+    "n_train": 3832,
+    "n_test": 959,
+    "accuracy": 0.3931,
+    "balanced_accuracy": 0.2642,
+    "mae_years": 8.47,
+    "baseline_mae_years": 12.45,
+    "majority_bracket": "60-69"
+  }
+}

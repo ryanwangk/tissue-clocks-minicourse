@@ -1,0 +1,8 @@
+.DS_Store
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# internal planning docs — not for public repo
+CONTENT.md
+OUTLINE.md

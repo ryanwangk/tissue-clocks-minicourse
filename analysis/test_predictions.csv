@@ -1,0 +1,960 @@
+,Tissue,Subject ID,Sex,Age Bracket,Hardy Scale,Pathology Categories,Pathology Notes,predicted_bracket,actual_midpoint,predicted_midpoint,age_gap_years
+GTEX-11EQ8-0126,Skin - Sun Exposed (Lower leg),GTEX-11EQ8,male,60-69,Slow death,,"6 pieces, minimal attached and internal fat (<10%)",60-69,65.0,65.0,0.0
+GTEX-11EQ8-0926,Skin - Not Sun Exposed (Suprapubic),GTEX-11EQ8,male,60-69,Slow death,,"6 pieces, 5-10% attached and internal fat, overlying crust of degenerating cells",60-69,65.0,65.0,0.0
+GTEX-11EQ8-1526,Lung,GTEX-11EQ8,male,60-69,Slow death,"calcification, emphysema, hemorrhage, macrophages","2 pieces, some hemosiderin-laden macrophages, emphysematous change, area of hemorrhage and foci of calcified material, isolated fragment of skeletal muscle (? aspiration)",60-69,65.0,65.0,0.0
+GTEX-11EQ8-2526,Colon - Transverse,GTEX-11EQ8,male,60-69,Slow death,,"6 pieces, severely autolyzed mucosa, muscularis",60-69,65.0,65.0,0.0
+GTEX-11EQ8-2626,Colon - Sigmoid,GTEX-11EQ8,male,60-69,Slow death,,"6 pieces, muscularis, small focus of autolyzed mucosa",60-69,65.0,65.0,0.0
+GTEX-11EQ8-2926,Brain - Cortex,GTEX-11EQ8,male,60-69,Slow death,,4 pieces,60-69,65.0,65.0,0.0
+GTEX-11ILO-0126,Skin - Sun Exposed (Lower leg),GTEX-11ILO,female,40-49,Ventilator case,,6 pieces; up to 40% internal fat,50-59,45.0,55.0,10.0
+GTEX-11ILO-0626,Skin - Not Sun Exposed (Suprapubic),GTEX-11ILO,female,40-49,Ventilator case,,6 pieces; well trimmed,60-69,45.0,65.0,20.0
+GTEX-11ILO-0726,Lung,GTEX-11ILO,female,40-49,Ventilator case,,2 pieces; pleura [not target] along 1 surface [annotated],60-69,45.0,65.0,20.0
+GTEX-11ILO-2026,Colon - Transverse,GTEX-11ILO,female,40-49,Ventilator case,,6 pieces; mucosa=3; muscle=1,60-69,45.0,65.0,20.0
+GTEX-11ILO-2126,Colon - Sigmoid,GTEX-11ILO,female,40-49,Ventilator case,,6 pieces; varying amounts of muscularis and submucosa,60-69,45.0,65.0,20.0
+GTEX-11LCK-0426,Lung,GTEX-11LCK,male,30-39,Ventilator case,congestion,"2 pieces, minimal congestion",20-29,35.0,25.0,-10.0
+GTEX-11LCK-1026,Skin - Sun Exposed (Lower leg),GTEX-11LCK,male,30-39,Ventilator case,,"6 pieces, trace adherent dermal fat, delineated; squamous epithelium is ~45microns thick",50-59,35.0,55.0,20.0
+GTEX-11LCK-2026,Colon - Transverse,GTEX-11LCK,male,30-39,Ventilator case,,"6 pieces, mucosa reasonably well preserved, focally approaches score '2' in a few foci; ~10% total thicknees, averaging 0.3-0.4mm",50-59,35.0,55.0,20.0
+GTEX-11LCK-2126,Colon - Sigmoid,GTEX-11LCK,male,30-39,Ventilator case,,"6 pieces, trace 'contaminant' mucosa, ~5% total. delineated",60-69,35.0,65.0,30.0
+GTEX-11LCK-2226,Skin - Not Sun Exposed (Suprapubic),GTEX-11LCK,male,30-39,Ventilator case,,"6 pieces, prominent adherent fat up to ~2mm on one section, delineated; squamous epithelium is ~70 microns",50-59,35.0,55.0,20.0
+GTEX-11NUK-0126,Skin - Sun Exposed (Lower leg),GTEX-11NUK,male,50-59,Fast death - natural causes,,"6 pieces, include internal and attached adipose tissue up to 40%, squamous epithelium measures ~40 microns",60-69,55.0,65.0,10.0
+GTEX-11NUK-0826,Lung,GTEX-11NUK,male,50-59,Fast death - natural causes,"congestion, macrophages","2 pieces, includes pleura (target is 1 cm below pleura), numerous hemosiderin-laden macrophages, some congestion",50-59,55.0,55.0,0.0
+GTEX-11NUK-2226,Colon - Transverse,GTEX-11NUK,male,50-59,Fast death - natural causes,,"6 pieces, includes muscularis and severely autolyzed mucosa",50-59,55.0,55.0,0.0
+GTEX-11NUK-2326,Colon - Sigmoid,GTEX-11NUK,male,50-59,Fast death - natural causes,,"6 pieces, muscularis (target) and severely autolyzed mucosa (not target)",50-59,55.0,55.0,0.0
+GTEX-11NUK-2726,Skin - Not Sun Exposed (Suprapubic),GTEX-11NUK,male,50-59,Fast death - natural causes,,"6 pieces, up to 40% attached subcutaneous fat",60-69,55.0,65.0,10.0
+GTEX-11NUK-2926,Brain - Cortex,GTEX-11NUK,male,50-59,Fast death - natural causes,,2 pieces,50-59,55.0,55.0,0.0
+GTEX-11P7K-0326,Lung,GTEX-11P7K,male,30-39,Ventilator case,"atelectasis, emphysema",2 pieces; emphysema & atelectasis,40-49,35.0,45.0,10.0
+GTEX-11P7K-1126,Skin - Not Sun Exposed (Suprapubic),GTEX-11P7K,male,30-39,Ventilator case,,6 pieces; well trimmed,50-59,35.0,55.0,20.0
+GTEX-11P7K-1526,Colon - Transverse,GTEX-11P7K,male,30-39,Ventilator case,,6 pieces; 2 without muscularis,60-69,35.0,65.0,30.0
+GTEX-11P7K-1826,Colon - Sigmoid,GTEX-11P7K,male,30-39,Ventilator case,,5 pieces,50-59,35.0,55.0,20.0
+GTEX-11P7K-2126,Skin - Sun Exposed (Lower leg),GTEX-11P7K,male,30-39,Ventilator case,,6 pieces; well trimmed,50-59,35.0,55.0,20.0
+GTEX-11TTK-0126,Skin - Sun Exposed (Lower leg),GTEX-11TTK,female,60-69,Slow death,sweat_glands,6 pieces; sweat glands moderately autolyzed,60-69,65.0,65.0,0.0
+GTEX-11TTK-0626,Skin - Not Sun Exposed (Suprapubic),GTEX-11TTK,female,60-69,Slow death,sweat_glands,6 pieces; sweat glands moderately autolyzed,60-69,65.0,65.0,0.0
+GTEX-11TTK-0926,Lung,GTEX-11TTK,female,60-69,Slow death,"fibrosis, macrophages, pigment",2 pieces; pigmented alveolar macrophages & fibrosis,50-59,65.0,55.0,-10.0
+GTEX-11TTK-2426,Colon - Transverse,GTEX-11TTK,female,60-69,Slow death,,"6 pieces; mucosa too autolyzed for GTEx, but muscularis is acceptable",60-69,65.0,65.0,0.0
+GTEX-11TTK-2526,Colon - Sigmoid,GTEX-11TTK,female,60-69,Slow death,,6 pieces; well dissected muscle;,60-69,65.0,65.0,0.0
+GTEX-11TTK-2926,Brain - Cortex,GTEX-11TTK,female,60-69,Slow death,,4 pieces,50-59,65.0,55.0,-10.0
+GTEX-11WQC-0626,Lung,GTEX-11WQC,male,60-69,Fast death - natural causes,"fibrosis, macrophages","2 pieces, mild fibrosis, some hemosiderin-laden macrophages",60-69,65.0,65.0,0.0
+GTEX-11WQC-1826,Skin - Not Sun Exposed (Suprapubic),GTEX-11WQC,male,60-69,Fast death - natural causes,,"6 pieces, well trimmed",60-69,65.0,65.0,0.0
+GTEX-11WQC-2126,Colon - Transverse,GTEX-11WQC,male,60-69,Fast death - natural causes,,"6 pieces, severely autolyzed mucosa and muscularis",60-69,65.0,65.0,0.0
+GTEX-11WQC-2226,Colon - Sigmoid,GTEX-11WQC,male,60-69,Fast death - natural causes,,6 pieces,60-69,65.0,65.0,0.0
+GTEX-11WQC-2526,Skin - Sun Exposed (Lower leg),GTEX-11WQC,male,60-69,Fast death - natural causes,,"6 pieces, fairly well trimmed, squamous epithelium measures 20-30 microns thick",60-69,65.0,65.0,0.0
+GTEX-11WQC-2926,Brain - Cortex,GTEX-11WQC,male,60-69,Fast death - natural causes,,"2 pieces, attached portion of meninges",60-69,65.0,65.0,0.0
+GTEX-1212Z-0126,Skin - Not Sun Exposed (Suprapubic),GTEX-1212Z,male,60-69,Fast death - natural causes,,"6 pieces, well trimmed",60-69,65.0,65.0,0.0
+GTEX-1212Z-1026,Lung,GTEX-1212Z,male,60-69,Fast death - natural causes,"heart_failure_cells, macrophages","2 pieces, congested, numerous hemosiderin-laden macrophages (heart failure cells)",60-69,65.0,65.0,0.0
+GTEX-1212Z-1826,Colon - Sigmoid,GTEX-1212Z,male,60-69,Fast death - natural causes,,"6 pieces, well trimmed",60-69,65.0,65.0,0.0
+GTEX-1212Z-1926,Colon - Transverse,GTEX-1212Z,male,60-69,Fast death - natural causes,,"6 pieces, severely autolyzed mucosa",50-59,65.0,55.0,-10.0
+GTEX-1212Z-2526,Skin - Sun Exposed (Lower leg),GTEX-1212Z,male,60-69,Fast death - natural causes,,"6 pieces, each with ~10% attached and intradermal fat, squamous epithelium measures 30-40 microns",50-59,65.0,55.0,-10.0
+GTEX-1212Z-3026,Brain - Cortex,GTEX-1212Z,male,60-69,Fast death - natural causes,,"2 pieces, includes small portion of meninges",60-69,65.0,65.0,0.0
+GTEX-12584-0126,Skin - Sun Exposed (Lower leg),GTEX-12584,male,40-49,Intermediate death,,6 pieces; well trimmed; 10% intradermal fat,50-59,45.0,55.0,10.0
+GTEX-12584-0726,Skin - Not Sun Exposed (Suprapubic),GTEX-12584,male,40-49,Intermediate death,,6 pieces; <10% intradermal fat; well trimmed,40-49,45.0,45.0,0.0
+GTEX-12584-1426,Lung,GTEX-12584,male,40-49,Intermediate death,,2 pieces,40-49,45.0,45.0,0.0
+GTEX-12584-2526,Colon - Sigmoid,GTEX-12584,male,40-49,Intermediate death,,6 pieces; well trimmed muscle,60-69,45.0,65.0,20.0
+GTEX-12584-2626,Colon - Transverse,GTEX-12584,male,40-49,Intermediate death,,6 pieces; mucosa severely autolyzed; muscularis preserved (1); chronicly inflamed mucosa consistent with history of ulcerative colitis,50-59,45.0,55.0,10.0
+GTEX-12584-2926,Brain - Cortex,GTEX-12584,male,40-49,Intermediate death,,"4 pieces, some fragmentation; 1 piece has adherent meninges",60-69,45.0,65.0,20.0
+GTEX-12BJ1-0926,Skin - Not Sun Exposed (Suprapubic),GTEX-12BJ1,male,60-69,Ventilator case,,"6 pieces, focal adherent dermal fat up to ~0.5mm; squamous epithelium is ~40-50 microns",50-59,65.0,55.0,-10.0
+GTEX-12BJ1-1026,Lung,GTEX-12BJ1,male,60-69,Ventilator case,inflammation,"2 pieces, mild peribronchial inflammation (chronic), delineated",40-49,65.0,45.0,-20.0
+GTEX-12BJ1-2026,Colon - Sigmoid,GTEX-12BJ1,male,60-69,Ventilator case,clean_specimens,"6 pieces, all muscularis, trace 'contaminant' mucosa; good specimens",50-59,65.0,55.0,-10.0
+GTEX-12BJ1-2126,Colon - Transverse,GTEX-12BJ1,male,60-69,Ventilator case,,"6 pieces, well preserved mucosa up to ~40-50% thickness",50-59,65.0,55.0,-10.0
+GTEX-12BJ1-2426,Skin - Sun Exposed (Lower leg),GTEX-12BJ1,male,60-69,Ventilator case,,"6 pieces, minimal dermal fat; squamous epithelium is 35-50 microns",60-69,65.0,65.0,0.0
+GTEX-12KS4-0326,Skin - Sun Exposed (Lower leg),GTEX-12KS4,male,30-39,Ventilator case,,"6 pieces, minimal dermal fat;squamous epithelium is ~50-6-microns",50-59,35.0,55.0,20.0
+GTEX-12KS4-0726,Lung,GTEX-12KS4,male,30-39,Ventilator case,congestion,"2 pieces, moderate congestion",50-59,35.0,55.0,20.0
+GTEX-12KS4-2126,Skin - Not Sun Exposed (Suprapubic),GTEX-12KS4,male,30-39,Ventilator case,,"6 pieces, minimal dermal fat, squamous epithelium is 30-50 microns",50-59,35.0,55.0,20.0
+GTEX-12KS4-2326,Colon - Sigmoid,GTEX-12KS4,male,30-39,Ventilator case,,"6 pieces, all muscularis",60-69,35.0,65.0,30.0
+GTEX-12KS4-2426,Colon - Transverse,GTEX-12KS4,male,30-39,Ventilator case,,"6 pieces, mucosa is ~0.3mm thick, moderately-severely autolyzed",50-59,35.0,55.0,20.0
+GTEX-12WS9-0126,Skin - Sun Exposed (Lower leg),GTEX-12WS9,female,50-59,Intermediate death,,"6 pieces, no dermal fat; squamous epithelium is ~50 microns",60-69,55.0,65.0,10.0
+GTEX-12WS9-0326,Skin - Not Sun Exposed (Suprapubic),GTEX-12WS9,female,50-59,Intermediate death,,"6 pieces, minimal dermal fat (delineated); squamous epithelium is ~50-60microns",60-69,55.0,65.0,10.0
+GTEX-12WS9-1026,Lung,GTEX-12WS9,female,50-59,Intermediate death,"congestion, pneumonia","2 pieces diffuse marked acute focally necrotizing pneumonia, marked consolidation/congestion.  Rep areas encircled",60-69,55.0,65.0,10.0
+GTEX-12WS9-2526,Colon - Sigmoid,GTEX-12WS9,female,50-59,Intermediate death,,"6 pieces, adherent fat/serosa ~0.5mm",60-69,55.0,65.0,10.0
+GTEX-12WS9-2626,Colon - Transverse,GTEX-12WS9,female,50-59,Intermediate death,,"6 pieces, mucosa is ~30 % thickness but epithelial component is totaly autolyzed",60-69,55.0,65.0,10.0
+GTEX-12WS9-2926,Brain - Cortex,GTEX-12WS9,female,50-59,Intermediate death,no_abnormalities,"4 pieces, no abnormalities",50-59,55.0,55.0,0.0
+GTEX-12WSA-0226,Skin - Sun Exposed (Lower leg),GTEX-12WSA,male,60-69,Slow death,,"6 pieces, minimal dermal fat; squamous epithelium is ~40 microns",60-69,65.0,65.0,0.0
+GTEX-12WSA-0426,Skin - Not Sun Exposed (Suprapubic),GTEX-12WSA,male,60-69,Slow death,,"6 pieces, minimal dermal fat, focal nubbin delineated; squamous epithelium is ~30-40 microns",60-69,65.0,65.0,0.0
+GTEX-12WSA-1026,Lung,GTEX-12WSA,male,60-69,Slow death,emphysema,"2 pieces, mild hylaline membrane deposition, mild-moderate emphysematous changes",50-59,65.0,55.0,-10.0
+GTEX-12WSA-2526,Colon - Transverse,GTEX-12WSA,male,60-69,Slow death,,"6 pieces, mucosa is badly autolyzed, ~20% of thickness",60-69,65.0,65.0,0.0
+GTEX-12WSA-2726,Colon - Sigmoid,GTEX-12WSA,male,60-69,Slow death,,"6 pieces, all muscularis",60-69,65.0,65.0,0.0
+GTEX-12WSA-2926,Brain - Cortex,GTEX-12WSA,male,60-69,Slow death,no_abnormalities,"4 pieces, no abnormalities",60-69,65.0,65.0,0.0
+GTEX-12WSD-0126,Skin - Sun Exposed (Lower leg),GTEX-12WSD,female,60-69,Fast death - natural causes,,"6 pieces, minimal dermal fat. Squamous epithelium is ~45-50 microns.",60-69,65.0,65.0,0.0
+GTEX-12WSD-0626,Skin - Not Sun Exposed (Suprapubic),GTEX-12WSD,female,60-69,Fast death - natural causes,,"6 pieces, no dermalt fat; squamous epithelium is ~30-50 microns",50-59,65.0,55.0,-10.0
+GTEX-12WSD-0826,Lung,GTEX-12WSD,female,60-69,Fast death - natural causes,congestion,"2 pieces, minimal/mild congestion",50-59,65.0,55.0,-10.0
+GTEX-12WSD-2426,Colon - Transverse,GTEX-12WSD,female,60-69,Fast death - natural causes,,"5 pieces; mucosa is ~0.3 mm or ~30% thickness, but toally autolyzed",60-69,65.0,65.0,0.0
+GTEX-12WSD-2626,Colon - Sigmoid,GTEX-12WSD,female,60-69,Fast death - natural causes,clean_specimens,"6 pieces, all muscularis, good specimens",50-59,65.0,55.0,-10.0
+GTEX-12WSD-3126,Brain - Cortex,GTEX-12WSD,female,60-69,Fast death - natural causes,no_abnormalities,"4 pieces, no abnormalities; fragment of dura/choroid plexus, delineated",60-69,65.0,65.0,0.0
+GTEX-12WSF-0126,Skin - Sun Exposed (Lower leg),GTEX-12WSF,male,70-79,Slow death,,"6 pieces, minimal dermal fat, squamous epithelium is ~40-60 microns",60-69,75.0,65.0,-10.0
+GTEX-12WSF-0726,Lung,GTEX-12WSF,male,70-79,Slow death,congestion,"2 pieces, mild congestion",60-69,75.0,65.0,-10.0
+GTEX-12WSF-1626,Skin - Not Sun Exposed (Suprapubic),GTEX-12WSF,male,70-79,Slow death,,"6 pieces, trace dermal fat; squamous epithelium is ~60microns.  One section mis-embedded (squamous epithelium not visible)",50-59,75.0,55.0,-20.0
+GTEX-12WSF-2626,Colon - Sigmoid,GTEX-12WSF,male,70-79,Slow death,clean_specimens,"6 pieces, all muscularis, good specimens",60-69,75.0,65.0,-10.0
+GTEX-12WSF-2826,Colon - Transverse,GTEX-12WSF,male,70-79,Slow death,,"6 pieces, mucosa totally autolyzed",60-69,75.0,65.0,-10.0
+GTEX-12WSF-3126,Brain - Cortex,GTEX-12WSF,male,70-79,Slow death,no_abnormalities,"4 pieces, cerebral cortex, no abnormalities",60-69,75.0,65.0,-10.0
+GTEX-12WSJ-0226,Lung,GTEX-12WSJ,female,40-49,Ventilator case,"emphysema, fibrosis, macrophages","2 pieces, hemosiderin-laden macrophages, focal emphysematous change and fibrosis",50-59,45.0,55.0,10.0
+GTEX-12WSJ-1126,Skin - Not Sun Exposed (Suprapubic),GTEX-12WSJ,female,40-49,Ventilator case,,"6 pieces, well trimmed",50-59,45.0,55.0,10.0
+GTEX-12WSJ-1426,Colon - Sigmoid,GTEX-12WSJ,female,40-49,Ventilator case,,6 pieces,20-29,45.0,25.0,-20.0
+GTEX-12WSJ-1526,Colon - Transverse,GTEX-12WSJ,female,40-49,Ventilator case,,6 pieces,50-59,45.0,55.0,10.0
+GTEX-12WSJ-1826,Skin - Sun Exposed (Lower leg),GTEX-12WSJ,female,40-49,Ventilator case,,"6 pieces, include up to 10% internal and attached fat, squamous epithelium measures ~31 microns",60-69,45.0,65.0,20.0
+GTEX-12WSL-1026,Lung,GTEX-12WSL,male,50-59,Ventilator case,,2 pieces; bronchus and large blood vessel comprise 50% of 1 piece,60-69,55.0,65.0,10.0
+GTEX-12WSL-1626,Colon - Transverse,GTEX-12WSL,male,50-59,Ventilator case,,6 pieces; partly autolyzed mucosa with variable amounts of muscularis,50-59,55.0,55.0,0.0
+GTEX-12WSL-1826,Colon - Sigmoid,GTEX-12WSL,male,50-59,Ventilator case,,6 pieces; well dissected muscularis,50-59,55.0,55.0,0.0
+GTEX-12WSL-2026,Skin - Not Sun Exposed (Suprapubic),GTEX-12WSL,male,50-59,Ventilator case,,6 pieces; <10% intradermal fat,50-59,55.0,55.0,0.0
+GTEX-12WSL-2526,Skin - Sun Exposed (Lower leg),GTEX-12WSL,male,50-59,Ventilator case,,6 pieces; 10% intradermal fat,60-69,55.0,65.0,10.0
+GTEX-13112-0126,Skin - Not Sun Exposed (Suprapubic),GTEX-13112,male,50-59,Fast death - natural causes,,6 pieces; hair-bearing skin sampled (not target); 20-50% intradermal and subcutaneous adipose tissue,50-59,55.0,55.0,0.0
+GTEX-13112-0826,Lung,GTEX-13112,male,50-59,Fast death - natural causes,"congestion, emphysema",2 pieces; patchy moderate vascular congestion; foci of emphysema,60-69,55.0,65.0,10.0
+GTEX-13112-1826,Colon - Transverse,GTEX-13112,male,50-59,Fast death - natural causes,,"5 pieces; mucosa severely autolyzed, muscularis slightly autolyzed; abundant [20 to 50%] submucosal fat",60-69,55.0,65.0,10.0
+GTEX-13112-1926,Colon - Sigmoid,GTEX-13112,male,50-59,Fast death - natural causes,,6 pieces; submucosal fat on 5 of 6 pieces measuring up to 1 mm thick; autolyzed mucosal remnant annotated,50-59,55.0,55.0,0.0
+GTEX-13112-2826,Skin - Sun Exposed (Lower leg),GTEX-13112,male,50-59,Fast death - natural causes,,6 pieces; well trimmed; 10% intradermal fat,50-59,55.0,55.0,0.0
+GTEX-13112-3026,Brain - Cortex,GTEX-13112,male,50-59,Fast death - natural causes,,2 pieces,60-69,55.0,65.0,10.0
+GTEX-1313W-0126,Skin - Sun Exposed (Lower leg),GTEX-1313W,female,50-59,Fast death - natural causes,,"6 pieces, well trimmed, squamous epithelium measures ~50 microns",50-59,55.0,55.0,0.0
+GTEX-1313W-0626,Skin - Not Sun Exposed (Suprapubic),GTEX-1313W,female,50-59,Fast death - natural causes,,"6 pieces, well trimmed, few sections include 5-10% internal fat",20-29,55.0,25.0,-30.0
+GTEX-1313W-0926,Lung,GTEX-1313W,female,50-59,Fast death - natural causes,"congestion, hemorrhage, macrophages","2 pieces, some congestion and hemorrhage and many hemosiderin-laden macrophages, small focus of cartilage",60-69,55.0,65.0,10.0
+GTEX-1313W-2326,Colon - Transverse,GTEX-1313W,female,50-59,Fast death - natural causes,,"6 pieces, severely autolyzed mucosa and muscularis",60-69,55.0,65.0,10.0
+GTEX-1313W-2426,Colon - Sigmoid,GTEX-1313W,female,50-59,Fast death - natural causes,,"6 pieces, predominantly well trimmed with scant residual mucosa (marked)",50-59,55.0,55.0,0.0
+GTEX-1313W-3126,Brain - Cortex,GTEX-1313W,female,50-59,Fast death - natural causes,,4 pieces,50-59,55.0,55.0,0.0
+GTEX-132AR-0126,Skin - Sun Exposed (Lower leg),GTEX-132AR,female,50-59,Ventilator case,,"6 pieces; well trimmed, <5% intradermal fat",60-69,55.0,65.0,10.0
+GTEX-132AR-0326,Skin - Not Sun Exposed (Suprapubic),GTEX-132AR,female,50-59,Ventilator case,,6 pieces; well trimmed; 10% intradermal fat,40-49,55.0,45.0,-10.0
+GTEX-132AR-0926,Lung,GTEX-132AR,female,50-59,Ventilator case,fibrosis,2 pieces; moderate interstitial fibrosis,60-69,55.0,65.0,10.0
+GTEX-132AR-2726,Colon - Transverse,GTEX-132AR,female,50-59,Ventilator case,,6 pieces; well dissected full thickness mucosa & muscle,50-59,55.0,55.0,0.0
+GTEX-132AR-2826,Colon - Sigmoid,GTEX-132AR,female,50-59,Ventilator case,,6 pieces; 3 have extraneous fat,20-29,55.0,25.0,-30.0
+GTEX-139D8-0226,Skin - Sun Exposed (Lower leg),GTEX-139D8,female,30-39,Ventilator case,,6 pieces; 10% intradermal fat,50-59,35.0,55.0,20.0
+GTEX-139D8-1126,Skin - Not Sun Exposed (Suprapubic),GTEX-139D8,female,30-39,Ventilator case,edema,6 pieces; well trimmed; edematous dermis,60-69,35.0,65.0,30.0
+GTEX-139D8-1726,Lung,GTEX-139D8,female,30-39,Ventilator case,,2 pieces; completely hemorrhagic; tissue autolyzed; consistent with pulmonary embolism,60-69,35.0,65.0,30.0
+GTEX-139D8-2826,Colon - Transverse,GTEX-139D8,female,30-39,Ventilator case,,"6 pieces; ; mucosa severely autolyzed, muscularis preserved",50-59,35.0,55.0,20.0
+GTEX-139D8-2926,Colon - Sigmoid,GTEX-139D8,female,30-39,Ventilator case,,6 pieces; 10% to 30% submucosal fat present,50-59,35.0,55.0,20.0
+GTEX-139T8-0126,Skin - Sun Exposed (Lower leg),GTEX-139T8,male,60-69,Slow death,edema,"6 pieces, edematous dermis, atrophic squamous epithelium (~15-20 microns)",60-69,65.0,65.0,0.0
+GTEX-139T8-0626,Skin - Not Sun Exposed (Suprapubic),GTEX-139T8,male,60-69,Slow death,,"6 pieces, atrophic squamous epithelium (~20-25 microns)",50-59,65.0,55.0,-10.0
+GTEX-139T8-1026,Brain - Cortex,GTEX-139T8,male,60-69,Slow death,no_abnormalities,"4 pieces, no abnormalities",60-69,65.0,65.0,0.0
+GTEX-13CZU-0326,Lung,GTEX-13CZU,male,20-29,Ventilator case,,2 pieces,20-29,25.0,25.0,0.0
+GTEX-13CZU-0926,Colon - Transverse,GTEX-13CZU,male,20-29,Ventilator case,,"6 pieces; 5 are full thickness, 1 is without muscularis",20-29,25.0,25.0,0.0
+GTEX-13CZU-1026,Colon - Sigmoid,GTEX-13CZU,male,20-29,Ventilator case,,5 pieces; up to 0.8mm submucosa on each,20-29,25.0,25.0,0.0
+GTEX-13CZU-1226,Skin - Not Sun Exposed (Suprapubic),GTEX-13CZU,male,20-29,Ventilator case,,6 pieces; up to 3 hair follicles in each piece; well trimmed; <1% intradermal fat,20-29,25.0,25.0,0.0
+GTEX-13CZU-2026,Skin - Sun Exposed (Lower leg),GTEX-13CZU,male,20-29,Ventilator case,,6 pieces; well trimmed; <5% intradermal fat,20-29,25.0,25.0,0.0
+GTEX-13JVG-0326,Skin - Sun Exposed (Lower leg),GTEX-13JVG,male,60-69,Fast death - natural causes,,"6 pieces; small amount of residual attached fat and internal fat up to ~10%, epidermis measures 25 to 31 microns, includes detached fragments of skeletal muscle",60-69,65.0,65.0,0.0
+GTEX-13JVG-0726,Skin - Not Sun Exposed (Suprapubic),GTEX-13JVG,male,60-69,Fast death - natural causes,,6 pieces; relatively well trimmed,60-69,65.0,65.0,0.0
+GTEX-13JVG-1426,Lung,GTEX-13JVG,male,60-69,Fast death - natural causes,"congestion, fibrosis, hemorrhage, inflammation","2 pieces; congestion, hemorrhage, fibrosis, includes several large vessels, focal chronic inflammation",60-69,65.0,65.0,0.0
+GTEX-13JVG-2626,Colon - Sigmoid,GTEX-13JVG,male,60-69,Fast death - natural causes,,6 pieces; well trimmed,60-69,65.0,65.0,0.0
+GTEX-13JVG-2826,Colon - Transverse,GTEX-13JVG,male,60-69,Fast death - natural causes,,"6 pieces; full thickness sections, mucosa severely autolyzed",60-69,65.0,65.0,0.0
+GTEX-13JVG-3126,Brain - Cortex,GTEX-13JVG,male,60-69,Fast death - natural causes,,2 pieces; includes small portion of meninges,60-69,65.0,65.0,0.0
+GTEX-13N11-0326,Lung,GTEX-13N11,female,50-59,Ventilator case,"fibrosis, macrophages, pigment","1 piece; some fibrosis, numerous pigmented macrophages",50-59,55.0,55.0,0.0
+GTEX-13N11-1926,Colon - Sigmoid,GTEX-13N11,female,50-59,Ventilator case,,"5 pieces; 3 are mucosa only, 2 are full thickness (only muscularis is target)",50-59,55.0,55.0,0.0
+GTEX-13N11-2026,Colon - Transverse,GTEX-13N11,female,50-59,Ventilator case,,2 pieces; muscularis with some attached fat and fibrovascular tissue (20 and >50%),50-59,55.0,55.0,0.0
+GTEX-13N11-2326,Skin - Not Sun Exposed (Suprapubic),GTEX-13N11,female,50-59,Ventilator case,,6 pieces; well trimmed,40-49,55.0,45.0,-10.0
+GTEX-13N11-2526,Skin - Sun Exposed (Lower leg),GTEX-13N11,female,50-59,Ventilator case,,"6 pieces; up to 60% attached fat, epidermis measures 35 to 50 microns",50-59,55.0,55.0,0.0
+GTEX-13N2G-0226,Skin - Not Sun Exposed (Suprapubic),GTEX-13N2G,male,60-69,Fast death - natural causes,,6 pieces; well trimmed,60-69,65.0,65.0,0.0
+GTEX-13N2G-0826,Lung,GTEX-13N2G,male,60-69,Fast death - natural causes,"atelectasis, congestion, fibrosis, macrophages","2 pieces; congestion, atelectasis, hemosiderin-laden macrophages and some fibrosis",50-59,65.0,55.0,-10.0
+GTEX-13N2G-2126,Colon - Transverse,GTEX-13N2G,male,60-69,Fast death - natural causes,,6 pieces; mildly to moderately autolysed mucosa; 1 of 6 pieces with attached 10% of external fat,60-69,65.0,65.0,0.0
+GTEX-13N2G-2226,Colon - Sigmoid,GTEX-13N2G,male,60-69,Fast death - natural causes,,6 pieces; focal attachment of mucosa (not target),60-69,65.0,65.0,0.0
+GTEX-13N2G-2626,Skin - Sun Exposed (Lower leg),GTEX-13N2G,male,60-69,Fast death - natural causes,,6 pieces; 10% to 30% of internal/external fat; 71 um thick epidermis,50-59,65.0,55.0,-10.0
+GTEX-13N2G-3026,Brain - Cortex,GTEX-13N2G,male,60-69,Fast death - natural causes,,2 pieces; one piece with attached meninges and small bone fragments,60-69,65.0,65.0,0.0
+GTEX-13NYC-0126,Skin - Not Sun Exposed (Suprapubic),GTEX-13NYC,male,60-69,Fast death - natural causes,,6 pieces; 10% internal fat,60-69,65.0,65.0,0.0
+GTEX-13NYC-0326,Skin - Sun Exposed (Lower leg),GTEX-13NYC,male,60-69,Fast death - natural causes,solar_elastosis,6 pieces; 10% to 20% internal fat; solar elastosis,60-69,65.0,65.0,0.0
+GTEX-13NYC-1026,Lung,GTEX-13NYC,male,60-69,Fast death - natural causes,"congestion, fibrosis, macrophages, pigment","2 pieces; congestion, fibrosis, pigmented macrophages",60-69,65.0,65.0,0.0
+GTEX-13NYC-2326,Colon - Transverse,GTEX-13NYC,male,60-69,Fast death - natural causes,,"6 pieces; full thickness sections, autolyzed mucosa",60-69,65.0,65.0,0.0
+GTEX-13NYC-2526,Colon - Sigmoid,GTEX-13NYC,male,60-69,Fast death - natural causes,,6 pieces; muscularis (target) and severely autolyzed mucosa (not target),60-69,65.0,65.0,0.0
+GTEX-13NYC-2826,Brain - Cortex,GTEX-13NYC,male,60-69,Fast death - natural causes,,"2 pieces; fragmented, focus of  meninges (outlined)",60-69,65.0,65.0,0.0
+GTEX-13OVL-0126,Skin - Not Sun Exposed (Suprapubic),GTEX-13OVL,male,50-59,Fast death - natural causes,,6 pieces; well trimmed; several hair follicles; <10% intradermal fat,60-69,55.0,65.0,10.0
+GTEX-13OVL-0226,Skin - Sun Exposed (Lower leg),GTEX-13OVL,male,50-59,Fast death - natural causes,,6 pieces; well  trimmed; 20% intradermal fat,50-59,55.0,55.0,0.0
+GTEX-13OVL-0626,Lung,GTEX-13OVL,male,50-59,Fast death - natural causes,"congestion, hemorrhage",2 pieces; moderate congestion and hemorrhage,60-69,55.0,65.0,10.0
+GTEX-13OVL-2526,Colon - Sigmoid,GTEX-13OVL,male,50-59,Fast death - natural causes,,6 pieces; all are full thickness with mucosa,60-69,55.0,65.0,10.0
+GTEX-13OVL-2626,Colon - Transverse,GTEX-13OVL,male,50-59,Fast death - natural causes,,"6 pieces; autolyzed mucosa, thick fatty submucosa, preserved thin muscularis",50-59,55.0,55.0,0.0
+GTEX-13OVL-3126,Brain - Cortex,GTEX-13OVL,male,50-59,Fast death - natural causes,,2 pieces,50-59,55.0,55.0,0.0
+GTEX-13PL7-1326,Skin - Not Sun Exposed (Suprapubic),GTEX-13PL7,female,60-69,Ventilator case,,"6 pieces, minimal dermal fat; squamous epithelium is ~30-40 microns",60-69,65.0,65.0,0.0
+GTEX-13PL7-1526,Skin - Sun Exposed (Lower leg),GTEX-13PL7,female,60-69,Ventilator case,,"6 pieces, minimal dermal fat; squamous epithelium is ~40 microns",60-69,65.0,65.0,0.0
+GTEX-13PL7-1726,Lung,GTEX-13PL7,female,60-69,Ventilator case,congestion,"2 pieces, pronounced chronic congestion--prominent areas delineated, with necrotizing foci (ensquared)",50-59,65.0,55.0,-10.0
+GTEX-13PL7-2426,Colon - Sigmoid,GTEX-13PL7,female,60-69,Ventilator case,,"6 pieces, all muscularis",50-59,65.0,55.0,-10.0
+GTEX-13PL7-2526,Colon - Transverse,GTEX-13PL7,female,60-69,Ventilator case,,"6 pieces, colon mucosa, well preserved, up to ~0.4mm, 70-80% thickness",50-59,65.0,55.0,-10.0
+GTEX-13PVR-0426,Skin - Not Sun Exposed (Suprapubic),GTEX-13PVR,female,60-69,Ventilator case,,"6 pieces, minimal dermal fat (delineated); squamous epithelium is ~45-50 microns",50-59,65.0,55.0,-10.0
+GTEX-13PVR-1626,Colon - Transverse,GTEX-13PVR,female,60-69,Ventilator case,,"6 pieces, mucosa well preserved, ~0.35mm, ~10% thickness",50-59,65.0,55.0,-10.0
+GTEX-13PVR-1726,Colon - Sigmoid,GTEX-13PVR,female,60-69,Ventilator case,clean_specimens,"6 pieces, all muscularis, good specimens",60-69,65.0,65.0,0.0
+GTEX-13PVR-2326,Skin - Sun Exposed (Lower leg),GTEX-13PVR,female,60-69,Ventilator case,,"6 pieces, no significant dermal fat; squamous epithelium is ~50-60 microns",60-69,65.0,65.0,0.0
+GTEX-13RTK-0926,Colon - Sigmoid,GTEX-13RTK,male,20-29,Ventilator case,,"6 pieces, mainly muscularis, trace 'contaminant mucosa present, moderately autolyzed, delineated (<5% total)",40-49,25.0,45.0,20.0
+GTEX-13RTK-1026,Colon - Transverse,GTEX-13RTK,male,20-29,Ventilator case,,"6 pieces, modeate -advanced autolysis, viable portions are small bowel",50-59,25.0,55.0,30.0
+GTEX-13RTK-1426,Skin - Sun Exposed (Lower leg),GTEX-13RTK,male,20-29,Ventilator case,,"6 pieces, squamous epithelium is ~50 microns, minimal dermal fat, rep focus delineated",20-29,25.0,25.0,0.0
+GTEX-13W46-0226,Skin - Sun Exposed (Lower leg),GTEX-13W46,male,50-59,Ventilator case,,"6 pieces; ~10% internal/periadnexal fat, 31um thick epidermis",60-69,55.0,65.0,10.0
+GTEX-13W46-0426,Skin - Not Sun Exposed (Suprapubic),GTEX-13W46,male,50-59,Ventilator case,,6 pieces; hair-bearing skin with up to 10% internal/periadnexal fat,60-69,55.0,65.0,10.0
+GTEX-13W46-1426,Lung,GTEX-13W46,male,50-59,Ventilator case,congestion,"2 pieces; congestion, focally attached fragment of vessel wall, cartilage and sloughed bronchial epithelium (outlined)",50-59,55.0,55.0,0.0
+GTEX-13W46-2626,Colon - Transverse,GTEX-13W46,male,50-59,Ventilator case,,"6 pieces; full thickness sections, moderate to severe autolysis",60-69,55.0,65.0,10.0
+GTEX-13W46-2726,Colon - Sigmoid,GTEX-13W46,male,50-59,Ventilator case,,6 pieces; attached serosa measures up to 1mm,50-59,55.0,55.0,0.0
+GTEX-145LU-0126,Skin - Sun Exposed (Lower leg),GTEX-145LU,male,50-59,Fast death - natural causes,,6 pieces; 10% dermal fat,50-59,55.0,55.0,0.0
+GTEX-145LU-0526,Lung,GTEX-145LU,male,50-59,Fast death - natural causes,"edema, emphysema",2 pieces; emphysema; pulmonary edema,50-59,55.0,55.0,0.0
+GTEX-145LU-1926,Skin - Not Sun Exposed (Suprapubic),GTEX-145LU,male,50-59,Fast death - natural causes,,6 pieces; well trimmed; 5% dermal fat,60-69,55.0,65.0,10.0
+GTEX-145LU-2226,Colon - Sigmoid,GTEX-145LU,male,50-59,Fast death - natural causes,,"2 pieces; mostly fibrous stroma, no muscle",60-69,55.0,65.0,10.0
+GTEX-145LU-2426,Colon - Transverse,GTEX-145LU,male,50-59,Fast death - natural causes,,6 pieces; too autolyzed,60-69,55.0,65.0,10.0
+GTEX-145LU-2726,Brain - Cortex,GTEX-145LU,male,50-59,Fast death - natural causes,,4 pieces,50-59,55.0,55.0,0.0
+GTEX-145LV-0726,Skin - Not Sun Exposed (Suprapubic),GTEX-145LV,male,50-59,Ventilator case,,7 pieces; no obvious fibrosis or vasculitis;  10% dermal fat,60-69,55.0,65.0,10.0
+GTEX-145LV-1726,Colon - Sigmoid,GTEX-145LV,male,50-59,Ventilator case,fibrosis,6 pieces; autolyzed mucosa & preserved muscle sampled; should only be muscularis; (possible fibrosis in submucosa). LCM,60-69,55.0,65.0,10.0
+GTEX-145LV-1826,Colon - Transverse,GTEX-145LV,male,50-59,Ventilator case,,"7 fragmented pieces; mucosa autolyzed, muscle preserved",60-69,55.0,65.0,10.0
+GTEX-145LV-2126,Skin - Sun Exposed (Lower leg),GTEX-145LV,male,50-59,Ventilator case,,6 pieces; 10% dermal fat; no sign of sclerosis or vasculitis,60-69,55.0,65.0,10.0
+GTEX-14753-0426,Skin - Sun Exposed (Lower leg),GTEX-14753,male,60-69,Slow death,,4 small pieces; up to 20% dermal fat,60-69,65.0,65.0,0.0
+GTEX-14753-0726,Skin - Not Sun Exposed (Suprapubic),GTEX-14753,male,60-69,Slow death,,6 pieces; 20% dermal fat in the 2 larger pieces,60-69,65.0,65.0,0.0
+GTEX-14753-0826,Lung,GTEX-14753,male,60-69,Slow death,"edema, fibrosis, hemorrhage","2 pieces; hemorrhage, edema, fibrosis",60-69,65.0,65.0,0.0
+GTEX-14753-2626,Colon - Sigmoid,GTEX-14753,male,60-69,Slow death,,6 pieces; well dissected muscularis,50-59,65.0,55.0,-10.0
+GTEX-14753-2726,Colon - Transverse,GTEX-14753,male,60-69,Slow death,,6 pieces; minimal muscularis propria,60-69,65.0,65.0,0.0
+GTEX-14753-3126,Brain - Cortex,GTEX-14753,male,60-69,Slow death,,2 pieces,60-69,65.0,65.0,0.0
+GTEX-147F4-0226,Skin - Sun Exposed (Lower leg),GTEX-147F4,male,50-59,Fast death - natural causes,,"6 pieces, minimal dermal fat; squamous epithelium is ~40 microns",60-69,55.0,65.0,10.0
+GTEX-147F4-0726,Skin - Not Sun Exposed (Suprapubic),GTEX-147F4,male,50-59,Fast death - natural causes,,6 pieces. miinmal adherent dermal fat; squamous epithelium is ~30-40 microns,50-59,55.0,55.0,0.0
+GTEX-147F4-0926,Lung,GTEX-147F4,male,50-59,Fast death - natural causes,atelectasis,"2 pieces patchy chronic, mildly active pneumonitis and atalectasis",60-69,55.0,65.0,10.0
+GTEX-147F4-2326,Colon - Sigmoid,GTEX-147F4,male,50-59,Fast death - natural causes,,"6 pieces, trace ""contaminant"" autolyzed mucosa",60-69,55.0,65.0,10.0
+GTEX-147F4-2426,Colon - Transverse,GTEX-147F4,male,50-59,Fast death - natural causes,,"6 pieces, mucosa with advance autolysis/sloughed",60-69,55.0,65.0,10.0
+GTEX-147F4-2926,Brain - Cortex,GTEX-147F4,male,50-59,Fast death - natural causes,no_abnormalities,"2 pieces, no abnormalities2",50-59,55.0,55.0,0.0
+GTEX-147JS-0226,Skin - Not Sun Exposed (Suprapubic),GTEX-147JS,male,60-69,Fast death - natural causes,,"6 pieces, minimal dermal fat, sqauamous epithelium is ~ microns",60-69,65.0,65.0,0.0
+GTEX-147JS-0326,Skin - Sun Exposed (Lower leg),GTEX-147JS,male,60-69,Fast death - natural causes,,"6 pieces, minimal dermal fat, squamous epithelium is ~40-50 microns",60-69,65.0,65.0,0.0
+GTEX-147JS-1226,Lung,GTEX-147JS,male,60-69,Fast death - natural causes,congestion,"2 pieces, patchy mild congestion, focal chronic pneumonitis",50-59,65.0,55.0,-10.0
+GTEX-147JS-2526,Colon - Transverse,GTEX-147JS,male,60-69,Fast death - natural causes,,"6 pieces, glandular mucosa badly preserved, ~0.25mm thick",60-69,65.0,65.0,0.0
+GTEX-147JS-2626,Colon - Sigmoid,GTEX-147JS,male,60-69,Fast death - natural causes,,"6 pieces, target muscularis",60-69,65.0,65.0,0.0
+GTEX-1497J-0226,Skin - Not Sun Exposed (Suprapubic),GTEX-1497J,male,60-69,Ventilator case,,"6 pieces, minimal dermal fat; squamous epithelium is ~40-50 microns",60-69,65.0,65.0,0.0
+GTEX-1497J-0326,Lung,GTEX-1497J,male,60-69,Ventilator case,congestion,"2 pieces,  mild- moderate congestion",50-59,65.0,55.0,-10.0
+GTEX-1497J-1626,Colon - Sigmoid,GTEX-1497J,male,60-69,Ventilator case,,"2 pieces, all target muscularis",40-49,65.0,45.0,-20.0
+GTEX-1497J-1726,Colon - Transverse,GTEX-1497J,male,60-69,Ventilator case,,"6 pieces, mucosa is ~250microns; glandular elements totally autolyze/sloughed",60-69,65.0,65.0,0.0
+GTEX-1497J-2426,Skin - Sun Exposed (Lower leg),GTEX-1497J,male,60-69,Ventilator case,,"6 pieces, squamous epithelium is ~50 microns; minimal adherent dermal fat",60-69,65.0,65.0,0.0
+GTEX-14C38-0226,Skin - Sun Exposed (Lower leg),GTEX-14C38,male,50-59,Ventilator case,,"4 pieces, no dermal fat, squamous epithelium is ~30-35 microns",60-69,55.0,65.0,10.0
+GTEX-14C38-0726,Skin - Not Sun Exposed (Suprapubic),GTEX-14C38,male,50-59,Ventilator case,,"4 pieces, minimeal dermal fat, squamous epithelium is ~35-40 microns",50-59,55.0,55.0,0.0
+GTEX-14C38-1826,Lung,GTEX-14C38,male,50-59,Ventilator case,congestion,"2 pieces, minimla congestion",50-59,55.0,55.0,0.0
+GTEX-14C38-2526,Colon - Sigmoid,GTEX-14C38,male,50-59,Ventilator case,,"6 pieces, target muscularis",60-69,55.0,65.0,10.0
+GTEX-14C38-2626,Colon - Transverse,GTEX-14C38,male,50-59,Ventilator case,,"6 pieces, mucosa with advanced autolysis",60-69,55.0,65.0,10.0
+GTEX-14DAR-0226,Lung,GTEX-14DAR,male,50-59,Ventilator case,,"2 pieces, focal early pneumonitis, delineated, diffuse atalectasis, bronchial mucosa fairly prominent, rep foci encircled",60-69,55.0,65.0,10.0
+GTEX-14DAR-1226,Skin - Not Sun Exposed (Suprapubic),GTEX-14DAR,male,50-59,Ventilator case,,"8 pieces, focal adherent dermal fat, delineated; squamous epithelium is ~70-80 microns",50-59,55.0,55.0,0.0
+GTEX-14DAR-1526,Colon - Transverse,GTEX-14DAR,male,50-59,Ventilator case,,"7 pieces, mucosa well preserved, ~0.3mm",50-59,55.0,55.0,0.0
+GTEX-14DAR-1626,Colon - Sigmoid,GTEX-14DAR,male,50-59,Ventilator case,,"6 pieces, target muscularis, few minute foci of 'contaminant' mucosa, delineated",50-59,55.0,55.0,0.0
+GTEX-14DAR-2026,Skin - Sun Exposed (Lower leg),GTEX-14DAR,male,50-59,Ventilator case,,"6 pieces, squamous epithelium is ~40 microns, few foci of adherent dermal fat, delineated",60-69,55.0,65.0,10.0
+GTEX-14JFF-0126,Skin - Sun Exposed (Lower leg),GTEX-14JFF,male,60-69,Slow death,,"6 pieces, minimal dermal fat; squamous epithelium is ~60-70 microns",60-69,65.0,65.0,0.0
+GTEX-14JFF-0626,Skin - Not Sun Exposed (Suprapubic),GTEX-14JFF,male,60-69,Slow death,,"6 pieces, minimal dermal fat; squamous epithelium is ~50-60 microns",60-69,65.0,65.0,0.0
+GTEX-14JFF-1126,Lung,GTEX-14JFF,male,60-69,Slow death,"congestion, metaplasia","2 pieces, moderate-marked chronic congestion, peripheral bronchial metaplasia, rep foci delineated",60-69,65.0,65.0,0.0
+GTEX-14JFF-2426,Colon - Transverse,GTEX-14JFF,male,60-69,Slow death,,"6 pieces, mucosa partially sloughed, residual up to ~0.25mm, glandular elements completely autolyzed",60-69,65.0,65.0,0.0
+GTEX-14JFF-2626,Colon - Sigmoid,GTEX-14JFF,male,60-69,Slow death,"clean_specimens, edema","6 pieces, mildly edematous, all target muscularis, good specimens",60-69,65.0,65.0,0.0
+GTEX-14JFF-2926,Brain - Cortex,GTEX-14JFF,male,60-69,Slow death,no_abnormalities,"4 pieces, no abnormalities",50-59,65.0,55.0,-10.0
+GTEX-14JIY-0126,Skin - Sun Exposed (Lower leg),GTEX-14JIY,male,60-69,Fast death - natural causes,,"6 pieces, minimal dermal fat, squamous epithelium is ~50 microns",60-69,65.0,65.0,0.0
+GTEX-14JIY-1326,Lung,GTEX-14JIY,male,60-69,Fast death - natural causes,congestion,2 pieces marked acute/subacute congestion,40-49,65.0,45.0,-20.0
+GTEX-14JIY-2226,Skin - Not Sun Exposed (Suprapubic),GTEX-14JIY,male,60-69,Fast death - natural causes,,"6 pieces, adherent dermal fat up to ~2mm, rep delineated; squamous epithelium is ~70 microns",50-59,65.0,55.0,-10.0
+GTEX-14JIY-2926,Brain - Cortex,GTEX-14JIY,male,60-69,Fast death - natural causes,no_abnormalities,"6 pieces, no abnormalities",40-49,65.0,45.0,-20.0
+GTEX-14JIY-3126,Colon - Transverse,GTEX-14JIY,male,60-69,Fast death - natural causes,hyalinization,"6 pieces, testis, pronounced tubular hyalinization, 50% rete testis, viable islands of non hyperplastic Leydig cells,  switched with 3325",60-69,65.0,65.0,0.0
+GTEX-14JIY-3226,Colon - Sigmoid,GTEX-14JIY,male,60-69,Fast death - natural causes,,"6 pieces, mucosa as well as muscularis, not GTEx target",60-69,65.0,65.0,0.0
+GTEX-14JIY-3326,Colon - Transverse,GTEX-14JIY,male,60-69,Fast death - natural causes,,"2 pieces colon with mucosa, the latter ~0.5mm, well preserved, switched with 3125",50-59,65.0,55.0,-10.0
+GTEX-14PHW-0126,Skin - Sun Exposed (Lower leg),GTEX-14PHW,female,60-69,Slow death,,"6 pieces, minimal fat, squamous epithelium is ~30 microns",60-69,65.0,65.0,0.0
+GTEX-14PHW-0326,Skin - Not Sun Exposed (Suprapubic),GTEX-14PHW,female,60-69,Slow death,,"6 pieces, minimal fat (delineated), squamous epithelium is ~ 50microns",60-69,65.0,65.0,0.0
+GTEX-14PHW-0826,Lung,GTEX-14PHW,female,60-69,Slow death,congestion,"2 pieces, moderate congestion",60-69,65.0,65.0,0.0
+GTEX-14PHW-2726,Colon - Transverse,GTEX-14PHW,female,60-69,Slow death,,"6 pieces, mucosa is up to ~0.25mm but glandulare elements completely autolyzed",60-69,65.0,65.0,0.0
+GTEX-14PHW-2826,Colon - Sigmoid,GTEX-14PHW,female,60-69,Slow death,,"6 pieces, target muscularis, unusually poorly preserved",50-59,65.0,55.0,-10.0
+GTEX-14PHW-3126,Brain - Cortex,GTEX-14PHW,female,60-69,Slow death,no_abnormalities,"4 pieces, no abnormalities",60-69,65.0,65.0,0.0
+GTEX-14PJ2-0126,Skin - Sun Exposed (Lower leg),GTEX-14PJ2,male,50-59,Ventilator case,,6 pieces; ~10% internal (periadnexal) fat; epidermis is 34um thick,40-49,55.0,45.0,-10.0
+GTEX-14PJ2-0626,Skin - Not Sun Exposed (Suprapubic),GTEX-14PJ2,male,50-59,Ventilator case,,6 pieces; hair bearing skin well trimmed,50-59,55.0,55.0,0.0
+GTEX-14PJ2-0826,Lung,GTEX-14PJ2,male,50-59,Ventilator case,"atelectasis, congestion, emphysema","2 pieces; congestion, emphysema-like changes, thickened alveolar walls and atelectasis; sloughed bronchial epithelium; one piece contains several noncaseating granulomata with foreign-body type giant cells (outlined)",60-69,55.0,65.0,10.0
+GTEX-14PJ2-2326,Colon - Sigmoid,GTEX-14PJ2,male,50-59,Ventilator case,,6 pieces; essentially well trimmed muscle,60-69,55.0,65.0,10.0
+GTEX-14PJ2-2526,Colon - Transverse,GTEX-14PJ2,male,50-59,Ventilator case,,4 pieces; completely autolyzed mucosa and preserved muscularis,60-69,55.0,65.0,10.0
+GTEX-14PJM-0126,Skin - Not Sun Exposed (Suprapubic),GTEX-14PJM,female,50-59,Fast death - natural causes,,"6 pieces; well trimmed, but contains up to 10 hair follicles per piece; 5-10% dermal fat",50-59,55.0,55.0,0.0
+GTEX-14PJM-0226,Skin - Sun Exposed (Lower leg),GTEX-14PJM,female,50-59,Fast death - natural causes,,6 pieces; well trimmed; 5-10% dermal fat,50-59,55.0,55.0,0.0
+GTEX-14PJM-0926,Lung,GTEX-14PJM,female,50-59,Fast death - natural causes,"emphysema, hemorrhage",2 pieces; moderate emphysema; mild patchy alveolar hemorrhage,50-59,55.0,55.0,0.0
+GTEX-14PJM-2626,Colon - Transverse,GTEX-14PJM,female,50-59,Fast death - natural causes,,"6 pieces; autolyzed mucosa, muscle intact",50-59,55.0,55.0,0.0
+GTEX-14PJM-2726,Colon - Sigmoid,GTEX-14PJM,female,50-59,Fast death - natural causes,,6 pieces; up to 0.9 mm submucosal fat,40-49,55.0,45.0,-10.0
+GTEX-14PJM-3126,Brain - Cortex,GTEX-14PJM,female,50-59,Fast death - natural causes,,6 fragmented pieces,50-59,55.0,55.0,0.0
+GTEX-14PJN-0326,Lung,GTEX-14PJN,male,30-39,Ventilator case,atelectasis,"2 pieces, prominent atalectasis",50-59,35.0,55.0,20.0
+GTEX-14PJN-1026,Colon - Sigmoid,GTEX-14PJN,male,30-39,Ventilator case,,"5 pieces, not target sigmoid, mucosa with autolysis",40-49,35.0,45.0,10.0
+GTEX-14PJN-1226,Colon - Transverse,GTEX-14PJN,male,30-39,Ventilator case,,"6 pieces not colon, small bowel, unkonwn region, not GTEx target.",40-49,35.0,45.0,10.0
+GTEX-14PJN-1826,Skin - Not Sun Exposed (Suprapubic),GTEX-14PJN,male,30-39,Ventilator case,,"6 pieces, minimal dermal fat, squamous epitheliums is 30-40 microns",50-59,35.0,55.0,20.0
+GTEX-14PJN-1926,Skin - Sun Exposed (Lower leg),GTEX-14PJN,male,30-39,Ventilator case,,"6 pieces, adherent dermal fat up to ~5-6mm; squamous epithelium is ~30 microns",50-59,35.0,55.0,20.0
+GTEX-14PJO-0126,Skin - Sun Exposed (Lower leg),GTEX-14PJO,male,60-69,Slow death,,6 pieces; well trimmed; minimal dermal fat,60-69,65.0,65.0,0.0
+GTEX-14PJO-0926,Lung,GTEX-14PJO,male,60-69,Slow death,"congestion, fibrosis",2 pieces; severe vascular congestion with fibrosis consistent with  heart failure,60-69,65.0,65.0,0.0
+GTEX-14PJO-2326,Colon - Sigmoid,GTEX-14PJO,male,60-69,Slow death,,"6 pieces, 1 with prominent submucosa [circled]",60-69,65.0,65.0,0.0
+GTEX-14PJO-2426,Colon - Transverse,GTEX-14PJO,male,60-69,Slow death,,"6 pieces; mucosa autolyzed, muscle intact",60-69,65.0,65.0,0.0
+GTEX-14PJO-2526,Skin - Not Sun Exposed (Suprapubic),GTEX-14PJO,male,60-69,Slow death,,"6 pieces; well trimmed, but prominent hair follicles",60-69,65.0,65.0,0.0
+GTEX-14PJO-3026,Brain - Cortex,GTEX-14PJO,male,60-69,Slow death,,4 pieces,60-69,65.0,65.0,0.0
+GTEX-15D79-0126,Skin - Sun Exposed (Lower leg),GTEX-15D79,male,50-59,Fast death - natural causes,,6 pieces; well trimmed; 10% dermal fat,50-59,55.0,55.0,0.0
+GTEX-15D79-1026,Lung,GTEX-15D79,male,50-59,Fast death - natural causes,"congestion, hemorrhage",2 pieces; marked congestion & alveolar hemorrhage; aspiration of foreign material in bronchus [arrowed],60-69,55.0,65.0,10.0
+GTEX-15D79-1126,Skin - Not Sun Exposed (Suprapubic),GTEX-15D79,male,50-59,Fast death - natural causes,,6 pieces; well trimmed; 5% dermal  fat,50-59,55.0,55.0,0.0
+GTEX-15D79-2626,Colon - Transverse,GTEX-15D79,male,50-59,Fast death - natural causes,,6 pieces; some deeper glands are better preserved than the rest,60-69,55.0,65.0,10.0
+GTEX-15D79-2826,Colon - Sigmoid,GTEX-15D79,male,50-59,Fast death - natural causes,,6 pieces; well dissected muscularis,60-69,55.0,65.0,10.0
+GTEX-15D79-3026,Brain - Cortex,GTEX-15D79,male,50-59,Fast death - natural causes,,4 pieces,50-59,55.0,55.0,0.0
+GTEX-15DCE-0226,Skin - Sun Exposed (Lower leg),GTEX-15DCE,male,20-29,Ventilator case,,6 pieces; up to 4 mm extraneous  subcutaneous fat,20-29,25.0,25.0,0.0
+GTEX-15DCE-1226,Skin - Not Sun Exposed (Suprapubic),GTEX-15DCE,male,20-29,Ventilator case,,6 pieces; several pieces have hair follicles with prominent sebaceous glands; 5/6 well trimmed; 1 without epidermis,20-29,25.0,25.0,0.0
+GTEX-15DCE-2026,Colon - Transverse,GTEX-15DCE,male,20-29,Ventilator case,,6 pieces;,50-59,25.0,55.0,30.0
+GTEX-15DCE-2126,Colon - Sigmoid,GTEX-15DCE,male,20-29,Ventilator case,,"6 pieces: all have mucosa, only 2 have muscle",40-49,25.0,45.0,20.0
+GTEX-15DYW-0126,Skin - Sun Exposed (Lower leg),GTEX-15DYW,female,60-69,Fast death - natural causes,,6 pieces; 10% dermal fat; well trimmed,50-59,65.0,55.0,-10.0
+GTEX-15DYW-0826,Lung,GTEX-15DYW,female,60-69,Fast death - natural causes,"edema, hemorrhage",2 pieces; prominent pulmonary edema and alveolar hemorrhage,60-69,65.0,65.0,0.0
+GTEX-15DYW-2326,Colon - Transverse,GTEX-15DYW,female,60-69,Fast death - natural causes,,6 pieces; mucosa largely autolyzed; muscularis intact (1),60-69,65.0,65.0,0.0
+GTEX-15DYW-2426,Colon - Sigmoid,GTEX-15DYW,female,60-69,Fast death - natural causes,,6 pieces; well dissected muscularis,60-69,65.0,65.0,0.0
+GTEX-15DYW-2726,Skin - Not Sun Exposed (Suprapubic),GTEX-15DYW,female,60-69,Fast death - natural causes,,6 pieces; up too 30% dermal fat,50-59,65.0,55.0,-10.0
+GTEX-15DYW-3126,Brain - Cortex,GTEX-15DYW,female,60-69,Fast death - natural causes,,4 fragmented pieces,60-69,65.0,65.0,0.0
+GTEX-15RIF-0426,Lung,GTEX-15RIF,male,20-29,Ventilator case,"congestion, pneumonia","2 pieces, moderate congestiona; pathcy acute pneumonia, encircled (rep), focally necrotizing",40-49,25.0,45.0,20.0
+GTEX-15RIF-1326,Colon - Transverse,GTEX-15RIF,male,20-29,Ventilator case,,"6 pieces, mucosa ~0.3mm, ~5-10% thickness",50-59,25.0,55.0,30.0
+GTEX-15RIF-1426,Colon - Sigmoid,GTEX-15RIF,male,20-29,Ventilator case,,"6 pieces, all target muscularis",50-59,25.0,55.0,30.0
+GTEX-15RIF-1626,Skin - Not Sun Exposed (Suprapubic),GTEX-15RIF,male,20-29,Ventilator case,,"6 pieces, trace dermal fat; squamous epithelium is ~50 microns",50-59,25.0,55.0,30.0
+GTEX-15RIF-1926,Skin - Sun Exposed (Lower leg),GTEX-15RIF,male,20-29,Ventilator case,,"6 pieces, trace dermal fat, squamous epithelium is ~50 microns",20-29,25.0,25.0,0.0
+GTEX-15SB6-0426,Lung,GTEX-15SB6,female,50-59,Ventilator case,hemorrhage,2 pieces; extensive hemorrhage/clot,50-59,55.0,55.0,0.0
+GTEX-15SB6-0526,Skin - Not Sun Exposed (Suprapubic),GTEX-15SB6,female,50-59,Ventilator case,,"6 pieces; hair-bearing skin, several include significant attached fat, up to 50%",50-59,55.0,55.0,0.0
+GTEX-15SB6-1226,Colon - Transverse,GTEX-15SB6,female,50-59,Ventilator case,,"6 pieces; full thickness sections, moderate autolysis, some attached fat",50-59,55.0,55.0,0.0
+GTEX-15SB6-1326,Colon - Sigmoid,GTEX-15SB6,female,50-59,Ventilator case,,6 pieces; muscularis (target) and mucosa (not target),50-59,55.0,55.0,0.0
+GTEX-15SB6-1726,Skin - Sun Exposed (Lower leg),GTEX-15SB6,female,50-59,Ventilator case,,"6 pieces; up to 10% attached and internal fat, epidermis measures 35 microns",50-59,55.0,55.0,0.0
+GTEX-15SHU-0126,Skin - Sun Exposed (Lower leg),GTEX-15SHU,female,40-49,Fast death - natural causes,,6 pieces; well trimmed; <5% dermal fat,60-69,45.0,65.0,20.0
+GTEX-15SHU-0526,Skin - Not Sun Exposed (Suprapubic),GTEX-15SHU,female,40-49,Fast death - natural causes,,6 pieces; 10% dermal fat; well trimmed,50-59,45.0,55.0,10.0
+GTEX-15SHU-1326,Lung,GTEX-15SHU,female,40-49,Fast death - natural causes,"atelectasis, emphysema, fibrosis, hemorrhage","2 pieces; emphysema in 1 piece; alveolar hemorrhage, atelectasis and fibrosis in other",50-59,45.0,55.0,10.0
+GTEX-15SHU-2526,Colon - Transverse,GTEX-15SHU,female,40-49,Fast death - natural causes,necrosis,6 pieces; mucosa totally necrotic; muscle intact,60-69,45.0,65.0,20.0
+GTEX-15SHU-2626,Colon - Sigmoid,GTEX-15SHU,female,40-49,Fast death - natural causes,,6 pieces;ell dissected,60-69,45.0,65.0,20.0
+GTEX-15SHU-3126,Brain - Cortex,GTEX-15SHU,female,40-49,Fast death - natural causes,,4 pieces,50-59,45.0,55.0,10.0
+GTEX-15SHV-0326,Lung,GTEX-15SHV,male,60-69,Ventilator case,atelectasis,2 pieces; atelectasis,50-59,65.0,55.0,-10.0
+GTEX-15SHV-1326,Colon - Transverse,GTEX-15SHV,male,60-69,Ventilator case,,"4 pieces; 1 piece has no mucosa, 1 piece is mainly submucosa",50-59,65.0,55.0,-10.0
+GTEX-15SHV-1626,Colon - Sigmoid,GTEX-15SHV,male,60-69,Ventilator case,,4 pieces; 2 have 80% & 60% submucosal fat,60-69,65.0,65.0,0.0
+GTEX-15SHV-2026,Skin - Not Sun Exposed (Suprapubic),GTEX-15SHV,male,60-69,Ventilator case,,6 pieces; up to 20% dermal fat,60-69,65.0,65.0,0.0
+GTEX-15SHV-2426,Skin - Sun Exposed (Lower leg),GTEX-15SHV,male,60-69,Ventilator case,,6 pieces; subcutaneous fat up to 1.6 mm thick; up to 10% dermal fat,50-59,65.0,55.0,-10.0
+GTEX-15SZO-0126,Skin - Sun Exposed (Lower leg),GTEX-15SZO,male,50-59,Fast death - natural causes,,"6 pieces, trace adherent fat, squamous epithelium is ~40-50 microns",40-49,55.0,45.0,-10.0
+GTEX-15SZO-0626,Skin - Not Sun Exposed (Suprapubic),GTEX-15SZO,male,50-59,Fast death - natural causes,,"6 pieces, no adherent fat, squamous epithelium is ~30-40 microns",50-59,55.0,55.0,0.0
+GTEX-15SZO-0926,Lung,GTEX-15SZO,male,50-59,Fast death - natural causes,congestion,"2 pieces, patchy moderate congestion",60-69,55.0,65.0,10.0
+GTEX-15SZO-2626,Colon - Transverse,GTEX-15SZO,male,50-59,Fast death - natural causes,,"6 pieces, mucosa is ~0.3mm, advanced autolysis",60-69,55.0,65.0,10.0
+GTEX-15SZO-2726,Colon - Sigmoid,GTEX-15SZO,male,50-59,Fast death - natural causes,,"6 pieces, unusually advanced autolysis",60-69,55.0,65.0,10.0
+GTEX-15SZO-3026,Brain - Cortex,GTEX-15SZO,male,50-59,Fast death - natural causes,no_abnormalities,"4 pieces, no abnormalities",60-69,55.0,65.0,10.0
+GTEX-15UF7-0626,Skin - Not Sun Exposed (Suprapubic),GTEX-15UF7,male,40-49,Ventilator case,,6 pieces; essentially well trimmed,50-59,45.0,55.0,10.0
+GTEX-15UF7-1126,Colon - Transverse,GTEX-15UF7,male,40-49,Ventilator case,,"6 pieces; full thickness sections, small intestine",60-69,45.0,65.0,20.0
+GTEX-15UF7-1326,Colon - Sigmoid,GTEX-15UF7,male,40-49,Ventilator case,,"6 pieces; ~50% muscularis, ~50% submucosa/serosa, fragments of bone",60-69,45.0,65.0,20.0
+GTEX-15UF7-2026,Skin - Sun Exposed (Lower leg),GTEX-15UF7,male,40-49,Ventilator case,,"6 pieces; well trimmed with minimal internal fat, epidermis measures 45 microns",50-59,45.0,55.0,10.0
+GTEX-15UKP-0426,Skin - Sun Exposed (Lower leg),GTEX-15UKP,male,20-29,Ventilator case,,"6 pieces; predominantly well trimmed with minimal internal/external fat, epidermis measures 40 microns",50-59,25.0,55.0,30.0
+GTEX-15UKP-1526,Skin - Not Sun Exposed (Suprapubic),GTEX-15UKP,male,20-29,Ventilator case,,6 pieces; well trimmed,50-59,25.0,55.0,30.0
+GTEX-15UKP-1726,Colon - Sigmoid,GTEX-15UKP,male,20-29,Ventilator case,,8 pieces; some include residual attached fat/submucosa,50-59,25.0,55.0,30.0
+GTEX-15UKP-1826,Colon - Transverse,GTEX-15UKP,male,20-29,Ventilator case,edema,"6 pieces; edema, mucosal autolysis",40-49,25.0,45.0,20.0
+GTEX-15UKP-1926,Lung,GTEX-15UKP,male,20-29,Ventilator case,"edema, hemorrhage","2 pieces; includes pleura (target is 1cm below pleura), hemorrhage, edema",40-49,25.0,45.0,20.0
+GTEX-169BO-0226,Lung,GTEX-169BO,male,50-59,Ventilator case,pneumonia,"2 pieces patchy chronic, focally acute pneumonitis",50-59,55.0,55.0,0.0
+GTEX-169BO-0826,Colon - Transverse,GTEX-169BO,male,50-59,Ventilator case,,"6 pieces, sections of small intestine, unknown location, not GTEx target",60-69,55.0,65.0,10.0
+GTEX-169BO-1026,Skin - Not Sun Exposed (Suprapubic),GTEX-169BO,male,50-59,Ventilator case,,"6 pieces, trace dermal fat, squamous epithelium is ~60 microns",40-49,55.0,45.0,-10.0
+GTEX-169BO-1326,Skin - Sun Exposed (Lower leg),GTEX-169BO,male,50-59,Ventilator case,,"6 pieces, trace adherent dermal fat; squamous epithelium is ~30-40 microns",50-59,55.0,55.0,0.0
+GTEX-16GPK-0126,Skin - Sun Exposed (Lower leg),GTEX-16GPK,male,60-69,Fast death - natural causes,,6 pieces; 5% internal (periadnexal) fat; epidermis ~31 microns,50-59,65.0,55.0,-10.0
+GTEX-16GPK-0626,Skin - Not Sun Exposed (Suprapubic),GTEX-16GPK,male,60-69,Fast death - natural causes,,6 pieces; hair bearing skin with ~10 to 20% internal/external fat,50-59,65.0,55.0,-10.0
+GTEX-16GPK-1826,Lung,GTEX-16GPK,male,60-69,Fast death - natural causes,"congestion, desquamation","2 pieces; marked congestion with focal areas of collapsed alveoli (arrowed); bronchial lumen filled with mucus, desquamated epithelial lining cells, microorganisms (outlined) and vegetable matter",60-69,65.0,65.0,0.0
+GTEX-16GPK-2526,Colon - Sigmoid,GTEX-16GPK,male,60-69,Fast death - natural causes,,"6 pieces; target muscularis, well trimmed",60-69,65.0,65.0,0.0
+GTEX-16GPK-2626,Colon - Transverse,GTEX-16GPK,male,60-69,Fast death - natural causes,,6 pieces; autolyzed mucosa and muscularis,60-69,65.0,65.0,0.0
+GTEX-16GPK-3026,Brain - Cortex,GTEX-16GPK,male,60-69,Fast death - natural causes,,4 pieces; small fragment of meninges (outlined),50-59,65.0,55.0,-10.0
+GTEX-16NGA-0226,Lung,GTEX-16NGA,female,40-49,Ventilator case,"atelectasis, hyperplasia","2 pieces; atelectasis alternating with dilated alveolar spaces; one piece contains bronchi with prominent smooth muscle, hyperplasia of submucosal mucous glands and  peribronchial lymphocytic ifiltrate (outlined) and cartlilage (arrowed); thick-walled vessels ; anthracosis",60-69,45.0,65.0,20.0
+GTEX-16NGA-0726,Skin - Not Sun Exposed (Suprapubic),GTEX-16NGA,female,40-49,Ventilator case,,6 pieces; essentially well trimmed except one piece with attached ~1mm external fat,60-69,45.0,65.0,20.0
+GTEX-16NGA-0926,Colon - Sigmoid,GTEX-16NGA,female,40-49,Ventilator case,,6 pieces; target muscularis with small focus of residual mucosa,30-39,45.0,35.0,-10.0
+GTEX-16NGA-1026,Colon - Transverse,GTEX-16NGA,female,40-49,Ventilator case,,6 pieces; well preserved colonic target mucosa and muscularis,50-59,45.0,55.0,10.0
+GTEX-16NGA-1726,Skin - Sun Exposed (Lower leg),GTEX-16NGA,female,40-49,Ventilator case,,6 pieces; well trimmed,50-59,45.0,55.0,10.0
+GTEX-16XZY-1526,Colon - Transverse,GTEX-16XZY,male,70-79,Ventilator case,,6 pieces; muscularis withup to 0.8mm attached fat/vessels,60-69,75.0,65.0,-10.0
+GTEX-16XZY-1726,Colon - Sigmoid,GTEX-16XZY,male,70-79,Ventilator case,,"6 pieces; predominantly muscularis, but 3 of 6 pieces include colonic mucosa",60-69,75.0,65.0,-10.0
+GTEX-16XZY-2026,Skin - Not Sun Exposed (Suprapubic),GTEX-16XZY,male,70-79,Ventilator case,,6 pieces with some fragmention;  hair bearing skin with up to ~50% external fat; numerous hair follicles,50-59,75.0,55.0,-20.0
+GTEX-16XZY-2126,Skin - Sun Exposed (Lower leg),GTEX-16XZY,male,70-79,Ventilator case,,6 pieces; ~10% external/internal fat; squamous epithelium 22 to 28 micron thick,50-59,75.0,55.0,-20.0
+GTEX-178AV-0326,Lung,GTEX-178AV,male,40-49,Ventilator case,pneumonia,"2 pieces patchy chronic and acute bronchitis/peribronchial pneumonitis, rep foci ensquared",40-49,45.0,45.0,0.0
+GTEX-178AV-1326,Colon - Transverse,GTEX-178AV,male,40-49,Ventilator case,,"6 pieces, mucosa up to ~0.4mm, ~15-20% thickness",50-59,45.0,55.0,10.0
+GTEX-178AV-1526,Colon - Sigmoid,GTEX-178AV,male,40-49,Ventilator case,,"6 pieces, abundant mucosa, not correct target",60-69,45.0,65.0,20.0
+GTEX-178AV-1726,Skin - Not Sun Exposed (Suprapubic),GTEX-178AV,male,40-49,Ventilator case,,"6 pieces, squamous epithelium is ~50 microns; trade dermal fat",40-49,45.0,45.0,0.0
+GTEX-178AV-2026,Skin - Sun Exposed (Lower leg),GTEX-178AV,male,40-49,Ventilator case,,"6 pieces, squamous epithelium is ~30-40 microns",60-69,45.0,65.0,20.0
+GTEX-17F96-0126,Skin - Not Sun Exposed (Suprapubic),GTEX-17F96,male,70-79,Ventilator case,,6 pieces; well trimmed; 10% dermal fat,60-69,75.0,65.0,-10.0
+GTEX-17F96-0626,Lung,GTEX-17F96,male,70-79,Ventilator case,emphysema,2 pieces; prominent diffuse emphysema,50-59,75.0,55.0,-20.0
+GTEX-17F96-1626,Skin - Sun Exposed (Lower leg),GTEX-17F96,male,70-79,Ventilator case,,6 pieces; well trimmed; 5% dermal fat,60-69,75.0,65.0,-10.0
+GTEX-17F96-2026,Colon - Transverse,GTEX-17F96,male,70-79,Ventilator case,,6 pieces; mucosa=3;muscle = 1 (autolysis),60-69,75.0,65.0,-10.0
+GTEX-17F96-2126,Colon - Sigmoid,GTEX-17F96,male,70-79,Ventilator case,,6 pieces; well dissected,50-59,75.0,55.0,-20.0
+GTEX-17F97-0326,Skin - Sun Exposed (Lower leg),GTEX-17F97,male,50-59,Slow death,,6 pieces; well trimmed; minimal dermal fat,60-69,55.0,65.0,10.0
+GTEX-17F97-1026,Lung,GTEX-17F97,male,50-59,Slow death,macrophages,2 pieces; numerous alveolar macrophages and foreign body reaction,60-69,55.0,65.0,10.0
+GTEX-17F97-2326,Colon - Transverse,GTEX-17F97,male,50-59,Slow death,,"6 pieces; mucosal glands autolyzed, muscularis intact",60-69,55.0,65.0,10.0
+GTEX-17F97-2426,Colon - Sigmoid,GTEX-17F97,male,50-59,Slow death,fibrosis,"6 pieces; prominent submucosal fibrous stroma on 3 pieces, up to 40%",60-69,55.0,65.0,10.0
+GTEX-17F97-2626,Skin - Not Sun Exposed (Suprapubic),GTEX-17F97,male,50-59,Slow death,,6 pieces; well trimmed; 5% dermal fat,60-69,55.0,65.0,10.0
+GTEX-17F97-3026,Brain - Cortex,GTEX-17F97,male,50-59,Slow death,,4pieces,60-69,55.0,65.0,10.0
+GTEX-17HGU-0226,Skin - Sun Exposed (Lower leg),GTEX-17HGU,male,50-59,Ventilator case,,6 pieces; well trimmed; 5-10% dermall fat,60-69,55.0,65.0,10.0
+GTEX-17HGU-0926,Lung,GTEX-17HGU,male,50-59,Ventilator case,"emphysema, fibrosis",2 pieces; patchy emphysema & fibrosis; aspiration,60-69,55.0,65.0,10.0
+GTEX-17HGU-2326,Skin - Not Sun Exposed (Suprapubic),GTEX-17HGU,male,50-59,Ventilator case,,6 pieces; 3 have up to 7 hair follicles and 10% dermal fat,60-69,55.0,65.0,10.0
+GTEX-17HGU-2426,Colon - Transverse,GTEX-17HGU,male,50-59,Ventilator case,,6 pieces; muscle in better shape than mucosa,50-59,55.0,55.0,0.0
+GTEX-17HGU-2626,Colon - Sigmoid,GTEX-17HGU,male,50-59,Ventilator case,,6 pieces; well dissected,60-69,55.0,65.0,10.0
+GTEX-183FY-0126,Skin - Sun Exposed (Lower leg),GTEX-183FY,male,20-29,Ventilator case,,6 pieces; squamous epithelium is ~60 microns; minimal dermal fat,20-29,25.0,25.0,0.0
+GTEX-183FY-0726,Lung,GTEX-183FY,male,20-29,Ventilator case,"congestion, fibrosis, pneumonia","2 pieces, diffuse alvoelar damage/ARDS, fibrosing pneumonitis, chronic congestion",50-59,25.0,55.0,30.0
+GTEX-183FY-0926,Colon - Transverse,GTEX-183FY,male,20-29,Ventilator case,,"6 pieces, muscularis only; no target mucosa",40-49,25.0,45.0,20.0
+GTEX-183FY-1026,Skin - Not Sun Exposed (Suprapubic),GTEX-183FY,male,20-29,Ventilator case,,6 pieces; squamous epithelium is ~50-60 microns; minimal adherent dermal fat,50-59,25.0,55.0,30.0
+GTEX-183FY-1426,Colon - Sigmoid,GTEX-183FY,male,20-29,Ventilator case,,"6 pieces, confirmed target muscularis",50-59,25.0,55.0,30.0
+GTEX-18A66-0226,Skin - Sun Exposed (Lower leg),GTEX-18A66,male,60-69,Slow death,,"6 pieces, no significant dermal fat; squamous epithelium is ~45-50 microns",50-59,65.0,55.0,-10.0
+GTEX-18A66-0626,Skin - Not Sun Exposed (Suprapubic),GTEX-18A66,male,60-69,Slow death,,"6 pieces, no significant adherent dermal fat; squamous epithelium is ~50-60 microns",60-69,65.0,65.0,0.0
+GTEX-18A66-0926,Lung,GTEX-18A66,male,60-69,Slow death,congestion,"2 pieces, minimal congestion",60-69,65.0,65.0,0.0
+GTEX-18A66-2426,Colon - Transverse,GTEX-18A66,male,60-69,Slow death,,"6 pieces, mucoa well preserved, up to ~0.5mm, ~15-20% thickness",50-59,65.0,55.0,-10.0
+GTEX-18A66-2626,Colon - Sigmoid,GTEX-18A66,male,60-69,Slow death,,"6 pieces, confirmed target muscularis",50-59,65.0,55.0,-10.0
+GTEX-18A7B-0126,Skin - Sun Exposed (Lower leg),GTEX-18A7B,male,70-79,Intermediate death,,6 fragmented pieces; 1 mm subcutaneous fat on 3 of 6 pieces,60-69,75.0,65.0,-10.0
+GTEX-18A7B-1026,Lung,GTEX-18A7B,male,70-79,Intermediate death,"atelectasis, emphysema, macrophages","2 pieces; emphysema, atelectasis, numerous alveolar macrophages; pleura sampled",60-69,75.0,65.0,-10.0
+GTEX-18A7B-1926,Colon - Sigmoid,GTEX-18A7B,male,70-79,Intermediate death,,6 pieces; 2 pieces contain submucosa and mucosal remnants [labeled],60-69,75.0,65.0,-10.0
+GTEX-18A7B-2026,Colon - Transverse,GTEX-18A7B,male,70-79,Intermediate death,,6 pieces; extensive glandular autolysis except for foci of moderate autolysis; muscle intact,60-69,75.0,65.0,-10.0
+GTEX-18A7B-2726,Skin - Not Sun Exposed (Suprapubic),GTEX-18A7B,male,70-79,Intermediate death,,6 pieces; well trimmed; 10% dermal fat content,50-59,75.0,55.0,-20.0
+GTEX-18A7B-2926,Brain - Cortex,GTEX-18A7B,male,70-79,Intermediate death,,2 pieces,60-69,75.0,65.0,-10.0
+GTEX-18D9A-0226,Lung,GTEX-18D9A,female,30-39,Ventilator case,"macrophages, pigment",2 pieces; some bronchi have pigmented macrophages,50-59,35.0,55.0,20.0
+GTEX-18D9A-1126,Colon - Transverse,GTEX-18D9A,female,30-39,Ventilator case,,6 pieces; epithelial autolysis varies from 1 to 2,60-69,35.0,65.0,30.0
+GTEX-18D9A-1326,Colon - Sigmoid,GTEX-18D9A,female,30-39,Ventilator case,,6 pieces; mucosa occupies 10% to 20% of 4 of 6 pieces [labeled],50-59,35.0,55.0,20.0
+GTEX-18D9A-1426,Skin - Not Sun Exposed (Suprapubic),GTEX-18D9A,female,30-39,Ventilator case,,6 pieces; up to 4 hair follicles on each piece; 5% dermal fat content,20-29,35.0,25.0,-10.0
+GTEX-18D9A-1926,Skin - Sun Exposed (Lower leg),GTEX-18D9A,female,30-39,Ventilator case,,6 pieces; minimal dermal fat content,50-59,35.0,55.0,20.0
+GTEX-19HZE-0126,Skin - Sun Exposed (Lower leg),GTEX-19HZE,female,70-79,Intermediate death,,6 pieces; well trimmed; 5% dermal fat,60-69,75.0,65.0,-10.0
+GTEX-19HZE-0526,Lung,GTEX-19HZE,female,70-79,Intermediate death,pneumonia,2 pieces; patchy pneumonia affects 30%,50-59,75.0,55.0,-20.0
+GTEX-19HZE-2626,Colon - Transverse,GTEX-19HZE,female,70-79,Intermediate death,,6 pieces; mucosa totally autolyzed; muscularis moderately autolyzed,60-69,75.0,65.0,-10.0
+GTEX-19HZE-2726,Colon - Sigmoid,GTEX-19HZE,female,70-79,Intermediate death,,6 pieces; well trimmed,50-59,75.0,55.0,-20.0
+GTEX-19HZE-2926,Skin - Not Sun Exposed (Suprapubic),GTEX-19HZE,female,70-79,Intermediate death,,6 pieces; well trimmed; 5% dermal fat,60-69,75.0,65.0,-10.0
+GTEX-19HZE-3126,Brain - Cortex,GTEX-19HZE,female,70-79,Intermediate death,,4 pieces,60-69,75.0,65.0,-10.0
+GTEX-1A3MV-0526,Lung,GTEX-1A3MV,male,30-39,Ventilator case,"atelectasis, macrophages, pneumonia","2 pieces; includes pleura, atelectasis with patchy widened airspaces, bronchopneumonia, pulmonary macrophages, portion of bronchus/cartilage",20-29,35.0,25.0,-10.0
+GTEX-1A3MV-1026,Colon - Sigmoid,GTEX-1A3MV,male,30-39,Ventilator case,,6 pieces; target muscularis,50-59,35.0,55.0,20.0
+GTEX-1A3MV-1126,Colon - Transverse,GTEX-1A3MV,male,30-39,Ventilator case,,"6 pieces; full thickness sections, few with minimal attached fat",50-59,35.0,55.0,20.0
+GTEX-1A3MV-1826,Skin - Not Sun Exposed (Suprapubic),GTEX-1A3MV,male,30-39,Ventilator case,,6 pieces; well trimmed,40-49,35.0,45.0,10.0
+GTEX-1A3MV-1926,Skin - Sun Exposed (Lower leg),GTEX-1A3MV,male,30-39,Ventilator case,,6 pieces; predominantly well trimmed with up to 5-10% internal/external fat. epidermis measures 53 micorns,20-29,35.0,25.0,-10.0
+GTEX-1A8G6-0426,Skin - Sun Exposed (Lower leg),GTEX-1A8G6,male,60-69,Fast death - natural causes,,"6 pieces, no adherent fat; squamous epithelium is ~30-40 microns",60-69,65.0,65.0,0.0
+GTEX-1A8G6-0726,Lung,GTEX-1A8G6,male,60-69,Fast death - natural causes,congestion,"2 pieces, minimal congestion",50-59,65.0,55.0,-10.0
+GTEX-1A8G6-2626,Colon - Sigmoid,GTEX-1A8G6,male,60-69,Fast death - natural causes,,"6 pieces, confirmed target muscularis",60-69,65.0,65.0,0.0
+GTEX-1A8G6-2726,Skin - Not Sun Exposed (Suprapubic),GTEX-1A8G6,male,60-69,Fast death - natural causes,,"6 pieces, no significant dermal fat/ squamous epithelium is ~20-40 microns",60-69,65.0,65.0,0.0
+GTEX-1A8G6-2826,Colon - Transverse,GTEX-1A8G6,male,60-69,Fast death - natural causes,,"6 pieces glandular mucosa with advanced autolysis, partially sloughing",50-59,65.0,55.0,-10.0
+GTEX-1A8G6-2926,Brain - Cortex,GTEX-1A8G6,male,60-69,Fast death - natural causes,no_abnormalities,"2 pieces, no abnormalities",50-59,65.0,55.0,-10.0
+GTEX-1AMEY-0826,Skin - Not Sun Exposed (Suprapubic),GTEX-1AMEY,female,30-39,Ventilator case,,6 pieces; well trimmed; minimal dermal fat,40-49,35.0,45.0,10.0
+GTEX-1AMEY-1326,Skin - Sun Exposed (Lower leg),GTEX-1AMEY,female,30-39,Ventilator case,,6 pieces; well trimmed; 5% dermal fat,40-49,35.0,45.0,10.0
+GTEX-1AMEY-1826,Colon - Sigmoid,GTEX-1AMEY,female,30-39,Ventilator case,,6 pieces; all contain mucosa and submucosa as well as variable amounts of muscularis; sample is of limited value; LCM,40-49,35.0,45.0,10.0
+GTEX-1AMEY-1926,Colon - Transverse,GTEX-1AMEY,female,30-39,Ventilator case,,6 pieces; variable amounts of mucosa sampled,20-29,35.0,25.0,-10.0
+GTEX-1AYD5-1226,Lung,GTEX-1AYD5,male,50-59,Ventilator case,congestion,2 pieces; marked congestion; thick walled vessels (rep. arrows) and thick alveolar septa and collapsed alveoli suggestive of chronic pulmonary hypertension,60-69,55.0,65.0,10.0
+GTEX-1AYD5-1726,Colon - Transverse,GTEX-1AYD5,male,50-59,Ventilator case,,"6 pieces; moderately to severely autolyzed mucosa and well preserved muscularis, serositis",50-59,55.0,55.0,0.0
+GTEX-1AYD5-1826,Colon - Sigmoid,GTEX-1AYD5,male,50-59,Ventilator case,,6 pieces; target muscularis  with one focal small fragment of moderately autolyzed colonic mucosa (outlined),50-59,55.0,55.0,0.0
+GTEX-1AYD5-2426,Skin - Sun Exposed (Lower leg),GTEX-1AYD5,male,50-59,Ventilator case,,6 pieces; ~47um thick epidermis; essentially well trimmed except one piece containing ~15% external fat (outlined),60-69,55.0,65.0,10.0
+GTEX-1AYD5-2626,Skin - Not Sun Exposed (Suprapubic),GTEX-1AYD5,male,50-59,Ventilator case,,6 pieces; insignificant internal/external fat,60-69,55.0,65.0,10.0
+GTEX-1B97J-2026,Skin - Sun Exposed (Lower leg),GTEX-1B97J,female,50-59,Ventilator case,,"6 pieces, no significant dermal fat; squamous epithelium is 30-40 microns",50-59,55.0,55.0,0.0
+GTEX-1B98T-0126,Skin - Sun Exposed (Lower leg),GTEX-1B98T,male,60-69,Fast death - natural causes,,"6 pieces, no dermal fat; squamous epithelium is ~30 microns",60-69,65.0,65.0,0.0
+GTEX-1B98T-0826,Skin - Not Sun Exposed (Suprapubic),GTEX-1B98T,male,60-69,Fast death - natural causes,,"6 pieces, no dermal fat; squamous epithelium is ~30 microns",60-69,65.0,65.0,0.0
+GTEX-1B98T-1226,Lung,GTEX-1B98T,male,60-69,Fast death - natural causes,"fibrosis, pneumonia","2 pieces, end-stage fibrosing pneumontiis",60-69,65.0,65.0,0.0
+GTEX-1B98T-2826,Colon - Transverse,GTEX-1B98T,male,60-69,Fast death - natural causes,,"6 pieces, mucosa up to ~0.2mm, total glandular autolysis/sloughing",60-69,65.0,65.0,0.0
+GTEX-1B98T-2926,Colon - Sigmoid,GTEX-1B98T,male,60-69,Fast death - natural causes,,"6 pieces, confirmed target muscularis",60-69,65.0,65.0,0.0
+GTEX-1B98T-3126,Brain - Cortex,GTEX-1B98T,male,60-69,Fast death - natural causes,no_abnormalities,"2 pieces, no abnormalities",60-69,65.0,65.0,0.0
+GTEX-1B996-0226,Skin - Sun Exposed (Lower leg),GTEX-1B996,male,60-69,Fast death - natural causes,,6 pieces;  ~36um thick epidermis; minimal periadnexal fat; numerous empty spaces (fixation related?),50-59,65.0,55.0,-10.0
+GTEX-1B996-0426,Skin - Not Sun Exposed (Suprapubic),GTEX-1B996,male,60-69,Fast death - natural causes,,6 pieces; well trimmed,60-69,65.0,65.0,0.0
+GTEX-1B996-0726,Lung,GTEX-1B996,male,60-69,Fast death - natural causes,"congestion, edema, inflammation","2 pieces; congestion, edema, focal perivascular inflammatory cell infiltrate (outlined)",60-69,65.0,65.0,0.0
+GTEX-1B996-2626,Colon - Transverse,GTEX-1B996,male,60-69,Fast death - natural causes,,6 pieces; moderate to severe mucosal autolysis; few pieces contain small fragments of muscularis (outlined),50-59,65.0,55.0,-10.0
+GTEX-1B996-2726,Colon - Sigmoid,GTEX-1B996,male,60-69,Fast death - natural causes,,6 pieces; target muscularis with scant detached fragments of colonic glands in association with a few pieces (arrows),60-69,65.0,65.0,0.0
+GTEX-1B996-2826,Brain - Cortex,GTEX-1B996,male,60-69,Fast death - natural causes,calcification,"2 pieces; attached meninges (arrows), focal calcifications (outlined), detached fragment of cerebellum (floater)",60-69,65.0,65.0,0.0
+GTEX-1C64O-0126,Skin - Sun Exposed (Lower leg),GTEX-1C64O,male,60-69,Ventilator case,,"6 pieces, no dermal fat; squamous epithelium is ~20-30 microns",50-59,65.0,55.0,-10.0
+GTEX-1C64O-1226,Lung,GTEX-1C64O,male,60-69,Ventilator case,"atelectasis, congestion","2 pieces, moderate congestion/atalectasis",60-69,65.0,65.0,0.0
+GTEX-1C64O-1326,Skin - Not Sun Exposed (Suprapubic),GTEX-1C64O,male,60-69,Ventilator case,,"6 pieces, focal, minimal dermal fat, delineated; squamus epithelium is ~40 microns",50-59,65.0,55.0,-10.0
+GTEX-1C64O-2326,Colon - Transverse,GTEX-1C64O,male,60-69,Ventilator case,,"6 pieces, mucosa fairly well preserved, up to ~0.3-0.4mm",50-59,65.0,55.0,-10.0
+GTEX-1C64O-2426,Colon - Sigmoid,GTEX-1C64O,male,60-69,Ventilator case,,"6 pieces, target muscularis, ~10% 'contaminant mucosa up to ~0.3mm, rep delineated",40-49,65.0,45.0,-20.0
+GTEX-1E2YA-0126,Skin - Sun Exposed (Lower leg),GTEX-1E2YA,male,50-59,Fast death - natural causes,,"6 pieces, no dermal fat; squamous epithelium is ~30-40 microns",40-49,55.0,45.0,-10.0
+GTEX-1E2YA-0926,Lung,GTEX-1E2YA,male,50-59,Fast death - natural causes,"congestion, pneumonia","2 pieces, patchy acute/chronic pneumonitis, hemmorhagic, moderate congestion, ensquared",20-29,55.0,25.0,-30.0
+GTEX-1E2YA-2126,Skin - Not Sun Exposed (Suprapubic),GTEX-1E2YA,male,50-59,Fast death - natural causes,,"6 pieces, trace dermal fat, delineated; squamous epithelium is ~30-40 microns",50-59,55.0,55.0,0.0
+GTEX-1E2YA-2526,Colon - Sigmoid,GTEX-1E2YA,male,50-59,Fast death - natural causes,,"6 pieces, confirmed target muscularis, minute nubbin of autolyzed mucosa delineated",50-59,55.0,55.0,0.0
+GTEX-1E2YA-2626,Colon - Transverse,GTEX-1E2YA,male,50-59,Fast death - natural causes,,"6 pieces, mucusa up to ~0.2mm, completely autolyzed/sloughing",50-59,55.0,55.0,0.0
+GTEX-1E2YA-3026,Brain - Cortex,GTEX-1E2YA,male,50-59,Fast death - natural causes,no_abnormalities,"4 pieces, no abnormalities",60-69,55.0,65.0,10.0
+GTEX-1EH9U-0126,Skin - Sun Exposed (Lower leg),GTEX-1EH9U,male,60-69,Slow death,,6 pieces; well trimmed; 10% dermal fat,60-69,65.0,65.0,0.0
+GTEX-1EH9U-1026,Lung,GTEX-1EH9U,male,60-69,Slow death,fibrosis,2 pieces; severe fibrosis & bronchiectasis; no normal lung tissue,60-69,65.0,65.0,0.0
+GTEX-1EH9U-1926,Colon - Sigmoid,GTEX-1EH9U,male,60-69,Slow death,,5 pieces: 2 with 20 & 30% autolyzed mucosa & submucosa; ample muscle,60-69,65.0,65.0,0.0
+GTEX-1EH9U-2026,Colon - Transverse,GTEX-1EH9U,male,60-69,Slow death,,"6 pieces; mucosa autolyzed, muscle intact",60-69,65.0,65.0,0.0
+GTEX-1EH9U-2826,Skin - Not Sun Exposed (Suprapubic),GTEX-1EH9U,male,60-69,Slow death,,6 pieces; well trimmed; 5% dermal fat,60-69,65.0,65.0,0.0
+GTEX-1EH9U-3026,Brain - Cortex,GTEX-1EH9U,male,60-69,Slow death,,2 pieces,60-69,65.0,65.0,0.0
+GTEX-1EX96-0226,Lung,GTEX-1EX96,male,50-59,Fast death - natural causes,congestion,"2 pieces, chronic congestive changes",60-69,55.0,65.0,10.0
+GTEX-1EX96-1026,Skin - Not Sun Exposed (Suprapubic),GTEX-1EX96,male,50-59,Fast death - natural causes,,"6 pieces, no significant dermal fat; squamous epithelium is ~60-70 microns",60-69,55.0,65.0,10.0
+GTEX-1EX96-1626,Skin - Sun Exposed (Lower leg),GTEX-1EX96,male,50-59,Fast death - natural causes,,"6 pieces, no significant dermal fat; squamous epithelium up to ~40-50 microns",60-69,55.0,65.0,10.0
+GTEX-1EX96-1926,Colon - Sigmoid,GTEX-1EX96,male,50-59,Fast death - natural causes,,"6 pieces, confirmed target muscularis",60-69,55.0,65.0,10.0
+GTEX-1EX96-2026,Colon - Transverse,GTEX-1EX96,male,50-59,Fast death - natural causes,,"6 pieces, target mucosa markedly autolyzed",50-59,55.0,55.0,0.0
+GTEX-1EX96-3026,Brain - Cortex,GTEX-1EX96,male,50-59,Fast death - natural causes,no_abnormalities,"2 pieces, no abnormalities",60-69,55.0,65.0,10.0
+GTEX-1F75B-0126,Skin - Sun Exposed (Lower leg),GTEX-1F75B,male,50-59,Slow death,,6 pieces; 1% to 5% dermal fat; ~34 micron thick epidermis,60-69,55.0,65.0,10.0
+GTEX-1F75B-0726,Skin - Not Sun Exposed (Suprapubic),GTEX-1F75B,male,50-59,Slow death,,6 pieces; essentially well trimmed with small amounts of dermal fat,60-69,55.0,65.0,10.0
+GTEX-1F75B-1026,Lung,GTEX-1F75B,male,50-59,Slow death,"congestion, emphysema",2 pieces; one contains bronchus with cartilage and vessel (outlined); emphysematous and athelectatic changes; congestion,50-59,55.0,55.0,0.0
+GTEX-1F75B-2726,Colon - Transverse,GTEX-1F75B,male,50-59,Slow death,,"6 pieces; severely autolyzed mucosa, moderately autolyzed muscularis",60-69,55.0,65.0,10.0
+GTEX-1F75B-2826,Colon - Sigmoid,GTEX-1F75B,male,50-59,Slow death,,6 pieces; essentially well trimmed target muscularis,60-69,55.0,65.0,10.0
+GTEX-1F75B-3026,Brain - Cortex,GTEX-1F75B,male,50-59,Slow death,,4 pieces,60-69,55.0,65.0,10.0
+GTEX-1GF9V-0326,Skin - Sun Exposed (Lower leg),GTEX-1GF9V,male,60-69,Fast death - natural causes,,"6 pieces, squamous epithelium is ~60 microns; minimal dermal fat",60-69,65.0,65.0,0.0
+GTEX-1GF9V-0826,Skin - Not Sun Exposed (Suprapubic),GTEX-1GF9V,male,60-69,Fast death - natural causes,,"6 pieces, Squamous epithelium is ~40-50 microns; no dermal fat",50-59,65.0,55.0,-10.0
+GTEX-1GF9V-1026,Lung,GTEX-1GF9V,male,60-69,Fast death - natural causes,congestion,"2 pieces, moderate congestion",60-69,65.0,65.0,0.0
+GTEX-1GF9V-2626,Colon - Transverse,GTEX-1GF9V,male,60-69,Fast death - natural causes,,"6 pieces, target mucosa up to ~0.25mm, totally autolyzed",60-69,65.0,65.0,0.0
+GTEX-1GF9V-2726,Colon - Sigmoid,GTEX-1GF9V,male,60-69,Fast death - natural causes,,"6 pieces, confirmed target muscularis",60-69,65.0,65.0,0.0
+GTEX-1GF9V-2926,Brain - Cortex,GTEX-1GF9V,male,60-69,Fast death - natural causes,no_abnormalities,"2 pieces, no abnormalities",60-69,65.0,65.0,0.0
+GTEX-1GF9W-0326,Skin - Sun Exposed (Lower leg),GTEX-1GF9W,male,60-69,Intermediate death,,6 pieces; up to 5-10% dermal fat; epidermis 30 to 40 microns thick,60-69,65.0,65.0,0.0
+GTEX-1GF9W-0726,Lung,GTEX-1GF9W,male,60-69,Intermediate death,"macrophages, pigment",2 pieces; many pigmented macrophages,60-69,65.0,65.0,0.0
+GTEX-1GF9W-1426,Skin - Not Sun Exposed (Suprapubic),GTEX-1GF9W,male,60-69,Intermediate death,,6 pieces; hair-bearing skin with up to seven follicles and 10-15% dermal fat,50-59,65.0,55.0,-10.0
+GTEX-1GF9W-2426,Colon - Transverse,GTEX-1GF9W,male,60-69,Intermediate death,,6 pieces; predominantly muscularis and submucosa with small fragment of autolyzed mucosa (arrow),60-69,65.0,65.0,0.0
+GTEX-1GF9W-2526,Colon - Sigmoid,GTEX-1GF9W,male,60-69,Intermediate death,,6 pieces; full thickness colon (target is muscularis only),50-59,65.0,55.0,-10.0
+GTEX-1GF9W-2626,Brain - Cortex,GTEX-1GF9W,male,60-69,Intermediate death,,2 pieces; one piece fragmented,60-69,65.0,65.0,0.0
+GTEX-1GMR2-0126,Lung,GTEX-1GMR2,male,50-59,Ventilator case,emphysema,"2 pieces; foci of mild emphysema, no fibrosis",50-59,55.0,55.0,0.0
+GTEX-1GMR2-0826,Skin - Not Sun Exposed (Suprapubic),GTEX-1GMR2,male,50-59,Ventilator case,,6 pieces; well trimmed; minimal dermal fat; 2 mm deep apocrine gland in 1 piece [labeled],60-69,55.0,65.0,10.0
+GTEX-1GMR2-1726,Colon - Transverse,GTEX-1GMR2,male,50-59,Ventilator case,,"2 pieces; muscularis and submucosa, no mucosa [could be used to compare to sigmoid colon]",60-69,55.0,65.0,10.0
+GTEX-1GMR2-1826,Colon - Sigmoid,GTEX-1GMR2,male,50-59,Ventilator case,,6 pieces; well trimmed muscularis propria,50-59,55.0,55.0,0.0
+GTEX-1GMR2-2226,Skin - Sun Exposed (Lower leg),GTEX-1GMR2,male,50-59,Ventilator case,,6 pieces; well trimmed skin;minimal dermal fat,60-69,55.0,65.0,10.0
+GTEX-1GMR3-0126,Skin - Not Sun Exposed (Suprapubic),GTEX-1GMR3,male,40-49,Ventilator case,,"6 pieces, no significant dermal fat; squamous epithelium is 40-50 microns",60-69,45.0,65.0,20.0
+GTEX-1GMR3-0226,Lung,GTEX-1GMR3,male,40-49,Ventilator case,congestion,"2 pieces, mild congestion",50-59,45.0,55.0,10.0
+GTEX-1GMR3-1926,Skin - Sun Exposed (Lower leg),GTEX-1GMR3,male,40-49,Ventilator case,,6 pieces trace dermal fat (delineated); squamous epithelium is ~40-50 microns,40-49,45.0,45.0,0.0
+GTEX-1GMR3-2526,Colon - Sigmoid,GTEX-1GMR3,male,40-49,Ventilator case,,"6 pieces, confirmed target muscularis;  focal trace mucosa, delineated",50-59,45.0,55.0,10.0
+GTEX-1GMR3-2826,Colon - Transverse,GTEX-1GMR3,male,40-49,Ventilator case,,"6 pieces, target mucosa is ~0.5mm, ~20% thickness; deeper (basal) mucosa better preserved (score 1)",50-59,45.0,55.0,10.0
+GTEX-1GN1U-0126,Skin - Sun Exposed (Lower leg),GTEX-1GN1U,female,50-59,Slow death,,"6 pieces, trace dermal fat; squamous epithelium is ~40-50 microns",60-69,55.0,65.0,10.0
+GTEX-1GN1U-0626,Skin - Not Sun Exposed (Suprapubic),GTEX-1GN1U,female,50-59,Slow death,,"6 pieces,  trace dermal fat; squamous epithelium is~25-35 microns",50-59,55.0,55.0,0.0
+GTEX-1GN1U-1026,Lung,GTEX-1GN1U,female,50-59,Slow death,congestion,"2 pieces, moderate chronic congestion",50-59,55.0,55.0,0.0
+GTEX-1GN1U-2726,Colon - Transverse,GTEX-1GN1U,female,50-59,Slow death,,"6 pieces, mucosa ~50% sloughed",60-69,55.0,65.0,10.0
+GTEX-1GN1U-2926,Colon - Sigmoid,GTEX-1GN1U,female,50-59,Slow death,,"6 pieces, confirmed target tissue",50-59,55.0,55.0,0.0
+GTEX-1GN1U-3126,Brain - Cortex,GTEX-1GN1U,female,50-59,Slow death,no_abnormalities,"4 pieces, no abnormalities",60-69,55.0,65.0,10.0
+GTEX-1H11D-0226,Skin - Sun Exposed (Lower leg),GTEX-1H11D,male,40-49,Ventilator case,,"6 pieces; relatively well trimmed, includes ~5% internal/external fat, epidermis measures 37 microns",50-59,45.0,55.0,10.0
+GTEX-1H11D-0726,Lung,GTEX-1H11D,male,40-49,Ventilator case,macrophages,"2 pieces; patchy collapse, thickening of alveolar walls, numerous macrophages",50-59,45.0,55.0,10.0
+GTEX-1H11D-1826,Skin - Not Sun Exposed (Suprapubic),GTEX-1H11D,male,40-49,Ventilator case,,"6 pieces; well trimmed, minimal internal fat",50-59,45.0,55.0,10.0
+GTEX-1H11D-2326,Colon - Sigmoid,GTEX-1H11D,male,40-49,Ventilator case,,"6 pieces; predominantly target muscularis, few strips of residual mucosa",50-59,45.0,55.0,10.0
+GTEX-1H11D-2626,Colon - Transverse,GTEX-1H11D,male,40-49,Ventilator case,,6 pieces; full thickness sections,50-59,45.0,55.0,10.0
+GTEX-1H1CY-0126,Skin - Not Sun Exposed (Suprapubic),GTEX-1H1CY,female,60-69,Fast death - natural causes,,6 pieces; well trimmed; 10% dermall fat,50-59,65.0,55.0,-10.0
+GTEX-1H1CY-0626,Lung,GTEX-1H1CY,female,60-69,Fast death - natural causes,"edema, hemorrhage",2 pieces; extensive alveolar edema & hemorrhage;,60-69,65.0,65.0,0.0
+GTEX-1H1CY-1726,Colon - Transverse,GTEX-1H1CY,female,60-69,Fast death - natural causes,,6 pieces; mucosa autolyzed or absent; muscle intact,60-69,65.0,65.0,0.0
+GTEX-1H1CY-2826,Skin - Sun Exposed (Lower leg),GTEX-1H1CY,female,60-69,Fast death - natural causes,,6 pieces: 1 with excess subcutaneous fat; others well trimmed,50-59,65.0,55.0,-10.0
+GTEX-1H1CY-2926,Brain - Cortex,GTEX-1H1CY,female,60-69,Fast death - natural causes,,2 pieces; excessive white matter compared to gray,60-69,65.0,65.0,0.0
+GTEX-1H1DF-0126,Skin - Sun Exposed (Lower leg),GTEX-1H1DF,female,40-49,Fast death - natural causes,,6  pieces; well trimmed; 5% dermal fat,50-59,45.0,55.0,10.0
+GTEX-1H1DF-1126,Skin - Not Sun Exposed (Suprapubic),GTEX-1H1DF,female,40-49,Fast death - natural causes,,6 pieces; well trimmed; 20% dermal fat,50-59,45.0,55.0,10.0
+GTEX-1H1DF-1226,Lung,GTEX-1H1DF,female,40-49,Fast death - natural causes,"congestion, edema",2 pieces; moderate congestion and severe pulmonary edema,60-69,45.0,65.0,20.0
+GTEX-1H1DF-2526,Colon - Transverse,GTEX-1H1DF,female,40-49,Fast death - natural causes,,6 pieces; mucosa severely autolyzed; muscle moderately,60-69,45.0,65.0,20.0
+GTEX-1H1DF-2826,Colon - Sigmoid,GTEX-1H1DF,female,40-49,Fast death - natural causes,,6 pieces; well dissected muscle,50-59,45.0,55.0,10.0
+GTEX-1H1DF-3026,Brain - Cortex,GTEX-1H1DF,female,40-49,Fast death - natural causes,,4 pieces,50-59,45.0,55.0,10.0
+GTEX-1H2FU-0126,Skin - Sun Exposed (Lower leg),GTEX-1H2FU,female,60-69,Slow death,,"6 pieces; include up to 10% mostly periadnexal fat, epidermis measures 36 microns",60-69,65.0,65.0,0.0
+GTEX-1H2FU-0926,Skin - Not Sun Exposed (Suprapubic),GTEX-1H2FU,female,60-69,Slow death,,6 pieces; includes up to ~10% mostly attached fat,60-69,65.0,65.0,0.0
+GTEX-1H2FU-1226,Lung,GTEX-1H2FU,female,60-69,Slow death,"congestion, hemorrhage",2 pieces; congestion and some intra-alveolar hemorrhage,60-69,65.0,65.0,0.0
+GTEX-1H2FU-2726,Colon - Transverse,GTEX-1H2FU,female,60-69,Slow death,,"6 pieces; full thickness sections, mucosa is moderately autolyzed",60-69,65.0,65.0,0.0
+GTEX-1H2FU-2826,Colon - Sigmoid,GTEX-1H2FU,female,60-69,Slow death,,6 pieces; target muscularis with focal residual autolyzed mucosa,60-69,65.0,65.0,0.0
+GTEX-1H2FU-3126,Brain - Cortex,GTEX-1H2FU,female,60-69,Slow death,,4 pieces,60-69,65.0,65.0,0.0
+GTEX-1HC8U-0426,Lung,GTEX-1HC8U,female,40-49,Ventilator case,"fibrosis, pneumonia",2 pieces; extensive interstitial fibrosis; several foci of bronchopneumonia; <30% is relatively undamaged lung,60-69,45.0,65.0,20.0
+GTEX-1HC8U-1326,Skin - Not Sun Exposed (Suprapubic),GTEX-1HC8U,female,40-49,Ventilator case,,6 pieces; 10% dermal fat,60-69,45.0,65.0,20.0
+GTEX-1HC8U-1926,Colon - Sigmoid,GTEX-1HC8U,female,40-49,Ventilator case,,6 pieces; 3 have mucosa as well as muscularis; LCM,50-59,45.0,55.0,10.0
+GTEX-1HC8U-2026,Colon - Transverse,GTEX-1HC8U,female,40-49,Ventilator case,,"6 pieces; all have muscle, but no mucosa",40-49,45.0,45.0,0.0
+GTEX-1HC8U-2226,Skin - Sun Exposed (Lower leg),GTEX-1HC8U,female,40-49,Ventilator case,,6 pieces; well trimmed; 5% dermal fat,50-59,45.0,55.0,10.0
+GTEX-1HR98-0126,Skin - Sun Exposed (Lower leg),GTEX-1HR98,male,60-69,Slow death,,6 pieces; well trimmed;dermal fat <5%,50-59,65.0,55.0,-10.0
+GTEX-1HR98-1826,Lung,GTEX-1HR98,male,60-69,Slow death,"edema, fibrosis",2 pieces; patchy moderate interstitial fibrosis; moderate alveolar edema,60-69,65.0,65.0,0.0
+GTEX-1HR98-2226,Skin - Not Sun Exposed (Suprapubic),GTEX-1HR98,male,60-69,Slow death,,6 pieces; well trimmed;dermal fat <5%,60-69,65.0,65.0,0.0
+GTEX-1HR98-2526,Colon - Transverse,GTEX-1HR98,male,60-69,Slow death,,6 pieces; no mucosa; could be used to compare with sigmoid colon,20-29,65.0,25.0,-40.0
+GTEX-1HR98-2826,Colon - Sigmoid,GTEX-1HR98,male,60-69,Slow death,,6 pieces; 1 piece has 50% pericolonic fat,60-69,65.0,65.0,0.0
+GTEX-1HR98-3026,Brain - Cortex,GTEX-1HR98,male,60-69,Slow death,,4 pieces,60-69,65.0,65.0,0.0
+GTEX-1HSMO-0126,Skin - Sun Exposed (Lower leg),GTEX-1HSMO,male,60-69,Intermediate death,,6 pieces; well trimmed; 10% dermal fat,60-69,65.0,65.0,0.0
+GTEX-1HSMO-0626,Skin - Not Sun Exposed (Suprapubic),GTEX-1HSMO,male,60-69,Intermediate death,,6 pieces; well trimmed; <5% dermal fat,60-69,65.0,65.0,0.0
+GTEX-1HSMO-0926,Lung,GTEX-1HSMO,male,60-69,Intermediate death,fibrosis,2 pieces; severe interstitial fibrosis (correlates with clinical diagnosis); may be of limited use,60-69,65.0,65.0,0.0
+GTEX-1HSMO-2526,Colon - Sigmoid,GTEX-1HSMO,male,60-69,Intermediate death,,6 pieces; well dissected,60-69,65.0,65.0,0.0
+GTEX-1HSMO-2726,Colon - Transverse,GTEX-1HSMO,male,60-69,Intermediate death,,"6  pieces; mucosa severely autolyzed, muscle intact",60-69,65.0,65.0,0.0
+GTEX-1HSMO-3026,Brain - Cortex,GTEX-1HSMO,male,60-69,Intermediate death,,4 pieces,60-69,65.0,65.0,0.0
+GTEX-1HT8W-0126,Skin - Sun Exposed (Lower leg),GTEX-1HT8W,male,30-39,Fast death - natural causes,,"6 pieces, trace dermal fat; squamous epithelium is ~50-60 microns",40-49,35.0,45.0,10.0
+GTEX-1HT8W-0626,Skin - Not Sun Exposed (Suprapubic),GTEX-1HT8W,male,30-39,Fast death - natural causes,,"6 pieces, minimal dermal fat; squamous epithelium is ~50 microns",50-59,35.0,55.0,20.0
+GTEX-1HT8W-1426,Lung,GTEX-1HT8W,male,30-39,Fast death - natural causes,congestion,"2 pieces, moderate congestion",50-59,35.0,55.0,20.0
+GTEX-1HT8W-2426,Colon - Transverse,GTEX-1HT8W,male,30-39,Fast death - natural causes,,"6 pieces, mucosa with advance autolysis, partially sloughed",50-59,35.0,55.0,20.0
+GTEX-1HT8W-2726,Colon - Sigmoid,GTEX-1HT8W,male,30-39,Fast death - natural causes,,"6 pieces, confirmed target muscularis",50-59,35.0,55.0,20.0
+GTEX-1HT8W-3026,Brain - Cortex,GTEX-1HT8W,male,30-39,Fast death - natural causes,no_abnormalities,"4 pieces, no abnormalities",50-59,35.0,55.0,20.0
+GTEX-1I1GP-0526,Lung,GTEX-1I1GP,male,50-59,Fast death - natural causes,"fibrosis, pneumonia","2 pieces, advanced fibrosing chronic pneumonitis, involves ~30% of tissue (delineated)",60-69,55.0,65.0,10.0
+GTEX-1I1GP-1326,Skin - Not Sun Exposed (Suprapubic),GTEX-1I1GP,male,50-59,Fast death - natural causes,,"6 pieces, moderately abundant dermal fat up to ~2mm, rep delineated.  Squamous epithelium is ~30-40 microns",50-59,55.0,55.0,0.0
+GTEX-1I1GP-2226,Skin - Sun Exposed (Lower leg),GTEX-1I1GP,male,50-59,Fast death - natural causes,,"6 pieces, focal adherent fat, nubbins up to ~1mm, rep delineated.  Squamous epithelium is ~35-40 microns",60-69,55.0,65.0,10.0
+GTEX-1I1GP-2726,Colon - Transverse,GTEX-1I1GP,male,50-59,Fast death - natural causes,,"6 pieces target mucosa up to ~0.35mm, variably moderately autolyzed, ~30% thickness",60-69,55.0,65.0,10.0
+GTEX-1I1GP-2826,Colon - Sigmoid,GTEX-1I1GP,male,50-59,Fast death - natural causes,,"6 pieces, confirmed target muscularis",60-69,55.0,65.0,10.0
+GTEX-1I1GP-3026,Brain - Cortex,GTEX-1I1GP,male,50-59,Fast death - natural causes,no_abnormalities,"4 pieces, no abnormalities",60-69,55.0,65.0,10.0
+GTEX-1I1GU-0526,Lung,GTEX-1I1GU,male,40-49,Ventilator case,fibrosis,2 pieces; 2.5mm fibrous focus [labeled],60-69,45.0,65.0,20.0
+GTEX-1I1GU-0926,Skin - Not Sun Exposed (Suprapubic),GTEX-1I1GU,male,40-49,Ventilator case,,6 pieces; well trimmed; 2% dermal fat,50-59,45.0,55.0,10.0
+GTEX-1I1GU-1726,Colon - Transverse,GTEX-1I1GU,male,40-49,Ventilator case,,"6 pieces; all with muscularis propria, 2 with minute [1mm] pieces of mucosa",50-59,45.0,55.0,10.0
+GTEX-1I1GU-1826,Colon - Sigmoid,GTEX-1I1GU,male,40-49,Ventilator case,,6 pieces; all full thickness (with mucosa) rather than muscularis only,50-59,45.0,55.0,10.0
+GTEX-1I1GU-2226,Skin - Sun Exposed (Lower leg),GTEX-1I1GU,male,40-49,Ventilator case,,6 pieces; well trimmed; 10% dermal fat,50-59,45.0,55.0,10.0
+GTEX-1I1HK-0126,Skin - Sun Exposed (Lower leg),GTEX-1I1HK,male,60-69,Intermediate death,solar_elastosis,"6 pieces; includes from 5-15% internal fat, epidermis measures 33 microns, solar elastosis",60-69,65.0,65.0,0.0
+GTEX-1I1HK-1226,Lung,GTEX-1I1HK,male,60-69,Intermediate death,"congestion, macrophages","2 pieces; includes pleura (target is 1cm below pleura), congestion, many macrophages",60-69,65.0,65.0,0.0
+GTEX-1I1HK-1726,Colon - Transverse,GTEX-1I1HK,male,60-69,Intermediate death,,"6 pieces; mucosa is entirely autolyzed, muscularis better preserved",60-69,65.0,65.0,0.0
+GTEX-1I1HK-1926,Colon - Sigmoid,GTEX-1I1HK,male,60-69,Intermediate death,,6 pieces; three are full thickness (mucosa not target),60-69,65.0,65.0,0.0
+GTEX-1I1HK-2326,Skin - Not Sun Exposed (Suprapubic),GTEX-1I1HK,male,60-69,Intermediate death,,"6 pieces; include up to 50% attached fat, incomplete sections (?poor fixation)",50-59,65.0,55.0,-10.0
+GTEX-1I1HK-2826,Brain - Cortex,GTEX-1I1HK,male,60-69,Intermediate death,,2 pieces; more white matter than usual,60-69,65.0,65.0,0.0
+GTEX-1IDJD-0826,Lung,GTEX-1IDJD,male,30-39,Ventilator case,congestion,2 pieces; congestion and collapsed alveolar spaces containing exfoliated alveolar epithelial cells; larger vessels included (arrows),40-49,35.0,45.0,10.0
+GTEX-1IDJD-1126,Skin - Sun Exposed (Lower leg),GTEX-1IDJD,male,30-39,Ventilator case,,6 pieces;~47 micron thick epidermis; ~10% periadnexal fat (arrows),50-59,35.0,55.0,20.0
+GTEX-1IDJD-2226,Colon - Transverse,GTEX-1IDJD,male,30-39,Ventilator case,,6 pieces; advanced autolysis of mucosa and preserved muscularis,40-49,35.0,45.0,10.0
+GTEX-1IDJD-2326,Skin - Not Sun Exposed (Suprapubic),GTEX-1IDJD,male,30-39,Ventilator case,,6 pieces; hair bearing skin with ~ 15% of external/internal fat,40-49,35.0,45.0,10.0
+GTEX-1IDJD-2626,Colon - Sigmoid,GTEX-1IDJD,male,30-39,Ventilator case,,6 pieces; mild to moderate mucosal autolysis; target muscularis preserved,50-59,35.0,55.0,20.0
+GTEX-1IDJD-5004,Lung,GTEX-1IDJD,male,30-39,Ventilator case,,1 piece,30-39,35.0,35.0,0.0
+GTEX-1IDJD-5007,Skin - Sun Exposed (Lower leg),GTEX-1IDJD,male,30-39,Ventilator case,,1 piece,50-59,35.0,55.0,20.0
+GTEX-1IKOH-0226,Skin - Sun Exposed (Lower leg),GTEX-1IKOH,female,60-69,Fast death - natural causes,,"6 pieces, minimal dermal fat; squamous epithelium is %0-60 microns",60-69,65.0,65.0,0.0
+GTEX-1IKOH-0726,Lung,GTEX-1IKOH,female,60-69,Fast death - natural causes,congestion,"2 pieces, moderate congestion",60-69,65.0,65.0,0.0
+GTEX-1IKOH-2226,Skin - Not Sun Exposed (Suprapubic),GTEX-1IKOH,female,60-69,Fast death - natural causes,,"6 pieces, no dermal fat; squamous epithelium is ~50 microns",50-59,65.0,55.0,-10.0
+GTEX-1IKOH-2526,Colon - Sigmoid,GTEX-1IKOH,female,60-69,Fast death - natural causes,,"6 pieces, confirmed target muscularis; few adherent rims of serosa up to ~0.6mm",60-69,65.0,65.0,0.0
+GTEX-1IKOH-2626,Colon - Transverse,GTEX-1IKOH,female,60-69,Fast death - natural causes,,"6 piece, glandular mucosa completely autolyzed; lamina prpria remnants are ~0.25mm",60-69,65.0,65.0,0.0
+GTEX-1IKOH-2726,Brain - Cortex,GTEX-1IKOH,female,60-69,Fast death - natural causes,no_abnormalities,"4 pieces cerebral cortex, no abnormalities; switch with -2825",50-59,65.0,55.0,-10.0
+GTEX-1IY9M-0126,Skin - Sun Exposed (Lower leg),GTEX-1IY9M,male,60-69,Fast death - violent,,"6 pieces; ~10% internal/external fat, epidermis measures ~34 microns",50-59,65.0,55.0,-10.0
+GTEX-1IY9M-1126,Lung,GTEX-1IY9M,male,60-69,Fast death - violent,"congestion, hemorrhage",2 pieces; severe congestion and pulmonary hemorrhage,60-69,65.0,65.0,0.0
+GTEX-1IY9M-2126,Colon - Transverse,GTEX-1IY9M,male,60-69,Fast death - violent,,6 pieces; severly autolyzed mucosa and preserved muscularis,60-69,65.0,65.0,0.0
+GTEX-1IY9M-2626,Colon - Sigmoid,GTEX-1IY9M,male,60-69,Fast death - violent,,6 pieces; totally autolyzed mucosal remnants (arrows) and preserved target muscularis,50-59,65.0,55.0,-10.0
+GTEX-1IY9M-2826,Skin - Not Sun Exposed (Suprapubic),GTEX-1IY9M,male,60-69,Fast death - violent,,6 pieces; hair-bearing skin with small amounts of periadnexal fat,60-69,65.0,65.0,0.0
+GTEX-1IY9M-3026,Brain - Cortex,GTEX-1IY9M,male,60-69,Fast death - violent,,4 pieces; excessive white matter,60-69,65.0,65.0,0.0
+GTEX-1J8EW-0126,Skin - Sun Exposed (Lower leg),GTEX-1J8EW,female,60-69,Fast death - natural causes,,"6 pieces; well trimmed; 1 piece with a large, 2mmx0.25mm, artery on the deep aspect [arrowed]",60-69,65.0,65.0,0.0
+GTEX-1J8EW-1026,Lung,GTEX-1J8EW,female,60-69,Fast death - natural causes,"congestion, emphysema, hemorrhage, pneumonia","2 pieces; moderate vascular congestion, patchy alveolar hemorrhage and emphysema, foci of early bronchopneumonia",50-59,65.0,55.0,-10.0
+GTEX-1J8EW-2326,Colon - Transverse,GTEX-1J8EW,female,60-69,Fast death - natural causes,,6 pieces; mucosa severely autolyzed; muscularis intact,60-69,65.0,65.0,0.0
+GTEX-1J8EW-2426,Colon - Sigmoid,GTEX-1J8EW,female,60-69,Fast death - natural causes,,"6 pieces; muscularis well sampled; 1, 1.5mm focus of mucosa [labeled]; fat content up to 30%",50-59,65.0,55.0,-10.0
+GTEX-1J8EW-2726,Skin - Not Sun Exposed (Suprapubic),GTEX-1J8EW,female,60-69,Fast death - natural causes,,6 pieces; well trimmed; up to 10% dermal fat,50-59,65.0,55.0,-10.0
+GTEX-1J8EW-3026,Brain - Cortex,GTEX-1J8EW,female,60-69,Fast death - natural causes,,2 pieces; white matter predominant in 1 [labeled],60-69,65.0,65.0,0.0
+GTEX-1JJ6O-0126,Skin - Sun Exposed (Lower leg),GTEX-1JJ6O,male,60-69,Slow death,,5 pieces; well trimmed epidermis measures 35 microns,60-69,65.0,65.0,0.0
+GTEX-1JJ6O-1026,Lung,GTEX-1JJ6O,male,60-69,Slow death,"fibrosis, inflammation","2 pieces; interstitial fibrosis, chronic inflammation, bronchiectasis",60-69,65.0,65.0,0.0
+GTEX-1JJ6O-2026,Colon - Sigmoid,GTEX-1JJ6O,male,60-69,Slow death,,6 pieces; muscularis,60-69,65.0,65.0,0.0
+GTEX-1JJ6O-2426,Colon - Transverse,GTEX-1JJ6O,male,60-69,Slow death,,"6 pieces; full thickness sections, mucosa largely autolyzed",60-69,65.0,65.0,0.0
+GTEX-1JJ6O-2726,Skin - Not Sun Exposed (Suprapubic),GTEX-1JJ6O,male,60-69,Slow death,,6 pieces; well trimmed,60-69,65.0,65.0,0.0
+GTEX-1JJ6O-3126,Brain - Cortex,GTEX-1JJ6O,male,60-69,Slow death,,3 pieces; some residual attached meninges,60-69,65.0,65.0,0.0
+GTEX-1JJE9-0326,Skin - Sun Exposed (Lower leg),GTEX-1JJE9,male,70-79,Intermediate death,,6 pieces; well trimmed; dermal fat up to 10%,60-69,75.0,65.0,-10.0
+GTEX-1JJE9-0926,Lung,GTEX-1JJE9,male,70-79,Intermediate death,"congestion, edema, hemorrhage, macrophages, pneumonia","2 pieces; severe congestion; large numbers of alveolar macrophages; patchy edema, hemorrhage and pneumonitis",60-69,75.0,65.0,-10.0
+GTEX-1JJE9-2426,Colon - Transverse,GTEX-1JJE9,male,70-79,Intermediate death,,6 pieces; autolyzed mucosa; intact muscularis,50-59,75.0,55.0,-20.0
+GTEX-1JJE9-2526,Colon - Sigmoid,GTEX-1JJE9,male,70-79,Intermediate death,,6 pieces; well dissected muscularis except for focal submucosal stroma,60-69,75.0,65.0,-10.0
+GTEX-1JJE9-2626,Skin - Not Sun Exposed (Suprapubic),GTEX-1JJE9,male,70-79,Intermediate death,,6 pieces; well dissected skin; <1% dermal fat,60-69,75.0,65.0,-10.0
+GTEX-1JJE9-2926,Brain - Cortex,GTEX-1JJE9,male,70-79,Intermediate death,,4 pieces,60-69,75.0,65.0,-10.0
+GTEX-1JKYN-0826,Skin - Not Sun Exposed (Suprapubic),GTEX-1JKYN,male,30-39,Ventilator case,,"6 pieces; well trimmed, up to 10% internal fat, hair-bearing skin",30-39,35.0,35.0,0.0
+GTEX-1JKYN-1326,Skin - Sun Exposed (Lower leg),GTEX-1JKYN,male,30-39,Ventilator case,,"6 pieces; mostly well trimmed with minimal internal/external fat, 1 with ~10% attached fat, epidermis measures 41 microns",40-49,35.0,45.0,10.0
+GTEX-1JKYN-2126,Lung,GTEX-1JKYN,male,30-39,Ventilator case,,"2 pieces; include pleura (target is 1 cm below pleura), some widening of airspaces, small bone marrow embolism",50-59,35.0,55.0,20.0
+GTEX-1JKYN-2226,Colon - Sigmoid,GTEX-1JKYN,male,30-39,Ventilator case,,6 pieces; target muscularis with small portion of residual submucosa/mucosa in 1 piece,40-49,35.0,45.0,10.0
+GTEX-1JKYN-2326,Colon - Transverse,GTEX-1JKYN,male,30-39,Ventilator case,,"6 pieces; variable representation of mucosa/submucosa/muscularis, small amount of adherent mucus",50-59,35.0,55.0,20.0
+GTEX-1JMLX-0226,Skin - Sun Exposed (Lower leg),GTEX-1JMLX,male,50-59,Fast death - natural causes,,6 pieces; <2% dermal fat; well trimmed,50-59,55.0,55.0,0.0
+GTEX-1JMLX-0626,Skin - Not Sun Exposed (Suprapubic),GTEX-1JMLX,male,50-59,Fast death - natural causes,,6 pieces; well trimmed; <1% dermal fat,50-59,55.0,55.0,0.0
+GTEX-1JMLX-0926,Lung,GTEX-1JMLX,male,50-59,Fast death - natural causes,"macrophages, pigment",2 pieces; numerous pigmented alveolar macrophages,50-59,55.0,55.0,0.0
+GTEX-1JMLX-2526,Colon - Sigmoid,GTEX-1JMLX,male,50-59,Fast death - natural causes,,6 pieces; well dissected muscularis,60-69,55.0,65.0,10.0
+GTEX-1JMLX-2726,Colon - Transverse,GTEX-1JMLX,male,50-59,Fast death - natural causes,,6 pieces; mucosa severely autolyzed; muscle intact,60-69,55.0,65.0,10.0
+GTEX-1JMLX-2926,Brain - Cortex,GTEX-1JMLX,male,50-59,Fast death - natural causes,,4 pieces; well sampled cortex,60-69,55.0,65.0,10.0
+GTEX-1JMPY-0226,Skin - Not Sun Exposed (Suprapubic),GTEX-1JMPY,male,30-39,Ventilator case,,6 pieces; well trimmed hair-bearing skin,20-29,35.0,25.0,-10.0
+GTEX-1JMPY-0426,Colon - Transverse,GTEX-1JMPY,male,30-39,Ventilator case,,6 pieces; full thickness sections,20-29,35.0,25.0,-10.0
+GTEX-1JMPY-1026,Colon - Sigmoid,GTEX-1JMPY,male,30-39,Ventilator case,,"6 pieces; predominantly target muscularis, but residual submucosa and strip of mucosa",20-29,35.0,25.0,-10.0
+GTEX-1JMPY-1326,Skin - Sun Exposed (Lower leg),GTEX-1JMPY,male,30-39,Ventilator case,,"6 pieces; well trimmed, epidermis measured 38 microns",30-39,35.0,35.0,0.0
+GTEX-1JMPZ-0226,Skin - Sun Exposed (Lower leg),GTEX-1JMPZ,male,30-39,Slow death,,6 pieces; subcutaneous fat & blood vessels occupy 40% of 2 of 6 pieces; minimal dermal fat,50-59,35.0,55.0,20.0
+GTEX-1JMPZ-0726,Skin - Not Sun Exposed (Suprapubic),GTEX-1JMPZ,male,30-39,Slow death,,6 pieces; well trimmed; minimal dermal fat,50-59,35.0,55.0,20.0
+GTEX-1JMPZ-1126,Lung,GTEX-1JMPZ,male,30-39,Slow death,"congestion, fibrosis, hemorrhage",2 pieces; severe pulmonary vascular congestion & alveolar hemorrhage; moderate to severe fibrosis,50-59,35.0,55.0,20.0
+GTEX-1JMPZ-2426,Colon - Transverse,GTEX-1JMPZ,male,30-39,Slow death,atrophy,"6 pieces; mucosa autolyzed, muscle intact; pericolonic fat is atrophic as in omentum",60-69,35.0,65.0,30.0
+GTEX-1JMPZ-2626,Colon - Sigmoid,GTEX-1JMPZ,male,30-39,Slow death,,6 pieces; well dissected muscularis,60-69,35.0,65.0,30.0
+GTEX-1JMPZ-2726,Brain - Cortex,GTEX-1JMPZ,male,30-39,Slow death,,5 pieces,50-59,35.0,55.0,20.0
+GTEX-1JMQJ-0526,Skin - Sun Exposed (Lower leg),GTEX-1JMQJ,male,50-59,Fast death - natural causes,,"6 pieces; well trimmed, epidermis measures 36 microns",50-59,55.0,55.0,0.0
+GTEX-1JMQJ-0826,Skin - Not Sun Exposed (Suprapubic),GTEX-1JMQJ,male,50-59,Fast death - natural causes,,"6 pieces; well trimmed, only focal attached fat",60-69,55.0,65.0,10.0
+GTEX-1JMQJ-2126,Lung,GTEX-1JMQJ,male,50-59,Fast death - natural causes,"congestion, edema",2 pieces; some congestion/edema,60-69,55.0,65.0,10.0
+GTEX-1JMQJ-2626,Colon - Sigmoid,GTEX-1JMQJ,male,50-59,Fast death - natural causes,,"6 pieces; target muscularis, few strips of residual autolyzed mucosa (not target)",60-69,55.0,65.0,10.0
+GTEX-1JMQJ-2826,Colon - Transverse,GTEX-1JMQJ,male,50-59,Fast death - natural causes,,"6 pieces; full thickness sections, mucosa autolyzed, residual attached fat (10-30%)",50-59,55.0,55.0,0.0
+GTEX-1JMQJ-3026,Brain - Cortex,GTEX-1JMQJ,male,50-59,Fast death - natural causes,,4 pieces; some residual meninges,60-69,55.0,65.0,10.0
+GTEX-1JMQL-0226,Skin - Sun Exposed (Lower leg),GTEX-1JMQL,female,50-59,Ventilator case,,"2 pieces, minimal dermal fat; squamous epithelium is ~50 microns",60-69,55.0,65.0,10.0
+GTEX-1JMQL-1126,Lung,GTEX-1JMQL,female,50-59,Ventilator case,"congestion, edema","2 pieces, moderate congestion/edema",50-59,55.0,55.0,0.0
+GTEX-1JMQL-2226,Skin - Not Sun Exposed (Suprapubic),GTEX-1JMQL,female,50-59,Ventilator case,,"6 pieces, minimal dermal fat; squamous epithelium is ~50-60 microns",50-59,55.0,55.0,0.0
+GTEX-1JMQL-2426,Colon - Transverse,GTEX-1JMQL,female,50-59,Ventilator case,,"6 pieces, target mucosa up to ~0.25mm, advanced autolysis with epithelial mucosa largely sloughed",60-69,55.0,65.0,10.0
+GTEX-1JMQL-2526,Colon - Sigmoid,GTEX-1JMQL,female,50-59,Ventilator case,,"6 pieces, confirmed target muscularis",60-69,55.0,65.0,10.0
+GTEX-1JMQL-2826,Brain - Cortex,GTEX-1JMQL,female,50-59,Ventilator case,no_abnormalities,"4 pieces, no abnormalities",60-69,55.0,65.0,10.0
+GTEX-1K9T9-0126,Skin - Sun Exposed (Lower leg),GTEX-1K9T9,female,50-59,Ventilator case,,"6 pieces, minimal dermal fat; squamous epithelium is ~45 microns",50-59,55.0,55.0,0.0
+GTEX-1K9T9-0926,Lung,GTEX-1K9T9,female,50-59,Ventilator case,emphysema,"2 pieces, emphysematous changes",60-69,55.0,65.0,10.0
+GTEX-1K9T9-1526,Skin - Not Sun Exposed (Suprapubic),GTEX-1K9T9,female,50-59,Ventilator case,,"6 pieces, no significant dermal fat; squamous epithelium is ~40-45 microns",40-49,55.0,45.0,-10.0
+GTEX-1K9T9-2826,Colon - Transverse,GTEX-1K9T9,female,50-59,Ventilator case,,"6 pieces, target mucosa up to ~0.3mm, advanced autolysis, partially sloughed",60-69,55.0,65.0,10.0
+GTEX-1K9T9-2926,Colon - Sigmoid,GTEX-1K9T9,female,50-59,Ventilator case,,"6 pieces, confirmed target muscularis",60-69,55.0,65.0,10.0
+GTEX-1KANB-0526,Skin - Sun Exposed (Lower leg),GTEX-1KANB,male,50-59,Fast death - natural causes,,"6 pieces, no dermal fat; squamous epithelium is ~40-45 microns",60-69,55.0,65.0,10.0
+GTEX-1KANB-1026,Lung,GTEX-1KANB,male,50-59,Fast death - natural causes,congestion,"2 pieces, mild chronic congestion",50-59,55.0,55.0,0.0
+GTEX-1KANB-1526,Colon - Transverse,GTEX-1KANB,male,50-59,Fast death - natural causes,,"6 pieces, target muscosa up to ~0.6mm, ~5-10% of thickness, glandular elements totally autolyzed",60-69,55.0,65.0,10.0
+GTEX-1KANB-2326,Colon - Sigmoid,GTEX-1KANB,male,50-59,Fast death - natural causes,,"6 pieces, confirmed target muscularis",60-69,55.0,65.0,10.0
+GTEX-1KANB-2826,Skin - Not Sun Exposed (Suprapubic),GTEX-1KANB,male,50-59,Fast death - natural causes,,"6 pieces, minimal dermal fat; prominent adnexal glands noted (apocrine and eccrine), encircled. Squamous epithelium is ~40-45 microns",60-69,55.0,65.0,10.0
+GTEX-1KANB-3026,Brain - Cortex,GTEX-1KANB,male,50-59,Fast death - natural causes,,"2 pieces, no abnormalties",50-59,55.0,55.0,0.0
+GTEX-1KXAM-0426,Lung,GTEX-1KXAM,male,60-69,Ventilator case,pneumonia,"2 pieces, patchy foci of acute pneumonia, ensquared",50-59,65.0,55.0,-10.0
+GTEX-1KXAM-1626,Skin - Not Sun Exposed (Suprapubic),GTEX-1KXAM,male,60-69,Ventilator case,,"7 pieces, trace dermal fat, rep delineated; squamous epithelium is ~40 microns",50-59,65.0,55.0,-10.0
+GTEX-1KXAM-1926,Colon - Sigmoid,GTEX-1KXAM,male,60-69,Ventilator case,,"6 pieces, confirmed target muscularis",60-69,65.0,65.0,0.0
+GTEX-1KXAM-2126,Colon - Transverse,GTEX-1KXAM,male,60-69,Ventilator case,,"6 pieces, target mucosa up to ~0.5mm, ~10-15% thickness",50-59,65.0,55.0,-10.0
+GTEX-1KXAM-2226,Skin - Sun Exposed (Lower leg),GTEX-1KXAM,male,60-69,Ventilator case,,"6 pieces, trace dermal fat, rep delineated; squamous epithelium up to ~4-45 microns",60-69,65.0,65.0,0.0
+GTEX-1LNCM-0526,Skin - Not Sun Exposed (Suprapubic),GTEX-1LNCM,female,50-59,Ventilator case,,"6 pieces; well trimmed, includes trivial component of internal fat",50-59,55.0,55.0,0.0
+GTEX-1LNCM-1126,Skin - Sun Exposed (Lower leg),GTEX-1LNCM,female,50-59,Ventilator case,,"6 pieces; includes up to ~50% mostly attached fat and large vessels, epidermis measures about 34 microns, one piece is only fat and vessel",50-59,55.0,55.0,0.0
+GTEX-1MA7W-0626,Colon - Transverse,GTEX-1MA7W,female,20-29,Ventilator case,,"6 pieces, mucosa well preserved, ~0.3mm, ~10-15% thickness",40-49,25.0,45.0,20.0
+GTEX-1MA7W-0826,Colon - Sigmoid,GTEX-1MA7W,female,20-29,Ventilator case,,"6 pieces, ~target muscularis delineated, ~50% of tissue, rest is 'contaminant' serosa/mucosa",30-39,25.0,35.0,10.0
+GTEX-1MA7W-1326,Skin - Not Sun Exposed (Suprapubic),GTEX-1MA7W,female,20-29,Ventilator case,,"6 pieces, squamous epithelium up to ~50 microns; adherent dermal fat nubbins up to ~1mm, rep delineated",40-49,25.0,45.0,20.0
+GTEX-1MA7W-2026,Skin - Sun Exposed (Lower leg),GTEX-1MA7W,female,20-29,Ventilator case,,"6 pieces, trace dermal fat, ~1-2mm nubbins; squamous epithelium is ~50 microns",30-39,25.0,35.0,10.0
+GTEX-1MCC2-0726,Lung,GTEX-1MCC2,female,30-39,Ventilator case,"atelectasis, congestion",2 pieces; collapsed alveoli (atelectasis)and enlarged  alveolar spaces (ruptured alveoli); prominent vasculature; bronchioles filled with slought epithelia; congestion,40-49,35.0,45.0,10.0
+GTEX-1MCC2-1426,Colon - Sigmoid,GTEX-1MCC2,female,30-39,Ventilator case,,6 pieces; target muscularis with trace of adherent serosa,20-29,35.0,25.0,-10.0
+GTEX-1MCC2-1626,Colon - Transverse,GTEX-1MCC2,female,30-39,Ventilator case,,6 pieces; mildly to moderately autolyzed target mucosa and well preserved target muscularis,50-59,35.0,55.0,20.0
+GTEX-1MCC2-1826,Skin - Not Sun Exposed (Suprapubic),GTEX-1MCC2,female,30-39,Ventilator case,,6 pieces; 5% to 20% external and internal/periadnexal fat,50-59,35.0,55.0,20.0
+GTEX-1MCC2-2525,Skin - Sun Exposed (Lower leg),GTEX-1MCC2,female,30-39,Ventilator case,,6 pieces; 5% to 15% internal/ periadnexal fat; ~34 micron thick epidermis,50-59,35.0,55.0,20.0
+GTEX-1MCQQ-0426,Lung,GTEX-1MCQQ,male,60-69,Intermediate death,"congestion, edema",2 pieces; alveolar edema and vascular congestion; no fibrosis,60-69,65.0,65.0,0.0
+GTEX-1MCQQ-0826,Skin - Sun Exposed (Lower leg),GTEX-1MCQQ,male,60-69,Intermediate death,,6 pieces; well trimmed; 5% dermal fat,50-59,65.0,55.0,-10.0
+GTEX-1MCQQ-1226,Colon - Sigmoid,GTEX-1MCQQ,male,60-69,Intermediate death,,4 pieces; large amount of partly autolyzed lymphoid tissue and submucosa in 2 of 4 pieces; muscle intact,60-69,65.0,65.0,0.0
+GTEX-1MCQQ-1326,Colon - Transverse,GTEX-1MCQQ,male,60-69,Intermediate death,,"6 pieces; mucosa severely autolyzed, muscle moderately autolyzed",50-59,65.0,55.0,-10.0
+GTEX-1MCQQ-2026,Skin - Not Sun Exposed (Suprapubic),GTEX-1MCQQ,male,60-69,Intermediate death,,6 pieces; several pieces with hair follicles; 10% dermal fat,60-69,65.0,65.0,0.0
+GTEX-1MCQQ-2526,Brain - Cortex,GTEX-1MCQQ,male,60-69,Intermediate death,,2 pieces; 1 has more neurons than the other,60-69,65.0,65.0,0.0
+GTEX-1MCYP-0526,Skin - Not Sun Exposed (Suprapubic),GTEX-1MCYP,female,20-29,Ventilator case,,"6 pieces; includes up to ~5-10% attached/internal fat, hair bearing sklin",20-29,25.0,25.0,0.0
+GTEX-1MCYP-1526,Colon - Sigmoid,GTEX-1MCYP,female,20-29,Ventilator case,,6 pieces; target muscularis,20-29,25.0,25.0,0.0
+GTEX-1MCYP-1726,Colon - Transverse,GTEX-1MCYP,female,20-29,Ventilator case,,6 pieces; full thickness sections,20-29,25.0,25.0,0.0
+GTEX-1MCYP-1926,Skin - Sun Exposed (Lower leg),GTEX-1MCYP,female,20-29,Ventilator case,,"6 pieces; includes 10-20% attached and internal fat, epidermis measures 42 microns",30-39,25.0,35.0,10.0
+GTEX-1MGNQ-0126,Skin - Sun Exposed (Lower leg),GTEX-1MGNQ,male,40-49,Ventilator case,,"6 pieces, adherent fat nubbins up to ~4mm; squamous epithelium is ~40-50 microns",40-49,45.0,45.0,0.0
+GTEX-1MGNQ-0826,Lung,GTEX-1MGNQ,male,40-49,Ventilator case,"atelectasis, congestion","2 pieces, mild congestion; moderate atelectasis; well-preserved intermediate bronchus, delineated",50-59,45.0,55.0,10.0
+GTEX-1MGNQ-1026,Skin - Not Sun Exposed (Suprapubic),GTEX-1MGNQ,male,40-49,Ventilator case,,"6 pieces, minimal dermal fat; squamous epithelium is ~ 40 microns",30-39,45.0,35.0,-10.0
+GTEX-1MGNQ-2026,Colon - Transverse,GTEX-1MGNQ,male,40-49,Ventilator case,,"6 pieces, surface mucosa moderately autolyzed, up to ~0.3mm",50-59,45.0,55.0,10.0
+GTEX-1MGNQ-2126,Colon - Sigmoid,GTEX-1MGNQ,male,40-49,Ventilator case,,"6 pieces, confirmed target muscularis",50-59,45.0,55.0,10.0
+GTEX-1N2DW-0126,Skin - Not Sun Exposed (Suprapubic),GTEX-1N2DW,male,50-59,Fast death - natural causes,,6 pieces; hair bearing skin with 5% to 30% internal/external fat,60-69,55.0,65.0,10.0
+GTEX-1N2DW-0226,Skin - Sun Exposed (Lower leg),GTEX-1N2DW,male,50-59,Fast death - natural causes,fibrosis,6 pieces; thickened dermis with spindle cell proliferation c/w dialysis related nephrogenic fibrosing dermopathy (arrows); trace of adherent fat;  ~46 microns epidermis,60-69,55.0,65.0,10.0
+GTEX-1N2DW-1126,Lung,GTEX-1N2DW,male,50-59,Fast death - natural causes,congestion,2 pieces; marked congestion; thick walled large vessels (arrows); couple of bronchioles (outlined),60-69,55.0,65.0,10.0
+GTEX-1N2DW-2326,Colon - Transverse,GTEX-1N2DW,male,50-59,Fast death - natural causes,,6 pieces; moderately autolyzed mucosa and preserved muscularis;,60-69,55.0,65.0,10.0
+GTEX-1N2DW-2426,Colon - Sigmoid,GTEX-1N2DW,male,50-59,Fast death - natural causes,,6 pieces; target muscularis and attached rim of serosa,60-69,55.0,65.0,10.0
+GTEX-1N2DW-2826,Brain - Cortex,GTEX-1N2DW,male,50-59,Fast death - natural causes,calcification,4 pieces; focal calcifications (arrow),50-59,55.0,55.0,0.0
+GTEX-1OJC3-0126,Skin - Sun Exposed (Lower leg),GTEX-1OJC3,male,20-29,Ventilator case,,6 pieces; ; epidermis ~41 microns thick; 5% to 20% of periadnexal (internal) fat; a few hair follicles,20-29,25.0,25.0,0.0
+GTEX-1OJC3-0726,Lung,GTEX-1OJC3,male,20-29,Ventilator case,atelectasis,2 pieces; mild to focally moderate autolysis; bronchioles and alveoli filled with hemosiderinophages (rep arrowed); collapsed alveolar spaces (atelectasis),20-29,25.0,25.0,0.0
+GTEX-1OJC3-1226,Skin - Not Sun Exposed (Suprapubic),GTEX-1OJC3,male,20-29,Ventilator case,,6 pieces; hair bearing skin with trace of periadnexal fat,30-39,25.0,35.0,10.0
+GTEX-1OJC3-1726,Colon - Transverse,GTEX-1OJC3,male,20-29,Ventilator case,,6 pieces; focal moderate autolysis,50-59,25.0,55.0,30.0
+GTEX-1OJC3-1826,Colon - Sigmoid,GTEX-1OJC3,male,20-29,Ventilator case,,6 pieces; target muscularis with ~1mm attached serosa,40-49,25.0,45.0,20.0
+GTEX-1OKEX-0326,Lung,GTEX-1OKEX,male,60-69,Ventilator case,"atelectasis, congestion","2 pieces, marked atalectasis/chronic congestion",50-59,65.0,55.0,-10.0
+GTEX-1OKEX-1026,Colon - Sigmoid,GTEX-1OKEX,male,60-69,Ventilator case,,"6 pieces, mainly mucosa/fat, <20% target muscularis",30-39,65.0,35.0,-30.0
+GTEX-1OKEX-1226,Colon - Transverse,GTEX-1OKEX,male,60-69,Ventilator case,,"6 piec, target mucosa partially sloughed but well-fixed, up to ~0.4mm",40-49,65.0,45.0,-20.0
+GTEX-1OKEX-2026,Skin - Not Sun Exposed (Suprapubic),GTEX-1OKEX,male,60-69,Ventilator case,,"6 pieces, squamous epithelium up to ~50 microns; trace dermal fat, rep delineated",50-59,65.0,55.0,-10.0
+GTEX-1OZHM-0126,Skin - Sun Exposed (Lower leg),GTEX-1OZHM,male,40-49,Slow death,,"6 pieces; squamous epithelium is ~40 microns; abundant adherent dermal fat up to ~2mm, rep delineated",50-59,45.0,55.0,10.0
+GTEX-1OZHM-0626,Skin - Not Sun Exposed (Suprapubic),GTEX-1OZHM,male,40-49,Slow death,,6 pieces; no dermal fat; squamous epithelium is ~40 microns,50-59,45.0,55.0,10.0
+GTEX-1OZHM-0826,Lung,GTEX-1OZHM,male,40-49,Slow death,"atelectasis, edema","2 pieces, moderate edema/atalectasis",60-69,45.0,65.0,20.0
+GTEX-1OZHM-2426,Colon - Transverse,GTEX-1OZHM,male,40-49,Slow death,,"6 pieces, target mucosa is ~0.25mm, lamina propria only, glandular elements with advanced autolysis",60-69,45.0,65.0,20.0
+GTEX-1OZHM-2526,Colon - Sigmoid,GTEX-1OZHM,male,40-49,Slow death,,"6 pieces, target muscularis is ~90% of tissue, rest is autolyzed mucosa",60-69,45.0,65.0,20.0
+GTEX-1OZHM-3026,Brain - Cortex,GTEX-1OZHM,male,40-49,Slow death,no_abnormalities,"4 pieces, no abnormalities",50-59,45.0,55.0,10.0
+GTEX-1PPH6-0126,Skin - Not Sun Exposed (Suprapubic),GTEX-1PPH6,female,60-69,Fast death - natural causes,,6 pieces; well trimmed; minimal dermal fat,60-69,65.0,65.0,0.0
+GTEX-1PPH6-0226,Skin - Sun Exposed (Lower leg),GTEX-1PPH6,female,60-69,Fast death - natural causes,,6 pieces; well trimmed; up to 20% dermal fat,60-69,65.0,65.0,0.0
+GTEX-1PPH6-0526,Lung,GTEX-1PPH6,female,60-69,Fast death - natural causes,edema,2 pieces; pulmonary edema; no fibrosis,50-59,65.0,55.0,-10.0
+GTEX-1PPH6-2326,Colon - Sigmoid,GTEX-1PPH6,female,60-69,Fast death - natural causes,,6 pieces; all have mucosa as well as muscularis,50-59,65.0,55.0,-10.0
+GTEX-1PPH6-2426,Colon - Transverse,GTEX-1PPH6,female,60-69,Fast death - natural causes,,"6 pieces; autolyzed mucosa, intact muscularis; abundant adventitial fat",50-59,65.0,55.0,-10.0
+GTEX-1PPH6-2826,Brain - Cortex,GTEX-1PPH6,female,60-69,Fast death - natural causes,,2 pieces; one appears better preserved than the other,50-59,65.0,55.0,-10.0
+GTEX-1QP66-0926,Colon - Transverse,GTEX-1QP66,male,50-59,Ventilator case,,6 pieces; moderately autolyzed mucosa and well preserved lymphoid aggregates and muscularis,50-59,55.0,55.0,0.0
+GTEX-1QP66-1026,Colon - Sigmoid,GTEX-1QP66,male,50-59,Ventilator case,,6 pieces; moderately autolyzed non target mucosa; well preserved target muscularis; attached serosa and fat (outlined),50-59,55.0,55.0,0.0
+GTEX-1QP66-1226,Skin - Not Sun Exposed (Suprapubic),GTEX-1QP66,male,50-59,Ventilator case,,6 pieces; hair bearing skin with up to 40% external fat; ~7 hair follicles with  associated sweat and apocrine glands (outlined,40-49,55.0,45.0,-10.0
+GTEX-1QP66-1726,Skin - Sun Exposed (Lower leg),GTEX-1QP66,male,50-59,Ventilator case,,6 pieces; up to 20% moderately autolyzed internal/external fat (outlined); epidermis ~35 micron thick,40-49,55.0,45.0,-10.0
+GTEX-1QP67-0626,Skin - Not Sun Exposed (Suprapubic),GTEX-1QP67,female,40-49,Ventilator case,,"6 pieces, adherent dermal fat up to ~2mm; squamous epithelium is ~40-50 microns",50-59,45.0,55.0,10.0
+GTEX-1QP67-1326,Colon - Transverse,GTEX-1QP67,female,40-49,Ventilator case,,"6 pieces, fragmented, target mucosa (rep encircled) well-fixed, up to ~0.5mm",40-49,45.0,45.0,0.0
+GTEX-1QP67-1426,Colon - Sigmoid,GTEX-1QP67,female,40-49,Ventilator case,,"6 pieces, confirmed target muscularis",50-59,45.0,55.0,10.0
+GTEX-1QP67-1626,Skin - Sun Exposed (Lower leg),GTEX-1QP67,female,40-49,Ventilator case,,"6 pieces, moderate dermal fat; squamous epithelium is ~405-50 microns",50-59,45.0,55.0,10.0
+GTEX-1QP6S-0226,Skin - Sun Exposed (Lower leg),GTEX-1QP6S,male,40-49,Fast death - natural causes,,"6 pieces; 5% to 20% internal/external fat, mostly periadnexal; epidermis ~40 micron thick; one piece with empty spaces mostly subepidermal and epidermal gap (outlined)",50-59,45.0,55.0,10.0
+GTEX-1QP6S-0326,Skin - Not Sun Exposed (Suprapubic),GTEX-1QP6S,male,40-49,Fast death - natural causes,,6 pieces; dermal cracks,30-39,45.0,35.0,-10.0
+GTEX-1QP6S-1726,Lung,GTEX-1QP6S,male,40-49,Fast death - natural causes,"congestion, pneumonia","2 pieces; mild to moderate autolysis; marked congestion; patchy intralveolar neutrophils, mucous, bacterial colonization (pneumonia) and aspirated foreign material (outlined); thick walled vessels",50-59,45.0,55.0,10.0
+GTEX-1QP6S-2626,Colon - Transverse,GTEX-1QP6S,male,40-49,Fast death - natural causes,congestion,6 pieces; moderate to severe mucosal  autolysis; preserved muscularis; congested serosa,60-69,45.0,65.0,20.0
+GTEX-1QP6S-2826,Colon - Sigmoid,GTEX-1QP6S,male,40-49,Fast death - natural causes,,4 pieces; autolyzed small focal rims of mucosa; moderate to severe autolysis of target muscularis,60-69,45.0,65.0,20.0
+GTEX-1QP6S-2926,Brain - Cortex,GTEX-1QP6S,male,40-49,Fast death - natural causes,calcification,4 fragmented pieces; tiny remnants of meninges with calcifications (outlined),60-69,45.0,65.0,20.0
+GTEX-1QPFJ-0226,Skin - Sun Exposed (Lower leg),GTEX-1QPFJ,female,30-39,Ventilator case,,6 pieces; 10-20% dermal fat,40-49,35.0,45.0,10.0
+GTEX-1QPFJ-1926,Skin - Not Sun Exposed (Suprapubic),GTEX-1QPFJ,female,30-39,Ventilator case,,6 pieces; well trimmed; <5% dermal fat,50-59,35.0,55.0,20.0
+GTEX-1QPFJ-2326,Colon - Transverse,GTEX-1QPFJ,female,30-39,Ventilator case,,"6 pieces; mucosa moderate autolysis, muscularis slight autolysis; 1 has no mucosa",20-29,35.0,25.0,-10.0
+GTEX-1QPFJ-2426,Colon - Sigmoid,GTEX-1QPFJ,female,30-39,Ventilator case,,6 pieces; generally well dissected; 1 has 1mm fibrofatty adventitia,60-69,35.0,65.0,30.0
+GTEX-1RAZA-0126,Skin - Sun Exposed (Lower leg),GTEX-1RAZA,male,20-29,Ventilator case,,6 pieces; mostly periadnexal fat (outlined); ~36microns thick epidermis,50-59,25.0,55.0,30.0
+GTEX-1RAZA-1726,Colon - Transverse,GTEX-1RAZA,male,20-29,Ventilator case,,6 pieces; target mucosa and muscularis present,40-49,25.0,45.0,20.0
+GTEX-1RAZA-1926,Colon - Sigmoid,GTEX-1RAZA,male,20-29,Ventilator case,,6 pieces; target muscularis; tiny residual fragments of mucosa (outlined) and  attached fat (outlined),30-39,25.0,35.0,10.0
+GTEX-1RAZA-2226,Skin - Not Sun Exposed (Suprapubic),GTEX-1RAZA,male,20-29,Ventilator case,,6 pieces; hair bearing skin; mostly periadnexal fat,40-49,25.0,45.0,20.0
+GTEX-1RMOY-0226,Lung,GTEX-1RMOY,male,50-59,Ventilator case,congestion,2 pieces; mild to moderate autolysis; congestion;  early thrombosis (outlined); attached pleura (arrows),50-59,55.0,55.0,0.0
+GTEX-1RMOY-1326,Skin - Not Sun Exposed (Suprapubic),GTEX-1RMOY,male,50-59,Ventilator case,,6 pieces; hair bearing skin and periadnexal fat,50-59,55.0,55.0,0.0
+GTEX-1RMOY-1626,Colon - Transverse,GTEX-1RMOY,male,50-59,Ventilator case,,6 pieces; target muscularis (outlined); 3 pieces with colonic mucosa (arrows),50-59,55.0,55.0,0.0
+GTEX-1RMOY-1726,Colon - Sigmoid,GTEX-1RMOY,male,50-59,Ventilator case,,6 pieces; target muscularis and attached serosa,50-59,55.0,55.0,0.0
+GTEX-1RMOY-2326,Skin - Sun Exposed (Lower leg),GTEX-1RMOY,male,50-59,Ventilator case,,6 pieces; well trimmed skin with some periadnexal fat; ~33 microns thick epidermis,50-59,55.0,55.0,0.0
+GTEX-1RNTQ-0126,Skin - Sun Exposed (Lower leg),GTEX-1RNTQ,female,20-29,Ventilator case,,6 pieces; 10% to 30% external fat (outlined); insignificant periadnexal fat; ~37 microns thick epidermis,20-29,25.0,25.0,0.0
+GTEX-1RNTQ-0926,Lung,GTEX-1RNTQ,female,20-29,Ventilator case,"congestion, pneumonia",2 pieces; massive pneumonia; marked congestion,40-49,25.0,45.0,20.0
+GTEX-1RNTQ-1526,Skin - Not Sun Exposed (Suprapubic),GTEX-1RNTQ,female,20-29,Ventilator case,,6 pieces; well trimmed  hair bearing skin,20-29,25.0,25.0,0.0
+GTEX-1RNTQ-1626,Colon - Sigmoid,GTEX-1RNTQ,female,20-29,Ventilator case,,6 pieces; target muscularis with attached serosa,50-59,25.0,55.0,30.0
+GTEX-1RNTQ-1926,Colon - Transverse,GTEX-1RNTQ,female,20-29,Ventilator case,,6 pieces; moderate to severe autolysis of colonic mucosa; preserved muscularis,40-49,25.0,45.0,20.0
+GTEX-1S5ZU-0126,Skin - Sun Exposed (Lower leg),GTEX-1S5ZU,female,20-29,Ventilator case,,4 pieces; well trimmed; 10% dermal  fat,60-69,25.0,65.0,40.0
+GTEX-1S5ZU-1026,Lung,GTEX-1S5ZU,female,20-29,Ventilator case,,2 pieces; no exudates or fibrosis;  bronchus in larger piece,50-59,25.0,55.0,30.0
+GTEX-1S5ZU-2226,Colon - Transverse,GTEX-1S5ZU,female,20-29,Ventilator case,,6 pieces; mucosa autolyzed on all; muscularis intact,50-59,25.0,55.0,30.0
+GTEX-1S5ZU-2426,Colon - Sigmoid,GTEX-1S5ZU,female,20-29,Ventilator case,fibrosis,6 pieces; extraneous fibrous and fatty tissue in several pieces,60-69,25.0,65.0,40.0
+GTEX-1S5ZU-2526,Skin - Not Sun Exposed (Suprapubic),GTEX-1S5ZU,female,20-29,Ventilator case,,4 pieces; well trimmed; <2% dermal fat,50-59,25.0,55.0,30.0
+GTEX-NPJ7-0626,Skin - Sun Exposed (Lower leg),GTEX-NPJ7,female,60-69,Slow death,solar_elastosis,Epidermis is ~2% thickness of specimen. Marked dermal elastosis,60-69,65.0,65.0,0.0
+GTEX-NPJ7-0926,Colon - Transverse,GTEX-NPJ7,female,60-69,Slow death,,Epithelial autolysis ~100% (“score 3”),60-69,65.0,65.0,0.0
+GTEX-NPJ7-1826,Lung,GTEX-NPJ7,female,60-69,Slow death,congestion,Mild congestion,60-69,65.0,65.0,0.0
+GTEX-NPJ7-2726,Brain - Cortex,GTEX-NPJ7,female,60-69,Slow death,,OK for analysis,60-69,65.0,65.0,0.0
+GTEX-NPJ8-0126,Skin - Sun Exposed (Lower leg),GTEX-NPJ8,male,40-49,Slow death,,Epidermis is 3% of total thickness of specimen.,60-69,45.0,65.0,20.0
+GTEX-NPJ8-0326,Lung,GTEX-NPJ8,male,40-49,Slow death,congestion,Mild congestion,60-69,45.0,65.0,20.0
+GTEX-NPJ8-1026,Colon - Transverse,GTEX-NPJ8,male,40-49,Slow death,,Epithelium badly autolyzed,60-69,45.0,65.0,20.0
+GTEX-NPJ8-1526,Brain - Cortex,GTEX-NPJ8,male,40-49,Slow death,,Well preserved,60-69,45.0,65.0,20.0
+GTEX-OXRL-0126,Skin - Sun Exposed (Lower leg),GTEX-OXRL,male,50-59,Ventilator case,,Prominent defects along subcutaneous fat.  7.6x3.5 mm,50-59,55.0,55.0,0.0
+GTEX-OXRL-0526,Lung,GTEX-OXRL,male,50-59,Ventilator case,"emphysema, hemorrhage, sclerotic","Moderate emphysema, vascular sclerosis. Focal hemorrhage. 10x8.6mm",50-59,55.0,55.0,0.0
+GTEX-OXRL-1426,Colon - Transverse,GTEX-OXRL,male,50-59,Ventilator case,,2 of 3 with mucosa. 9.6x5.8mm,60-69,55.0,65.0,10.0
+GTEX-OXRO-0126,Skin - Sun Exposed (Lower leg),GTEX-OXRO,female,60-69,Slow death,,3 pieces 9.5x1.8mm. Epidermis 30um,60-69,65.0,65.0,0.0
+GTEX-OXRO-0326,Lung,GTEX-OXRO,female,60-69,Slow death,,Alveolar exudates. 10x10mm,60-69,65.0,65.0,0.0
+GTEX-OXRO-0726,Colon - Transverse,GTEX-OXRO,female,60-69,Slow death,,"Mucosa, 1 wall. Three pieces:  9.5x1.9mm. Moderate fracture",60-69,65.0,65.0,0.0
+GTEX-OXRO-1326,Brain - Cortex,GTEX-OXRO,female,60-69,Slow death,,Two pieces: 5x6.5mm. Slight fractures,60-69,65.0,65.0,0.0
+GTEX-P4PP-0126,Skin - Sun Exposed (Lower leg),GTEX-P4PP,female,30-39,Ventilator case,,3  ~8x1.5mm pieces.  Squamous epithelium is 1-2% of thickness,50-59,35.0,55.0,20.0
+GTEX-P4PP-0526,Lung,GTEX-P4PP,female,30-39,Ventilator case,"hemorrhage, pneumonia","~9x8mm.  Dense areas granulomatous pneumonitis /hemorrhage.  Foreign body giant cells, and lipoid-like structures.  Probable Aspiration pneumonia.",40-49,35.0,45.0,10.0
+GTEX-P4PP-1426,Colon - Transverse,GTEX-P4PP,female,30-39,Ventilator case,,"3  ~9x2-2.5mm pieces.  Mucosa well preserved, 10-15% of thickness",50-59,35.0,55.0,20.0
+GTEX-P4QR-0326,Skin - Sun Exposed (Lower leg),GTEX-P4QR,male,60-69,Ventilator case,,6   ~5-8x2.5mm pieces. Squamous epithelium is ~2% of specimen thickness,60-69,65.0,65.0,0.0
+GTEX-P4QR-1026,Lung,GTEX-P4QR,male,60-69,Ventilator case,edema,"2  ~9x8mm pieces.  Mild edema,  focal mucus plugging in bronchioles",60-69,65.0,65.0,0.0
+GTEX-P4QR-2226,Colon - Transverse,GTEX-P4QR,male,60-69,Ventilator case,,"6  ~7x2.5mm pieces. Epithelium totally autolyzed, stroma partially sloughed",60-69,65.0,65.0,0.0
+GTEX-POYW-0626,Skin - Sun Exposed (Lower leg),GTEX-POYW,male,60-69,Ventilator case,,6 ~ 8.5x2.5mm pieces; squamous mucosa is ~1-2% of specimen thickness,50-59,65.0,55.0,-10.0
+GTEX-POYW-1226,Lung,GTEX-POYW,male,60-69,Ventilator case,,"2 pieces, ~ 9.5x7.5mm –at least one aliquot appears peripheral (contains fat)",50-59,65.0,55.0,-10.0
+GTEX-POYW-2126,Colon - Transverse,GTEX-POYW,male,60-69,Ventilator case,,"6 pieces, ~7x2.5mm, mucosa totally autolyzed and largely sloughed",60-69,65.0,65.0,0.0
+GTEX-POYW-2326,Brain - Cortex,GTEX-POYW,male,60-69,Ventilator case,,"4 ~ 5x3mm pieces, fragments of adherent dura/pia mater are present",50-59,65.0,55.0,-10.0
+GTEX-PVOW-0126,Skin - Sun Exposed (Lower leg),GTEX-PVOW,male,40-49,Fast death - natural causes,sweat_glands,6 pieces~8.5x2.5mm; many sweat and sebaceous glands; tissue tears,50-59,45.0,55.0,10.0
+GTEX-PVOW-1026,Lung,GTEX-PVOW,male,40-49,Fast death - natural causes,congestion,"2 pieces,~7x4mm; congested",50-59,45.0,55.0,10.0
+GTEX-PVOW-2226,Colon - Transverse,GTEX-PVOW,male,40-49,Fast death - natural causes,,"6 pieces,~7x1.5mm; mucosa poorly preserved",60-69,45.0,65.0,20.0
+GTEX-PVOW-2526,Brain - Cortex,GTEX-PVOW,male,40-49,Fast death - natural causes,,"4 pieces,~5-6x3mm; tissue tears",60-69,45.0,65.0,20.0
+GTEX-PW2O-0526,Lung,GTEX-PW2O,male,20-29,Ventilator case,fibrosis,"2  ~ 8.5x7mm aliquots, one with focal fibrosis/consolidation—pending slide review",20-29,25.0,25.0,0.0
+GTEX-PW2O-0926,Colon - Transverse,GTEX-PW2O,male,20-29,Ventilator case,,"6  ~4.5x3.5mm pieces; mucosa variably preserved, 5-10% of thickness",50-59,25.0,55.0,30.0
+GTEX-PW2O-1526,Skin - Sun Exposed (Lower leg),GTEX-PW2O,male,20-29,Ventilator case,,6   ~ 7x3.5 pieces; squamous mucosa is ~1.5—2% of thickness,50-59,25.0,55.0,30.0
+GTEX-Q2AG-0126,Skin - Sun Exposed (Lower leg),GTEX-Q2AG,female,40-49,Fast death - natural causes,,6   ~8x2.5mm pieces.  Squamous epithelium is ~1--2% of thickness,50-59,45.0,55.0,10.0
+GTEX-Q2AG-1026,Lung,GTEX-Q2AG,female,40-49,Fast death - natural causes,"fibrosis, inflammation","2  ~8x6.5mm aliquots, areas of interstitial fibrosis/inflammation",40-49,45.0,45.0,0.0
+GTEX-Q2AG-2026,Colon - Transverse,GTEX-Q2AG,female,40-49,Fast death - natural causes,,"6 pieces    ~ 8x1.5mm.  Mucosa badly autolyzed, 10-25% of thickness",50-59,45.0,55.0,10.0
+GTEX-Q2AG-2926,Brain - Cortex,GTEX-Q2AG,female,40-49,Fast death - natural causes,,"4 fragmented aliquots,   ~ 6x4mm",50-59,45.0,55.0,10.0
+GTEX-Q2AH-0426,Lung,GTEX-Q2AH,male,40-49,Ventilator case,,"2 pieces, 11x7.5 & 9x6mm",40-49,45.0,45.0,0.0
+GTEX-Q2AH-1226,Colon - Transverse,GTEX-Q2AH,male,40-49,Ventilator case,"edema, hyperplasia",6 pieces up to 9x3.6 mm; reactive lymphoid hyperplasia; good mucosa; edematous submucosa,50-59,45.0,55.0,10.0
+GTEX-Q2AH-1626,Skin - Sun Exposed (Lower leg),GTEX-Q2AH,male,40-49,Ventilator case,,6 pieces up to 7.7x2.6 mm; several sectioning lines and tissue tears,50-59,45.0,55.0,10.0
+GTEX-Q734-0626,Lung,GTEX-Q734,female,40-49,Ventilator case,"fibrosis, pneumonia","2   ~11x8mm aliquots.  Dense conolidation, pneumonia, fibrosis, pending glass review",40-49,45.0,45.0,0.0
+GTEX-Q734-1126,Colon - Transverse,GTEX-Q734,female,40-49,Ventilator case,,"6   ~8.5x3m pieces.  Mucosa is well-preserved, ~ 15% of thickness",50-59,45.0,55.0,10.0
+GTEX-Q734-1926,Skin - Sun Exposed (Lower leg),GTEX-Q734,female,40-49,Ventilator case,,"6 pieces,  ~8x3mm.  Squamous epithelium is ~1.5-2% of  thickness",50-59,45.0,55.0,10.0
+GTEX-REY6-0226,Skin - Sun Exposed (Lower leg),GTEX-REY6,male,60-69,Ventilator case,,6 pieces up to 7.4x5 mm;  excessive subcutaneous adipose tissue over 50% of specimens; epidermis completely sloughed,50-59,65.0,55.0,-10.0
+GTEX-REY6-0426,Lung,GTEX-REY6,male,60-69,Ventilator case,hemorrhage,pieces ; patchy alveolar dilatation; focal bronchial hemorrhage,60-69,65.0,65.0,0.0
+GTEX-REY6-2326,Colon - Transverse,GTEX-REY6,male,60-69,Ventilator case,,"6 pieces up to 6x2.7 mm; patchy preserved mucosa, otherwise autolyzed; muscle slight autolysis",50-59,65.0,55.0,-10.0
+GTEX-RN5K-0326,Lung,GTEX-RN5K,female,50-59,Slow death,"congestion, hemorrhage","2 aliquots,   ~8x8mm.  Severe congestion/hemorrhage, diffuse",60-69,55.0,65.0,10.0
+GTEX-RN5K-0726,Colon - Transverse,GTEX-RN5K,female,50-59,Slow death,,"6 pieces,  ~7x1.5mm.  Mucosa nearly totally autolyzed and/or sloughed",60-69,55.0,65.0,10.0
+GTEX-RN5K-1626,Skin - Sun Exposed (Lower leg),GTEX-RN5K,female,50-59,Slow death,,"6 pieces,   ~7x2mm.  Squamous epithelium is ~1-2% of thickness",60-69,55.0,65.0,10.0
+GTEX-RN5K-3126,Brain - Cortex,GTEX-RN5K,female,50-59,Slow death,,"4 pieces,  ~6x4mm",60-69,55.0,65.0,10.0
+GTEX-RTLS-0126,Skin - Sun Exposed (Lower leg),GTEX-RTLS,female,60-69,Slow death,,6 pieces up to 8.6x2.2 mm;,50-59,65.0,55.0,-10.0
+GTEX-RTLS-0926,Lung,GTEX-RTLS,female,60-69,Slow death,hemorrhage,"2 pieces, 7x6 & 10x5 mm; focal hemorrhages",60-69,65.0,65.0,0.0
+GTEX-RTLS-2726,Colon - Transverse,GTEX-RTLS,female,60-69,Slow death,,6 pieces up to 8x2 mm; mucosa largely autolyzed; muscle mildly autolyzed,60-69,65.0,65.0,0.0
+GTEX-RVPU-0526,Lung,GTEX-RVPU,male,50-59,Fast death - natural causes,congestion,"2 aliquots,  ~8x7mm.  Diffuse patchy congestion.  Moderately autolyzed",60-69,55.0,65.0,10.0
+GTEX-RVPU-1626,Colon - Transverse,GTEX-RVPU,male,50-59,Fast death - natural causes,,"6 pieces,  ~6.5x1.5mm.  Mucosa severely autolyzed",50-59,55.0,55.0,0.0
+GTEX-RVPU-2226,Skin - Sun Exposed (Lower leg),GTEX-RVPU,male,50-59,Fast death - natural causes,,"6 pieces,  ~7x2.5mm.  Squamous epithelium is ~1-2% of thickness",50-59,55.0,55.0,0.0
+GTEX-RVPU-2626,Brain - Cortex,GTEX-RVPU,male,50-59,Fast death - natural causes,,"1 aliquot pituitary,  ~5x3mm.  All neurohypophysis",60-69,55.0,65.0,10.0
+GTEX-RVPV-0126,Skin - Sun Exposed (Lower leg),GTEX-RVPV,male,60-69,Intermediate death,,6 pieces up to 11x5 mm;,40-49,65.0,45.0,-20.0
+GTEX-RVPV-1326,Brain - Cortex,GTEX-RVPV,male,60-69,Intermediate death,,5 pieces up to 4x4 mm;,50-59,65.0,55.0,-10.0
+GTEX-RVPV-1726,Lung,GTEX-RVPV,male,60-69,Intermediate death,"congestion, hemorrhage","2 pieces, 9x8 & 8x7 mm; moderate patchy recent hemorrhages and congestion",60-69,65.0,65.0,0.0
+GTEX-RVPV-2226,Colon - Transverse,GTEX-RVPV,male,60-69,Intermediate death,,6 pieces up to 8x2.5 mm; mucosa severely autolyzed; muscle slight autolysis,60-69,65.0,65.0,0.0
+GTEX-S32W-0326,Lung,GTEX-S32W,female,50-59,Ventilator case,pneumonia,2 pieces 11x4 & 9x8 mm; patchy pneumonia ~10%;,40-49,55.0,45.0,-10.0
+GTEX-S32W-2126,Skin - Sun Exposed (Lower leg),GTEX-S32W,female,50-59,Ventilator case,,6 pieces up to 9x3 mm; up to 1.8 mm of  subcutaneous adipose; trim visible fat,60-69,55.0,65.0,10.0
+GTEX-S3XE-1126,Colon - Transverse,GTEX-S3XE,male,50-59,Ventilator case,,6 pieces up to 11x4 mm; each has well preserved mucosa and all layers intact,50-59,55.0,55.0,0.0
+GTEX-S3XE-1726,Skin - Sun Exposed (Lower leg),GTEX-S3XE,male,50-59,Ventilator case,,6 pieces up to 9x3.6 mm;,60-69,55.0,65.0,10.0
+GTEX-S7SE-0126,Skin - Sun Exposed (Lower leg),GTEX-S7SE,male,50-59,Fast death - natural causes,,"6 pieces, 6xx3mm.  Squamous mucosa is  ~2-3% of thickness.",60-69,55.0,65.0,10.0
+GTEX-S7SE-0926,Lung,GTEX-S7SE,male,50-59,Fast death - natural causes,"emphysema, inflammation","2 aliquots,  10x 7mm, foci of chronic inflammation--areas of emphysematous damage",50-59,55.0,55.0,0.0
+GTEX-S7SE-2226,Colon - Transverse,GTEX-S7SE,male,50-59,Fast death - natural causes,,"6 pieces, 7x2mm.  Mucosa totally autolyzed",60-69,55.0,65.0,10.0
+GTEX-S7SE-2626,Brain - Cortex,GTEX-S7SE,male,50-59,Fast death - natural causes,,"4 pieces, ~5x3mm",60-69,55.0,65.0,10.0
+GTEX-T5JC-0426,Skin - Sun Exposed (Lower leg),GTEX-T5JC,male,20-29,Fast death - natural causes,,6 pieces up to 8x3 mm; no subcutaneous adipose,20-29,25.0,25.0,0.0
+GTEX-T5JC-0826,Lung,GTEX-T5JC,male,20-29,Fast death - natural causes,,2 pieces 7x7 & 6x6 mm; good alveolar structure; bronchial epithelium autolyzed,50-59,25.0,55.0,30.0
+GTEX-T5JC-2226,Colon - Transverse,GTEX-T5JC,male,20-29,Fast death - natural causes,,"6 pieces up to 7x4 mm; mucosa completely autolyzed, muscle moderately autolyzed",60-69,25.0,65.0,40.0
+GTEX-T5JC-2426,Brain - Cortex,GTEX-T5JC,male,20-29,Fast death - natural causes,,4 pieces up to 4x4 mm; one piece has meninges and vessels in a sulcus,50-59,25.0,55.0,30.0
+GTEX-T6MN-0126,Skin - Sun Exposed (Lower leg),GTEX-T6MN,male,50-59,Fast death - natural causes,,6 pieces up to 8x5mm; thin layer of subcutaneous adipose,50-59,55.0,55.0,0.0
+GTEX-T6MN-0826,Lung,GTEX-T6MN,male,50-59,Fast death - natural causes,heart_failure_cells,2 pieces 11x6 & 10x8 mm; heart failure cells,50-59,55.0,55.0,0.0
+GTEX-T6MN-2326,Colon - Transverse,GTEX-T6MN,male,50-59,Fast death - natural causes,,6 pieces up to 8x2 mm; mucosa largely autolyzed,60-69,55.0,65.0,10.0
+GTEX-T6MN-2626,Brain - Cortex,GTEX-T6MN,male,50-59,Fast death - natural causes,,4 pieces up to 5x5 mm;,50-59,55.0,55.0,0.0
+GTEX-TML8-0326,Lung,GTEX-TML8,female,40-49,Ventilator case,emphysema,"2 pieces: 9x7 & 8x5 mm; panacinar emphysema, no fibrosis or inflammation",50-59,45.0,55.0,10.0
+GTEX-TML8-1326,Colon - Transverse,GTEX-TML8,female,40-49,Ventilator case,clean_specimens,6 pieces up to 8x3 mm; good mucosal preservation,50-59,45.0,55.0,10.0
+GTEX-TML8-1926,Skin - Sun Exposed (Lower leg),GTEX-TML8,female,40-49,Ventilator case,,6 pieces up to 8x3 mm; subcutaneous fat well trimmed; numerous tissue fractures in dermis,50-59,45.0,55.0,10.0
+GTEX-TMZS-0126,Skin - Sun Exposed (Lower leg),GTEX-TMZS,male,60-69,Ventilator case,,6 pieces up to 10x3 mm; well trimmed of subcutaneous adipose,40-49,65.0,45.0,-20.0
+GTEX-U4B1-1126,Colon - Transverse,GTEX-U4B1,male,40-49,Ventilator case,clean_specimens,"6 pieces, up to 12x3 mm; good mucosa on all; hardly any muscularis",60-69,45.0,65.0,20.0
+GTEX-U4B1-1826,Skin - Sun Exposed (Lower leg),GTEX-U4B1,male,40-49,Ventilator case,,"6 pieces, up to 9.6x3 mm; well cleaned of subcutaneous adipose",50-59,45.0,55.0,10.0
+GTEX-U8XE-0226,Skin - Not Sun Exposed (Suprapubic),GTEX-U8XE,male,30-39,Slow death,,6 pieces ~6x3; squamous epithelium is 2-3% of thickness,50-59,35.0,55.0,20.0
+GTEX-U8XE-0326,Skin - Sun Exposed (Lower leg),GTEX-U8XE,male,30-39,Slow death,,"6 pieces  ~7x3.5 mm, squamous epithelium is ~2-3% of thickness",40-49,35.0,45.0,10.0
+GTEX-U8XE-1426,Lung,GTEX-U8XE,male,30-39,Slow death,emphysema,"2 pieces  ~7x6mm.  Well preserved, mild emphysematous changes.  Good bronchial preservation, representative bronchioles encircled",50-59,35.0,55.0,20.0
+GTEX-U8XE-2326,Colon - Sigmoid,GTEX-U8XE,male,30-39,Slow death,,6 pieces   `8x3mm.  Mucosa badly autolyzed  ~5-10% thickness,50-59,35.0,55.0,20.0
+GTEX-U8XE-2426,Colon - Transverse,GTEX-U8XE,male,30-39,Slow death,,"6 pieces  ~7x1.5mm.  Mucosa badly autolyzed,  ~10% thickness",20-29,35.0,25.0,-10.0
+GTEX-UJHI-0726,Lung,GTEX-UJHI,female,50-59,Ventilator case,,"2 pieces, 9x7 & 9x7.5mm; no inflammation",50-59,55.0,55.0,0.0
+GTEX-UJHI-1126,Colon - Transverse,GTEX-UJHI,female,50-59,Ventilator case,clean_specimens,"6 pieces, up to 8x4mm; good mucosa and muscularis on all",50-59,55.0,55.0,0.0
+GTEX-UJHI-1526,Skin - Sun Exposed (Lower leg),GTEX-UJHI,female,50-59,Ventilator case,,6 pieces. up to 6x3mm; free of subcutaneous adipose,60-69,55.0,65.0,10.0
+GTEX-UJMC-0726,Lung,GTEX-UJMC,male,50-59,Ventilator case,congestion,"2 pieces,  ~12x6mm bronchial mucosa seen, encircled.  Minimal congestion, well preserved",50-59,55.0,55.0,0.0
+GTEX-UJMC-1326,Colon - Transverse,GTEX-UJMC,male,50-59,Ventilator case,,"6 pieces, ~6x3mm mucosa remarkably well-preserved, up to 500 microns thick",50-59,55.0,55.0,0.0
+GTEX-UJMC-1626,Skin - Sun Exposed (Lower leg),GTEX-UJMC,male,50-59,Ventilator case,,"6 pieces,   ~6x3mm squamous mucosa is ~2-3% of thickness  or ~50 microns thick",50-59,55.0,55.0,0.0
+GTEX-UPIC-0826,Lung,GTEX-UPIC,female,20-29,Ventilator case,fibrosis,"2 pieces, 10x6.5 & 7x6mm; patchy interstitial fibrosis and pneumonitis",20-29,25.0,25.0,0.0
+GTEX-UPIC-1626,Skin - Sun Exposed (Lower leg),GTEX-UPIC,female,20-29,Ventilator case,,"6 pieces, up to 8x3mm; most subcutaneous adipose removed; keratin layer looks thicker than usual",20-29,25.0,25.0,0.0
+GTEX-UPIC-1726,Colon - Transverse,GTEX-UPIC,female,20-29,Ventilator case,clean_specimens,"6 pieces, up to 6x3mm; all have full thickness with good mucosa",20-29,25.0,25.0,0.0
+GTEX-UPJH-0226,Skin - Not Sun Exposed (Suprapubic),GTEX-UPJH,male,50-59,Fast death - natural causes,,6 pieces   ~7x2mm.  Squamous epithelium is ~2-3% of thickness,50-59,55.0,55.0,0.0
+GTEX-UPJH-0326,Skin - Sun Exposed (Lower leg),GTEX-UPJH,male,50-59,Fast death - natural causes,,6 pieces  ~7x2mm.  Squamous epithelium is 2-3% thickness,50-59,55.0,55.0,0.0
+GTEX-UPJH-0826,Lung,GTEX-UPJH,male,50-59,Fast death - natural causes,"congestion, emphysema","2 pieces  ~7x7mm.  Poorly preserved, moderate congestion, areas of emphysematous change noted",60-69,55.0,65.0,10.0
+GTEX-UPJH-2026,Colon - Transverse,GTEX-UPJH,male,50-59,Fast death - natural causes,,6 pieces  ~8 x 1.5mm  Mucosa poorly preserved; where visible  ~20% of thickness,60-69,55.0,65.0,10.0
+GTEX-UPJH-2126,Colon - Sigmoid,GTEX-UPJH,male,50-59,Fast death - natural causes,,"6 pieces  ~7x  1.5mm  Mucosa poorly preserved,  ~30% of thickness  (~300 microns)",60-69,55.0,65.0,10.0
+GTEX-UPK5-0426,Skin - Not Sun Exposed (Suprapubic),GTEX-UPK5,male,40-49,Ventilator case,,"6 pieces, up to 8x4mm; all except the smallest are free of subcutaneous adipose",20-29,45.0,25.0,-20.0
+GTEX-UPK5-0726,Skin - Sun Exposed (Lower leg),GTEX-UPK5,male,40-49,Ventilator case,,"6 pieces, 7x3mm; largely free of subcutaneous adipose",40-49,45.0,45.0,0.0
+GTEX-UPK5-1126,Lung,GTEX-UPK5,male,40-49,Ventilator case,hemorrhage,"2 pieces, 8x7 & 10x7.5mm; scattered hemorrhages; pleura present (avoid)",50-59,45.0,55.0,10.0
+GTEX-UPK5-2226,Colon - Transverse,GTEX-UPK5,male,40-49,Ventilator case,,"6 pieces, up to 10x2mm; poor preservation of mucosa; muscularis better preserved",50-59,45.0,55.0,10.0
+GTEX-UPK5-2426,Colon - Sigmoid,GTEX-UPK5,male,40-49,Ventilator case,,"6 pieces, up to 7x2mm; all have mucosa and muscularis; mucosa largely autolyzed",60-69,45.0,65.0,20.0
+GTEX-VJWN-0126,Skin - Sun Exposed (Lower leg),GTEX-VJWN,female,50-59,Fast death - natural causes,,"6 pieces, up to 6x3.5mm; subcutaneous adipose up to 0.7mm on 2 pieces",60-69,55.0,65.0,10.0
+GTEX-VJWN-0326,Skin - Not Sun Exposed (Suprapubic),GTEX-VJWN,female,50-59,Fast death - natural causes,,"6 pieces, up to 6x2.5mm; up to 0.5mm subcutaneous adipose",60-69,55.0,65.0,10.0
+GTEX-VJWN-1326,Lung,GTEX-VJWN,female,50-59,Fast death - natural causes,"congestion, hemorrhage","2 pieces, 7x7 & 8x6mm; markedly congested with focal hemorrhages; minimal air;",60-69,55.0,65.0,10.0
+GTEX-VJWN-2526,Colon - Transverse,GTEX-VJWN,female,50-59,Fast death - natural causes,,"6 pieces, up to 6x2mm; mucosa totally autolyzed; muscle in better shape;",60-69,55.0,65.0,10.0
+GTEX-VJWN-2626,Colon - Sigmoid,GTEX-VJWN,female,50-59,Fast death - natural causes,,"6 pieces, up to 8x2mm; mucosa totally autolyzed; muscle in better shape;",60-69,55.0,65.0,10.0
+GTEX-VJWN-3126,Brain - Cortex,GTEX-VJWN,female,50-59,Fast death - natural causes,,"4 pieces, up to 4.5x3mm;",50-59,55.0,55.0,0.0
+GTEX-VJYA-0326,Lung,GTEX-VJYA,male,60-69,Ventilator case,congestion,"2 pieces  ~9x2mm, minimal congestion",50-59,65.0,55.0,-10.0
+GTEX-VJYA-1126,Skin - Sun Exposed (Lower leg),GTEX-VJYA,male,60-69,Ventilator case,,"6 pieces, ~6x3mm, squamous epithelium is 1-2% thickness",50-59,65.0,55.0,-10.0
+GTEX-VJYA-1526,Skin - Not Sun Exposed (Suprapubic),GTEX-VJYA,male,60-69,Ventilator case,,"6 pieces  ~6x3mm, squamous epithelium is ~2% thickness",60-69,65.0,65.0,0.0
+GTEX-VJYA-2026,Colon - Transverse,GTEX-VJYA,male,60-69,Ventilator case,,"6 pieces  ~~7x2mm, mucosa well preserved, ~10-20 thickness",50-59,65.0,55.0,-10.0
+GTEX-VJYA-2126,Colon - Sigmoid,GTEX-VJYA,male,60-69,Ventilator case,,"6 pieces  ~6x3mm.  Mucosa well preserved,  ~15-20% thickness",50-59,65.0,55.0,-10.0
+GTEX-W5X1-0526,Lung,GTEX-W5X1,female,40-49,Ventilator case,"fibrosis, heart_failure_cells","2 pieces, 11x7 & 8x8mm. Heart failure cells. Focal interstitial fibrosis.",40-49,45.0,45.0,0.0
+GTEX-W5X1-1726,Colon - Transverse,GTEX-W5X1,female,40-49,Ventilator case,,"6 pieces, up to 9.5x2mm; autolysis ranges from moderate to severe",60-69,45.0,65.0,20.0
+GTEX-W5X1-1826,Colon - Sigmoid,GTEX-W5X1,female,40-49,Ventilator case,,"6 pieces, up to 8x2mm; virtually all muscle as targeted; minute focal mucosa in 2 pieces",60-69,45.0,65.0,20.0
+GTEX-W5X1-2526,Skin - Not Sun Exposed (Suprapubic),GTEX-W5X1,female,40-49,Ventilator case,,"7 pieces, up to 10.5x3.5mm; most subcutaneous adipose trimmed; 1 piece has <1mm adipose",50-59,45.0,55.0,10.0
+GTEX-W5X1-3026,Skin - Sun Exposed (Lower leg),GTEX-W5X1,female,40-49,Ventilator case,,"6 pieces, up to 8x3mm; subcutaneous adipose well trimmed",60-69,45.0,65.0,20.0
+GTEX-WK11-0126,Skin - Sun Exposed (Lower leg),GTEX-WK11,male,50-59,Fast death - violent,,"6 pieces, up to 8x3mm; up to 0.5mm subcutaneous adipose",60-69,55.0,65.0,10.0
+GTEX-WK11-0526,Lung,GTEX-WK11,male,50-59,Fast death - violent,"congestion, emphysema","2 pieces, 8x7 & 8x6mm; focal emphysema, congestion",60-69,55.0,65.0,10.0
+GTEX-WK11-2326,Colon - Transverse,GTEX-WK11,male,50-59,Fast death - violent,,"6 pieces, up to 7x2mm; mucosa = 3; muscularis = 2 (autolysis)",60-69,55.0,65.0,10.0
+GTEX-WK11-2726,Skin - Not Sun Exposed (Suprapubic),GTEX-WK11,male,50-59,Fast death - violent,,"6 pieces, up to 8x3mm; subcutaneous adipose is up to 1 mm thick in 2 pieces",60-69,55.0,65.0,10.0
+GTEX-WK11-2826,Colon - Sigmoid,GTEX-WK11,male,50-59,Fast death - violent,,"6 pieces, up to 6.5x2mm; mucosa (unwanted) and muscle (target) in all pieces",60-69,55.0,65.0,10.0
+GTEX-WWYW-0126,Skin - Sun Exposed (Lower leg),GTEX-WWYW,female,50-59,Intermediate death,,6  pieces  ~8x3mm; squamous epithelium is 1.5-2% thickness,40-49,55.0,45.0,-10.0
+GTEX-WWYW-0626,Skin - Not Sun Exposed (Suprapubic),GTEX-WWYW,female,50-59,Intermediate death,,"6 pieces  ~10x3mm.  Squamous epithelium looks atrophic, <1% thickness",50-59,55.0,55.0,0.0
+GTEX-WWYW-0926,Lung,GTEX-WWYW,female,50-59,Intermediate death,"congestion, emphysema","2 pieces ~8x7mm, emphysemaous changes, congestion, badly autolyzed,  vascular structures delineated",50-59,55.0,55.0,0.0
+GTEX-WWYW-2326,Colon - Transverse,GTEX-WWYW,female,50-59,Intermediate death,,"6 pieces ~7x1mm, mucosa completely autolzyed,sloughing",50-59,55.0,55.0,0.0
+GTEX-WWYW-2626,Colon - Sigmoid,GTEX-WWYW,female,50-59,Intermediate death,,"6 pieces ~8x2mm, 90% muscle, reprentative areas delineated",60-69,55.0,65.0,10.0
+GTEX-WWYW-3126,Brain - Cortex,GTEX-WWYW,female,50-59,Intermediate death,,4 pieces  ~4x4mm,60-69,55.0,65.0,10.0
+GTEX-WY7C-0426,Lung,GTEX-WY7C,male,50-59,Ventilator case,emphysema,"2 pieces ~9x6mm, diffuse emphysematous changes",50-59,55.0,55.0,0.0
+GTEX-WY7C-1626,Colon - Transverse,GTEX-WY7C,male,50-59,Ventilator case,,"~6x3mm  6  pieces ~10% mucosa, moderately  well preserved",50-59,55.0,55.0,0.0
+GTEX-WY7C-1926,Colon - Sigmoid,GTEX-WY7C,male,50-59,Ventilator case,clean_specimens,"6 pieces  ~6x4mm, all muscularis, good specimens",40-49,55.0,45.0,-10.0
+GTEX-WY7C-2126,Skin - Not Sun Exposed (Suprapubic),GTEX-WY7C,male,50-59,Ventilator case,,"6 pieces  ~9x3, squamous epithelium is ~1.5-2% thickness",50-59,55.0,55.0,0.0
+GTEX-WY7C-2326,Skin - Sun Exposed (Lower leg),GTEX-WY7C,male,50-59,Ventilator case,,6 pieces   ~8x3.5mm. Squamous epithelium is ~ 2% of thickness,60-69,55.0,65.0,10.0
+GTEX-X15G-0626,Lung,GTEX-X15G,female,50-59,Ventilator case,,"2 pieces, 11x6 & 9x5mm; patchy chronic bronciolitis, rep area delineated",50-59,55.0,55.0,0.0
+GTEX-X15G-1326,Colon - Transverse,GTEX-X15G,female,50-59,Ventilator case,,"6 pieces, up to 5x3mm; ~10-20% thickness is fairly well-preserved mucosa",50-59,55.0,55.0,0.0
+GTEX-X15G-1526,Colon - Sigmoid,GTEX-X15G,female,50-59,Ventilator case,,"6 pieces, up to 8.5x4mm; ~90% muscle/fat, rest is well preserved mucosa",50-59,55.0,55.0,0.0
+GTEX-X15G-2026,Skin - Not Sun Exposed (Suprapubic),GTEX-X15G,female,50-59,Ventilator case,,"4 pieces, up to 6x3mm;squamous epitheliums is ~2-3% thickness",60-69,55.0,65.0,10.0
+GTEX-X15G-2226,Skin - Sun Exposed (Lower leg),GTEX-X15G,female,50-59,Ventilator case,,"6 pieces, up to 5x2mm; squamous epithelium is ~2-3% thickness",60-69,55.0,65.0,10.0
+GTEX-X4LF-0526,Lung,GTEX-X4LF,male,50-59,Ventilator case,emphysema,"2 pieces, 12x8 & 13x13mm; well -preserved bronchioles present, rep. ones delineated.  Emphysematous changes noted",50-59,55.0,55.0,0.0
+GTEX-X4LF-1126,Colon - Transverse,GTEX-X4LF,male,50-59,Ventilator case,,"6 pieces, up to 11x4mm; ~20% thickness is well-preserved mucosa",50-59,55.0,55.0,0.0
+GTEX-X4LF-1226,Colon - Sigmoid,GTEX-X4LF,male,50-59,Ventilator case,,"6 pieces, up to 9x4mm; `90+% muscle, trace mucosa, fat present",60-69,55.0,65.0,10.0
+GTEX-X4LF-1526,Skin - Not Sun Exposed (Suprapubic),GTEX-X4LF,male,50-59,Ventilator case,,"6 pieces, up to 10x4mm; squamous epithelium is ~1-2% of thickness",60-69,55.0,65.0,10.0
+GTEX-X4LF-1626,Skin - Sun Exposed (Lower leg),GTEX-X4LF,male,50-59,Ventilator case,,"6 pieces, up to 11x2mm; squamous epitherlium is ~2-3% of thickness",50-59,55.0,55.0,0.0
+GTEX-X5EB-0426,Lung,GTEX-X5EB,male,40-49,Ventilator case,congestion,"2 pieces, 8.5x6.5 & 7.5x4mm; congested but well preserved",40-49,45.0,45.0,0.0
+GTEX-X5EB-0926,Colon - Transverse,GTEX-X5EB,male,40-49,Ventilator case,,"6 pieces, up to 12x5mm; ~10-20% thickness is mucosa, reasonably well preserved",20-29,45.0,25.0,-20.0
+GTEX-X5EB-1126,Colon - Sigmoid,GTEX-X5EB,male,40-49,Ventilator case,,"6 pieces, up to 9x4mm; ~60% muscularis, rep. area delineated; rest is fat and mucosa",20-29,45.0,25.0,-20.0
+GTEX-X5EB-1926,Skin - Not Sun Exposed (Suprapubic),GTEX-X5EB,male,40-49,Ventilator case,,"6 pieces, up to 8x3mm; squamous epitheium is ~1% thickness",50-59,45.0,55.0,10.0
+GTEX-X5EB-2226,Skin - Sun Exposed (Lower leg),GTEX-X5EB,male,40-49,Ventilator case,,"6 pieces, up to 11x3mm; squamous epithelium is ~1% thickness",60-69,45.0,65.0,20.0
+GTEX-X638-0126,Skin - Sun Exposed (Lower leg),GTEX-X638,female,70-79,Ventilator case,,"6 pieces, up to 8x3.5mm;  All have considerable subcutaneous adipose up to 3.5x 1 mm.",60-69,75.0,65.0,-10.0
+GTEX-XMD2-0126,Skin - Sun Exposed (Lower leg),GTEX-XMD2,female,60-69,Ventilator case,,"6 pieces, up to 7.5x3mm; well trimmed, no subcutaneous adipose",60-69,65.0,65.0,0.0
+GTEX-XMD2-1026,Lung,GTEX-XMD2,female,60-69,Ventilator case,fibrosis,"2 pieces, 10x8 & 9x7mm; focal subpleural fibrosis (BSS: please take specimens 1 cm beneath pleural surface)",50-59,65.0,55.0,-10.0
+GTEX-XMD2-2126,Skin - Not Sun Exposed (Suprapubic),GTEX-XMD2,female,60-69,Ventilator case,,"6 pieces, up to 9.5x3mm; up to 1mm subcutaneous adipose",50-59,65.0,55.0,-10.0
+GTEX-XMD2-2526,Colon - Transverse,GTEX-XMD2,female,60-69,Ventilator case,,"6 pieces, up to 6x2.5mm; mucosa=3; muscle =1.",60-69,65.0,65.0,0.0
+GTEX-XMD2-2626,Colon - Sigmoid,GTEX-XMD2,female,60-69,Ventilator case,,6 pieces. up to 7.5x4mm; All muscle and some fibrous stroma (good),60-69,65.0,65.0,0.0
+GTEX-XMK1-1626,Colon - Sigmoid,GTEX-XMK1,male,40-49,Ventilator case,,"6 pieces. up to 12x5mm; muscularis is ~25 % total, rest is fat/mucosa",40-49,45.0,45.0,0.0
+GTEX-XMK1-1726,Colon - Transverse,GTEX-XMK1,male,40-49,Ventilator case,,"6 pieces. up to 10x4mm; mucosa is ~10% thickness, reasonably well preserved but superficially sloughed",50-59,45.0,55.0,10.0
+GTEX-XMK1-1926,Skin - Not Sun Exposed (Suprapubic),GTEX-XMK1,male,40-49,Ventilator case,,6 pieces. up to 10x5mm;  squamous epithelium is~1.5 thickness,50-59,45.0,55.0,10.0
+GTEX-XMK1-2126,Skin - Sun Exposed (Lower leg),GTEX-XMK1,male,40-49,Ventilator case,,6 pieces. up to 9x4mm; squamous epithelium~1.5% thickness,60-69,45.0,65.0,20.0
+GTEX-XPT6-1126,Colon - Transverse,GTEX-XPT6,male,20-29,Ventilator case,,"6 pieces ~6x4mm, 5 with mucosa, well preserved, up to 15% thickness",20-29,25.0,25.0,0.0
+GTEX-XPT6-1226,Lung,GTEX-XPT6,male,20-29,Ventilator case,pneumonia,"2 pieces, 10x7mm, patchy acute pneumonita/chronic pneumonitis, rep areas delineated",50-59,25.0,55.0,30.0
+GTEX-XPT6-1326,Colon - Sigmoid,GTEX-XPT6,male,20-29,Ventilator case,,"6 pieces, ~7x4mm, up to ~50% muscularis in 5 sections, one with no muscle",20-29,25.0,25.0,0.0
+GTEX-XPT6-1726,Skin - Not Sun Exposed (Suprapubic),GTEX-XPT6,male,20-29,Ventilator case,,"6 pieces  ~6x5mm, squamous epithelium is ~1% thickness",50-59,25.0,55.0,30.0
+GTEX-XPT6-1826,Skin - Sun Exposed (Lower leg),GTEX-XPT6,male,20-29,Ventilator case,,"6 pieces ~8x4mm, squamous epithelium is ~1-2% thickness",50-59,25.0,55.0,30.0
+GTEX-XUYS-0126,Skin - Sun Exposed (Lower leg),GTEX-XUYS,male,50-59,Ventilator case,,"6 pieces, up to 12x5.5mm.  All have large amounts of subcutaneous adipose tissue, up to 4.7 mm thick (skin is 3mm thick); 2 have attached subcutaneous veins",40-49,55.0,45.0,-10.0
+GTEX-XV7Q-0426,Lung,GTEX-XV7Q,female,40-49,Ventilator case,congestion,"2 pieces, 20x7 & 14x10mm; mild-moderate edmea/congestion",50-59,45.0,55.0,10.0
+GTEX-XV7Q-1826,Skin - Not Sun Exposed (Suprapubic),GTEX-XV7Q,female,40-49,Ventilator case,,"6 pieces, up to 10x3mm;  ~2% squamous epithelium",60-69,45.0,65.0,20.0
+GTEX-XV7Q-2126,Colon - Transverse,GTEX-XV7Q,female,40-49,Ventilator case,,"6 pieces, up to 8x1.5mm; mucosa partially sloughed",50-59,45.0,55.0,10.0
+GTEX-XV7Q-2226,Colon - Sigmoid,GTEX-XV7Q,female,40-49,Ventilator case,,"6 pieces, up to 9x5mm; generally all muscularis",40-49,45.0,45.0,0.0
+GTEX-XV7Q-2526,Skin - Sun Exposed (Lower leg),GTEX-XV7Q,female,40-49,Ventilator case,,"6 pieces, up to 11x3.5mm;  ~2% thickness is squamous epithelium",60-69,45.0,65.0,20.0
+GTEX-Y111-0126,Skin - Sun Exposed (Lower leg),GTEX-Y111,male,50-59,Fast death - violent,,"6 pieces, up to 11.5x4mm;",50-59,55.0,55.0,0.0
+GTEX-Y111-0626,Skin - Not Sun Exposed (Suprapubic),GTEX-Y111,male,50-59,Fast death - violent,,"6 pieces, up to 8.5x3mm;",60-69,55.0,65.0,10.0
+GTEX-Y111-1026,Lung,GTEX-Y111,male,50-59,Fast death - violent,"congestion, hemorrhage","2 pieces, 10.5x9 & 11x8mm. Extensive congestion and hemorrhage. 2 mm infarct. 3 mm bronchus, lymph node and vessels occupy 40% of 1 piece",60-69,55.0,65.0,10.0
+GTEX-Y111-1426,Colon - Transverse,GTEX-Y111,male,50-59,Fast death - violent,,"6 pieces, up to 9x2.5mm. All have severely autolyzed mucosa; 3 have moderately autolyzed muscularis. 3 without muscularis",50-59,55.0,55.0,0.0
+GTEX-Y111-2126,Colon - Sigmoid,GTEX-Y111,male,50-59,Fast death - violent,,"6 pieces, up to 8x5mm; 3 pieces contain muscularis only (target); 3 pieces contain mucosa (NOT the target) and muscularis",60-69,55.0,65.0,10.0
+GTEX-Y111-2726,Brain - Cortex,GTEX-Y111,male,50-59,Fast death - violent,,"2 pieces, 8x5 & 8x7mm. Up to 1 mm meninges on 1 piece.",60-69,55.0,65.0,10.0
+GTEX-Y8DK-0126,Skin - Sun Exposed (Lower leg),GTEX-Y8DK,male,60-69,Fast death - natural causes,,6 pieces up to 8 x 3 mm.  Well trimmed of subcutaneous adipose tissue.,60-69,65.0,65.0,0.0
+GTEX-Y8DK-0826,Brain - Cortex,GTEX-Y8DK,male,60-69,Fast death - natural causes,,2 pieces 5 x 2 mm and the second is composed of multiple fragments estimated to 5 x 5 mm in aggregate dimension.,60-69,65.0,65.0,0.0
+GTEX-Y9LG-0526,Lung,GTEX-Y9LG,male,30-39,Ventilator case,,2 pieces. 12x9 & 10x9mm;,50-59,35.0,55.0,20.0
+GTEX-Y9LG-1126,Skin - Not Sun Exposed (Suprapubic),GTEX-Y9LG,male,30-39,Ventilator case,,"6 pieces, up to 12x5mm.  Well trimmed except for 1 piece with 0.6mm adipose.",60-69,35.0,65.0,30.0
+GTEX-Y9LG-1326,Colon - Sigmoid,GTEX-Y9LG,male,30-39,Ventilator case,,6 pieces. up to 8x5mm;  All muscle (target) with adjacent submucosa. Neural tissue marked.,50-59,35.0,55.0,20.0
+GTEX-Y9LG-1526,Colon - Transverse,GTEX-Y9LG,male,30-39,Ventilator case,,1 piece with small amount (1.6x0.8 mm) muscularis propria.,20-29,35.0,25.0,-10.0
+GTEX-Y9LG-2126,Skin - Sun Exposed (Lower leg),GTEX-Y9LG,male,30-39,Ventilator case,,1 piece 5x3mm; well trimmed,50-59,35.0,55.0,20.0
+GTEX-YECK-0126,Skin - Sun Exposed (Lower leg),GTEX-YECK,male,60-69,Intermediate death,,1 piece; correlates with -0125,60-69,65.0,65.0,0.0
+GTEX-YECK-0326,Skin - Not Sun Exposed (Suprapubic),GTEX-YECK,male,60-69,Intermediate death,,"6 pieces, from 8x3 to 9x4.5mm; squamous mucosa is 1-2% thickness",50-59,65.0,55.0,-10.0
+GTEX-YECK-0926,Lung,GTEX-YECK,male,60-69,Intermediate death,"atelectasis, congestion","2 pieces, 9x7 and 7x7mm; moderate congestion/atalectasis",60-69,65.0,65.0,0.0
+GTEX-YECK-2626,Colon - Transverse,GTEX-YECK,male,60-69,Intermediate death,,"1 piece, correlates with -2625, mucosa badly autolyzed",60-69,65.0,65.0,0.0
+GTEX-YECK-2826,Colon - Sigmoid,GTEX-YECK,male,60-69,Intermediate death,,"6 pieces, up to 8x2mm.  Muscualris; a few nubbings of adherent fat, delineated, on 2",40-49,65.0,45.0,-20.0
+GTEX-ZAK1-0126,Skin - Sun Exposed (Lower leg),GTEX-ZAK1,female,50-59,Fast death - natural causes,,"6 pieces, squamous epithelium is ~10microns thick, 1-2 % total thickness",50-59,55.0,55.0,0.0
+GTEX-ZAK1-0626,Skin - Not Sun Exposed (Suprapubic),GTEX-ZAK1,female,50-59,Fast death - natural causes,,"6 pieces; squamous epithelium averages ~50 microns, 1-2% thickness, trace adherent fat, delineated",60-69,55.0,65.0,10.0
+GTEX-ZAK1-0826,Lung,GTEX-ZAK1,female,50-59,Fast death - natural causes,"congestion, edema","2 pieces, patchy congestion/edema",60-69,55.0,65.0,10.0
+GTEX-ZAK1-2726,Colon - Transverse,GTEX-ZAK1,female,50-59,Fast death - natural causes,,6 pieces; mucosa ~10-40% thickness but totally autolyzed/sloughing,60-69,55.0,65.0,10.0
+GTEX-ZAK1-2826,Colon - Sigmoid,GTEX-ZAK1,female,50-59,Fast death - natural causes,,"6 pieces,  ~10% adherent serosa, ~90% muscularis, unusually poorly preserved",60-69,55.0,65.0,10.0
+GTEX-ZAK1-3026,Brain - Cortex,GTEX-ZAK1,female,50-59,Fast death - natural causes,,4 pieces,60-69,55.0,65.0,10.0
+GTEX-ZDTS-0126,Skin - Sun Exposed (Lower leg),GTEX-ZDTS,male,60-69,Fast death - natural causes,,6 pieces; well trimmed of subcutaneous fat,60-69,65.0,65.0,0.0
+GTEX-ZDTS-0826,Skin - Not Sun Exposed (Suprapubic),GTEX-ZDTS,male,60-69,Fast death - natural causes,,6 pieces; many hair follicles;(avoid pubic hair); well trimmed of subcutaneous fat,50-59,65.0,55.0,-10.0
+GTEX-ZDTS-1026,Lung,GTEX-ZDTS,male,60-69,Fast death - natural causes,"congestion, emphysema, hemorrhage","2 pieces; debris in bronchi, congestion, patchy emphysema and focal alveolar hemorrhage",60-69,65.0,65.0,0.0
+GTEX-ZDTS-2526,Colon - Transverse,GTEX-ZDTS,male,60-69,Fast death - natural causes,,6 pieces; mucosa = autolysis 3; muscle = 2,50-59,65.0,55.0,-10.0
+GTEX-ZDTS-2726,Colon - Sigmoid,GTEX-ZDTS,male,60-69,Fast death - natural causes,,6 pieces; well trimmed muscularis; small focus of mucosa (marked),50-59,65.0,55.0,-10.0
+GTEX-ZF28-0126,Skin - Sun Exposed (Lower leg),GTEX-ZF28,male,60-69,Slow death,,6 pieces. well trimmed,60-69,65.0,65.0,0.0
+GTEX-ZF28-0726,Lung,GTEX-ZF28,male,60-69,Slow death,"emphysema, fibrosis",2 pieces. Emphysema and patchy fibrosis,60-69,65.0,65.0,0.0
+GTEX-ZF28-1326,Skin - Not Sun Exposed (Suprapubic),GTEX-ZF28,male,60-69,Slow death,,6 pieces. internal fat up to 0.7mm in all.,60-69,65.0,65.0,0.0
+GTEX-ZF28-2526,Colon - Sigmoid,GTEX-ZF28,male,60-69,Slow death,,6 pieces. well dissected muscularis,50-59,65.0,55.0,-10.0
+GTEX-ZF28-2826,Colon - Transverse,GTEX-ZF28,male,60-69,Slow death,,6 pieces. Mucosa totally autolyzed; muscle slightly autolyzed,60-69,65.0,65.0,0.0
+GTEX-ZF28-3026,Brain - Cortex,GTEX-ZF28,male,60-69,Slow death,,4 pieces,60-69,65.0,65.0,0.0
+GTEX-ZF29-0926,Skin - Not Sun Exposed (Suprapubic),GTEX-ZF29,female,60-69,Ventilator case,,"6 pieces, each with ~5-10% internal and attached dermal fat",50-59,65.0,55.0,-10.0
+GTEX-ZF29-1026,Lung,GTEX-ZF29,female,60-69,Ventilator case,,"2 pieces, focal collections of chronic inflammatory cells and areas of collapse",60-69,65.0,65.0,0.0
+GTEX-ZF29-1726,Colon - Transverse,GTEX-ZF29,female,60-69,Ventilator case,,"6 pieces, 3 are muscularis only and 3 are predominantly muscularis, each with small strip of mucosa.",50-59,65.0,55.0,-10.0
+GTEX-ZF29-1826,Colon - Sigmoid,GTEX-ZF29,female,60-69,Ventilator case,,"6 pieces, all with both muscularis and mucosa.",50-59,65.0,55.0,-10.0
+GTEX-ZF29-2326,Skin - Sun Exposed (Lower leg),GTEX-ZF29,female,60-69,Ventilator case,,"6 pieces, internal and attached dermal adipose tissue of 5-15% in all pieces",60-69,65.0,65.0,0.0
+GTEX-ZLWG-0626,Lung,GTEX-ZLWG,female,50-59,Ventilator case,"emphysema, macrophages","2 pieces, some emphysematous change, hemosiderin-laden macrophages",50-59,55.0,55.0,0.0
+GTEX-ZLWG-0826,Skin - Not Sun Exposed (Suprapubic),GTEX-ZLWG,female,50-59,Ventilator case,,"6 pieces, predominantly well trimmed with limited attached adipose tissue",60-69,55.0,65.0,10.0
+GTEX-ZLWG-1726,Colon - Transverse,GTEX-ZLWG,female,50-59,Ventilator case,,"6 pieces, mucosa and muscularis",60-69,55.0,65.0,10.0
+GTEX-ZLWG-1826,Colon - Sigmoid,GTEX-ZLWG,female,50-59,Ventilator case,,"6 pieces, predominantly muscularis (target) with few strips of mucosa and small amount of attached fat (not target)",40-49,55.0,45.0,-10.0
+GTEX-ZLWG-2326,Skin - Sun Exposed (Lower leg),GTEX-ZLWG,female,50-59,Ventilator case,,"6 pieces, 5-10% attached and internal adipose tissue, squamous epithelium measures 30-40 microns in thickness",60-69,55.0,65.0,10.0
+GTEX-ZQUD-0726,Colon - Transverse,GTEX-ZQUD,male,30-39,Ventilator case,,5 pieces  small bowel; not a GTEx target organ,60-69,35.0,65.0,30.0
+GTEX-ZQUD-1026,Colon - Sigmoid,GTEX-ZQUD,male,30-39,Ventilator case,,"6 pieces, well preserved, ~50% muscularis, the rest fat and mucosa, ~10% thickness",50-59,35.0,55.0,20.0
+GTEX-ZQUD-1426,Skin - Sun Exposed (Lower leg),GTEX-ZQUD,male,30-39,Ventilator case,,6 pieces.  Squamous epithelium is ~1.5-2% thickness; minimal dermal fat,40-49,35.0,45.0,10.0
+GTEX-ZQUD-1826,Skin - Not Sun Exposed (Suprapubic),GTEX-ZQUD,male,30-39,Ventilator case,,6 pieces.  Squamous epithelium is ~1.5% thickness.  Minimal dermal fat.,40-49,35.0,45.0,10.0
+GTEX-ZVT2-0126,Skin - Not Sun Exposed (Suprapubic),GTEX-ZVT2,female,50-59,Ventilator case,,3 pieces; well trimmed,60-69,55.0,65.0,10.0
+GTEX-ZVT2-1726,Colon - Sigmoid,GTEX-ZVT2,female,50-59,Ventilator case,,3 pieces; well-trimmed muscle,50-59,55.0,55.0,0.0
+GTEX-ZVT2-1926,Colon - Transverse,GTEX-ZVT2,female,50-59,Ventilator case,,"3  pieces, well preserved mucosa; well trimmed full thickness wall",60-69,55.0,65.0,10.0
+GTEX-ZVT2-2526,Skin - Sun Exposed (Lower leg),GTEX-ZVT2,female,50-59,Ventilator case,,"3 pieces, well dissected",60-69,55.0,65.0,10.0
+GTEX-ZWKS-0126,Skin - Sun Exposed (Lower leg),GTEX-ZWKS,male,30-39,Slow death,,"6 pieces, squamous epithelium is ~50-75 microns; minimal adherent fat",50-59,35.0,55.0,20.0
+GTEX-ZWKS-0526,Lung,GTEX-ZWKS,male,30-39,Slow death,congestion,"2 pieces, moderate congestion, moderately autolyzed",50-59,35.0,55.0,20.0
+GTEX-ZWKS-0626,Skin - Not Sun Exposed (Suprapubic),GTEX-ZWKS,male,30-39,Slow death,,"6 pieces, adherent dermal fat on 4/6, rep foci delineated; squamous epithelium is ~40-70 microns thick",50-59,35.0,55.0,20.0
+GTEX-ZWKS-2326,Colon - Transverse,GTEX-ZWKS,male,30-39,Slow death,,"6 pieces, mucosa  toally autoyzed and/or sloughed",60-69,35.0,65.0,30.0
+GTEX-ZWKS-2426,Colon - Sigmoid,GTEX-ZWKS,male,30-39,Slow death,,"6 pieces, all muscularis",60-69,35.0,65.0,30.0
+GTEX-ZWKS-3026,Brain - Cortex,GTEX-ZWKS,male,30-39,Slow death,,"4 pieces, mild autolysis",50-59,35.0,55.0,20.0
+GTEX-ZXES-1026,Skin - Not Sun Exposed (Suprapubic),GTEX-ZXES,female,30-39,Ventilator case,,"6 pieces, predominantly well trimmed",50-59,35.0,55.0,20.0
+GTEX-ZXES-1626,Colon - Transverse,GTEX-ZXES,female,30-39,Ventilator case,,"4 pieces, muscularis only",50-59,35.0,55.0,20.0
+GTEX-ZXES-1726,Colon - Sigmoid,GTEX-ZXES,female,30-39,Ventilator case,,"5 pieces, well trimmed",50-59,35.0,55.0,20.0
+GTEX-ZXES-1826,Skin - Sun Exposed (Lower leg),GTEX-ZXES,female,30-39,Ventilator case,,"6 pieces, minimal attached fat, squamous epithelium is 40-50 microns thick",60-69,35.0,65.0,30.0
+GTEX-ZYVF-0126,Skin - Sun Exposed (Lower leg),GTEX-ZYVF,female,50-59,Ventilator case,,"6  pieces, trace dermal fat, delineated; squamous epithelium is ~70-90 microns thick",60-69,55.0,65.0,10.0
+GTEX-ZYVF-0926,Skin - Not Sun Exposed (Suprapubic),GTEX-ZYVF,female,50-59,Ventilator case,,"6 pieces, minimal fat, squamous epithelium is 30-50 microns thick",60-69,55.0,65.0,10.0
+GTEX-ZYVF-1726,Lung,GTEX-ZYVF,female,50-59,Ventilator case,congestion,"2 pieces, mild congestion",60-69,55.0,65.0,10.0
+GTEX-ZYVF-2826,Colon - Transverse,GTEX-ZYVF,female,50-59,Ventilator case,,"6 pieces, mucosa is ~0.2mm thick but totally autolyzed",50-59,55.0,55.0,0.0
+GTEX-ZYVF-2926,Colon - Sigmoid,GTEX-ZYVF,female,50-59,Ventilator case,,"6 pieces, all muscularis",60-69,55.0,65.0,10.0
+GTEX-ZYW4-0126,Skin - Sun Exposed (Lower leg),GTEX-ZYW4,male,60-69,Intermediate death,,"6 pieces, 4 have up to 0.5 mm fat",60-69,65.0,65.0,0.0
+GTEX-ZYW4-0626,Skin - Not Sun Exposed (Suprapubic),GTEX-ZYW4,male,60-69,Intermediate death,,"6 pieces, well trimmed",60-69,65.0,65.0,0.0
+GTEX-ZYW4-1526,Lung,GTEX-ZYW4,male,60-69,Intermediate death,emphysema,"2 pieces, emphysema",50-59,65.0,55.0,-10.0
+GTEX-ZYW4-2326,Colon - Sigmoid,GTEX-ZYW4,male,60-69,Intermediate death,,"6 pieces, all muscularis (target)",60-69,65.0,65.0,0.0
+GTEX-ZYW4-2426,Colon - Transverse,GTEX-ZYW4,male,60-69,Intermediate death,,6 pieces: all full thickness. well trimmed; mucosa largely severely autolyzed; muscle  slightly autolyzed,60-69,65.0,65.0,0.0
+GTEX-ZYWO-0826,Lung,GTEX-ZYWO,female,40-49,Ventilator case,pneumonia,"2 pieces, patchy bronchopneumonia (?aspiration)",40-49,45.0,45.0,0.0
+GTEX-ZYWO-1626,Colon - Transverse,GTEX-ZYWO,female,40-49,Ventilator case,,4 pieces,40-49,45.0,45.0,0.0
+GTEX-ZYWO-1826,Colon - Sigmoid,GTEX-ZYWO,female,40-49,Ventilator case,,"4 pieces, mucosa (not target)",60-69,45.0,65.0,20.0
+GTEX-ZYWO-2226,Skin - Not Sun Exposed (Suprapubic),GTEX-ZYWO,female,40-49,Ventilator case,,"5 pieces, 10-40% attached and internal fat",50-59,45.0,55.0,10.0
+GTEX-ZYWO-2426,Skin - Sun Exposed (Lower leg),GTEX-ZYWO,female,40-49,Ventilator case,,"5 pieces, include up to 30% attached and internal fat, squamous epithelium is 30-45 microns thick",40-49,45.0,45.0,0.0
+GTEX-ZZPT-0126,Skin - Not Sun Exposed (Suprapubic),GTEX-ZZPT,male,50-59,Slow death,,"6 pieces; squamous epithelium is ~1-1.5% thickness, ~30 microns",60-69,55.0,65.0,10.0
+GTEX-ZZPT-0226,Skin - Sun Exposed (Lower leg),GTEX-ZZPT,male,50-59,Slow death,edema,"6 pieces; squamous epithelium is ~1.5-2% thickness, ~30-40 microns.  Dermis appears edematous",60-69,55.0,65.0,10.0
+GTEX-ZZPT-1326,Lung,GTEX-ZZPT,male,50-59,Slow death,"congestion, edema","2 pieces, moderate edema/congestion",60-69,55.0,65.0,10.0
+GTEX-ZZPT-2426,Colon - Sigmoid,GTEX-ZZPT,male,50-59,Slow death,,"6 pieces, trace adherent autolyzed mcuosa on one, delineated",60-69,55.0,65.0,10.0
+GTEX-ZZPT-2526,Colon - Transverse,GTEX-ZZPT,male,50-59,Slow death,,"6 pieces, mucosa totally autolyzed and /or sloughed",60-69,55.0,65.0,10.0
+GTEX-ZZPT-3026,Brain - Cortex,GTEX-ZZPT,male,50-59,Slow death,edema,"4 pieces, appears edematous",60-69,55.0,65.0,10.0
