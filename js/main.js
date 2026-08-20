@@ -1,6 +1,6 @@
 // ============================================================================
-// Tissue Clocks minicourse — interactivity
-// All chart data below is real, computed in analysis/*.py — see results.json,
+// Tissue Clocks minicourse: interactivity
+// All chart data below is real, computed in analysis/*.py; see results.json,
 // gap_by_hardy.csv, gap_by_tissue.csv. Nothing here is mocked.
 // ============================================================================
 
@@ -121,7 +121,7 @@ function renderBarChart(containerId, data, opts) {
 
       const label = document.createElement("div");
       label.className = "bar-label";
-      label.textContent = opts.series.length > 1 ? `${d.label} — ${s.label}` : d.label;
+      label.textContent = opts.series.length > 1 ? `${d.label}: ${s.label}` : d.label;
       row.appendChild(label);
 
       const track = document.createElement("div");
@@ -288,7 +288,7 @@ function renderConfusionMatrix(containerId, data) {
 
   const dark = isDarkMode();
   const gridlineRgb = hexToRgb(css("--gridline"));
-  // continuous blend in both themes, not discrete buckets — a 6-bucket lookup put
+  // continuous blend in both themes, not discrete buckets: a 6-bucket lookup put
   // every v below 0.2 in the same bucket as v=0, so low-but-nonzero cells were
   // indistinguishable from empty ones.
   const ceilingRgb = dark ? hexToRgb(css("--accent-blue")) : hexToRgb("#0d366b");
@@ -464,8 +464,8 @@ function initQuiz() {
           else if (o === opt) o.classList.add("incorrect");
         });
         feedback.textContent = isCorrect
-          ? "Correct — " + block.dataset.explain
-          : "Not quite — " + block.dataset.explain;
+          ? "Correct: " + block.dataset.explain
+          : "Not quite: " + block.dataset.explain;
         reset.hidden = false;
       });
     });
