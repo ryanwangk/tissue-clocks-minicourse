@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tissue Clocks: a hands-on minicourse</title>
-<meta name="description" content="Build your own tissue-specific aging clock on real GTEx histology embeddings. A MICCAI Educational Challenge minicourse.">
+<meta name="description" content="Build your own tissue-specific aging clock on real donor histology embeddings. A MICCAI Educational Challenge minicourse.">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -29,7 +29,7 @@
     <div class="hero-copy">
       <div class="kicker">MICCAI Educational Challenge · Minicourse</div>
       <h1>Tissue Clocks</h1>
-      <p class="subtitle">What a lung biopsy can tell you about how fast you're aging: building our own tissue-specific age predictor on real, pre-extracted pathology foundation model embeddings from 4,791 real GTEx tissue slides.</p>
+      <p class="subtitle">What a lung biopsy can tell you about how fast you're aging: a tissue-specific age predictor built from real, pre-extracted pathology foundation model embeddings from 4,791 real donor tissue slides.</p>
       <div class="authors">Ryan Khalloqi<sup>1</sup> · Jun Ma<sup>2</sup><br>
         <span class="affil"><sup>1</sup>Department of Electrical and Computer Engineering, Carnegie Mellon University · <sup>2</sup>Princess Margaret Cancer Centre &amp; AI Hub, University Health Network</span>
       </div>
@@ -133,11 +133,11 @@
   <div class="stat-strip">
     <div class="stat"><div class="num">25,712</div><div class="label">whole-slide images analyzed</div></div>
     <div class="stat"><div class="num">40</div><div class="label">tissue types</div></div>
-    <div class="stat"><div class="num">983</div><div class="label">individuals (GTEx)</div></div>
+    <div class="stat"><div class="num">983</div><div class="label">individuals</div></div>
     <div class="stat"><div class="num">4.9 yr</div><div class="label">mean prediction error</div></div>
   </div>
 
-  <p>They analyzed those 25,712 whole-slide histopathology images across 40 tissue types from 983 people in the GTEx cohort, and built "tissue clocks": deep-learning predictors of biological age from tissue architecture alone, with no molecular assay involved. Their clocks correlated with telomere attrition, subclinical pathology, and comorbidities, and predicted disease-relevant organ aging across eight conditions including Alzheimer's disease, stroke, and Crohn's disease.</p>
+  <p>They analyzed those 25,712 whole-slide histopathology images across 40 tissue types from 983 people in GTEx, a large public archive of donated tissue samples, and built "tissue clocks": deep-learning predictors of biological age from tissue architecture alone, with no molecular assay involved. Their clocks correlated with telomere attrition, subclinical pathology, and comorbidities, and predicted disease-relevant organ aging across eight conditions including Alzheimer's disease, stroke, and Crohn's disease.</p>
 
   <p>This minicourse builds a small version of that idea ourselves, end to end, on real data, with real (if humbler) results, and shows you exactly where the real engineering effort in a project like this actually goes: from a raw gigapixel image, through a foundation model, to a number you can sanity-check against clinical metadata the model never saw.</p>
 
@@ -380,8 +380,8 @@
   <table class="data-table">
     <thead><tr><th>Hardy Scale category</th><th>What it means</th></tr></thead>
     <tbody>
-      <tr><td>Violent / fast death</td><td>Sudden death from trauma or accident</td></tr>
-      <tr><td>Fast death of natural causes</td><td>Rapid natural death, onset to death under ~1 hour</td></tr>
+      <tr><td>Fast death (violent)</td><td>Sudden death from trauma or accident</td></tr>
+      <tr><td>Fast death (natural causes)</td><td>Rapid natural death, onset to death under ~1 hour</td></tr>
       <tr><td>Intermediate death</td><td>Terminal phase lasted roughly 1–24 hours</td></tr>
       <tr><td>Slow death</td><td>Ill for more than 24 hours before death</td></tr>
       <tr><td>Ventilator case</td><td>On a ventilator before death, regardless of underlying cause, a marker of prolonged critical illness</td></tr>
@@ -401,13 +401,13 @@
     </div>
   </div>
 
-  <p>One honest note: GTEx donors skew older, and our six age brackets are unevenly sized: 176 slides in the 70–79 bracket versus 1,681 in 60–69. That imbalance directly shapes what our model can and can't learn well, as you'll see in Evaluation.</p>
+  <p>One honest note: GTEx donors skew older, and the six age brackets are unevenly sized: 176 slides in the 70–79 bracket versus 1,681 in 60–69. That imbalance directly shapes what the model can and can't learn well, as you'll see in Evaluation.</p>
 </section>
 
 <!-- ============================================================ 06 -->
 <section class="course-section" id="model">
   <div class="section-eyebrow"><span class="section-num">06</span><span class="kicker-text">Architecture &amp; training</span></div>
-  <h2 class="section-title">Building our own tissue clock</h2>
+  <h2 class="section-title">Building a tissue clock</h2>
 
   <p class="lede">Now for the part that turns embeddings into predictions.</p>
 
@@ -490,7 +490,7 @@ train_idx, test_idx = <span class="k">next</span>(gss.split(X, groups=obs[<span 
   <p>We report two metrics throughout. <strong>Mean absolute error (MAE)</strong> is the average, across all held-out test slides, of how many years off the model's prediction was from the true age, in either direction, in years; smaller is better, and it's directly comparable to the baseline in the same units. The confusion matrix below is <strong>row-normalized</strong>, meaning each row (one true age bracket) sums to 1.0, so a cell's value is "of the slides that were actually this age, what fraction did the model predict as that age," not a raw count that would be dominated by whichever bracket has the most slides.</p>
 
   <div class="chart-wrap">
-    <div class="chart-title">Mean absolute error: our tissue clock vs. a naive baseline</div>
+    <div class="chart-title">Mean absolute error: the tissue clock vs. a naive baseline</div>
     <div class="chart-subtitle">Baseline = always predict the majority age bracket. Lower is better.</div>
     <div id="chart-mae" data-chart></div>
   </div>
@@ -499,7 +499,7 @@ train_idx, test_idx = <span class="k">next</span>(gss.split(X, groups=obs[<span 
 
   <div class="callout honest">
     <strong>Where it didn't work</strong>
-    Brain-Cortex did not beat baseline (7.44 vs. 7.33 years). Our model performs essentially the same as just guessing the majority bracket. That's very likely because Brain-Cortex has the fewest training examples of any tissue here (337, vs. 795 for the largest). This is a real limitation of training a lightweight model quickly on limited data, not a property of tissue clocks in general; the published paper, trained on far more data with a more sophisticated pipeline, reaches 4.9 years mean error <em>across all 40 tissues</em>. Ours, built entirely on pre-extracted features, lands in the 7.4–10.0 year range on 6 tissues. That gap is itself the honest lesson: foundation-model embeddings get you real signal fast, but data scale and modeling choices on top still matter enormously. One more honest note: that 0.11-year margin is thin enough to flip. <code>HistGradientBoostingClassifier</code> isn't bit-reproducible across machines, and it already has: a Colab run of this same notebook put Brain-Cortex at 7.09 years, beating baseline. The other five tissues beat baseline by 2 to 6 years, margins wide enough that this kind of run-to-run noise wouldn't change their outcome.
+    Brain-Cortex did not beat baseline (7.44 vs. 7.33 years). The model performs essentially the same as just guessing the majority bracket. That's very likely because Brain-Cortex has the fewest training examples of any tissue here (337, vs. 795 for the largest). This is a real limitation of training a lightweight model quickly on limited data, not a property of tissue clocks in general; the published paper, trained on far more data with a more sophisticated pipeline, reaches 4.9 years mean error <em>across all 40 tissues</em>. Ours, built entirely on pre-extracted features, lands in the 7.4–10.0 year range on 6 tissues. That gap is itself the honest lesson: foundation-model embeddings get you real signal fast, but data scale and modeling choices on top still matter enormously. One more honest note: that 0.11-year margin is thin enough to flip. <code>HistGradientBoostingClassifier</code> isn't bit-reproducible across machines, and it already has: a Colab run of this same notebook put Brain-Cortex at 7.09 years, beating baseline. The other five tissues beat baseline by 2 to 6 years, margins wide enough that this kind of run-to-run noise wouldn't change their outcome.
   </div>
 
   <div class="chart-wrap">
@@ -508,9 +508,9 @@ train_idx, test_idx = <span class="k">next</span>(gss.split(X, groups=obs[<span 
     <div id="chart-confusion" data-chart></div>
   </div>
 
-  <p>The model is noticeably better at the youngest bracket (20–29, predicted correctly 35% of the time, more than double random chance for 6 classes) than at distinguishing older brackets from each other, where it increasingly collapses toward predicting "60–69", a direct consequence of the class imbalance in section 05.</p>
+  <p>The model is noticeably better at the youngest bracket (20–29, predicted correctly 35% of the time, more than double random chance for 6 classes) than at distinguishing older brackets from each other, where it increasingly collapses toward predicting "60–69", a direct consequence of the class imbalance in section 05. The clearest case of that collapse: the model never predicts "70–79" at all, for any slide, including ones that actually are 70–79. That bracket has the fewest slides of any age group in the whole dataset (176; see Data), and the confusion matrix's rightmost column reflects it exactly: 0.00 in every row.</p>
 
-  <p><strong>Does the age gap mean anything clinically?</strong> We checked this against the real Hardy Scale metadata bundled in the same file, a classification of how each donor died, something our model was never trained on.</p>
+  <p><strong>Does the age gap mean anything clinically?</strong> We checked this against the real Hardy Scale metadata bundled in the same file, a classification of how each donor died, something the model was never trained on.</p>
 
   <div class="chart-wrap">
     <div class="chart-title">Predicted age gap by cause-of-death classification</div>
@@ -624,7 +624,7 @@ adata = ad.read_h5ad(<span class="s">"gtex.4_tissues.0.5mpp.224px.conch.h5ad"</s
     <div class="quiz-feedback"></div>
   </div>
 
-  <div class="quiz-block" data-explain="Brain-Cortex had the fewest training slides (337) of any tissue in this dataset.">
+  <div class="quiz-block" data-explain="Brain-Cortex had the fewest training slides (337) of any tissue in this dataset. Its margin over baseline is thin enough (0.11 years on this run) that it has already flipped to beating baseline on a different machine; see the note in Evaluation.">
     <div class="quiz-q">Which tissue's model failed to beat the naive baseline, and why?</div>
     <div class="quiz-options">
       <button class="quiz-option" data-correct="false">Lung: because lung tissue is structurally too uniform</button>
@@ -644,7 +644,7 @@ adata = ad.read_h5ad(<span class="s">"gtex.4_tissues.0.5mpp.224px.conch.h5ad"</s
     <div class="quiz-feedback"></div>
   </div>
 
-  <div class="quiz-block" data-explain="a single pooled number averages over tissues and hides exactly the kind of per-group failure (Brain-Cortex barely beating a naive baseline) that the honest, tissue-by-tissue breakdown surfaces.">
+  <div class="quiz-block" data-explain="a single pooled number averages over tissues and hides exactly the kind of per-group failure (Brain-Cortex essentially tying a naive baseline, by a margin thin enough that it has already flipped on a different machine) that the honest, tissue-by-tissue breakdown surfaces.">
     <div class="quiz-q">If we had only reported one pooled, all-tissue accuracy number instead of the per-tissue breakdown, what real finding would it have hidden?</div>
     <div class="quiz-options">
       <button class="quiz-option" data-correct="false">That CONCH embeddings are 512-dimensional</button>
