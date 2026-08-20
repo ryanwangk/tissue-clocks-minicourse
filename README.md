@@ -1,6 +1,6 @@
 # Tissue Clocks: a hands-on minicourse
 
-[![Course site](https://img.shields.io/badge/-course%20site-brightgreen?logo=googlechrome&logoColor=white)](https://ryanwangk.github.io/tissue-clocks-minicourse/)
+[![Course site](https://img.shields.io/badge/%F0%9F%94%97-course%20site-brightgreen)](https://ryanwangk.github.io/tissue-clocks-minicourse/)
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ryanwangk/tissue-clocks-minicourse/blob/main/notebooks/tissue_clock_handson.ipynb)
 [![License: CC BY-NC 4.0](https://img.shields.io/badge/license-CC%20BY--NC%204.0-lightgrey.svg)](LICENSE)
 
