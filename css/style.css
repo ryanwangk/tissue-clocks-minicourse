@@ -546,6 +546,7 @@ footer.site-footer h4 { font-size: 12px; text-transform: uppercase; letter-spaci
   overflow-x: auto;
   margin: 18px 0;
   line-height: 1.55;
+  white-space: pre;
 }
 .code-block .c { color: #7a9e7e; } /* comment */
 .code-block .s { color: #d4a574; } /* string */
