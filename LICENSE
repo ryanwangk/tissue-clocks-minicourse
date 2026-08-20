@@ -1,0 +1,33 @@
+Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)
+
+Copyright (c) 2026 Ryan Khalloqi
+
+This work is licensed under the Creative Commons Attribution-NonCommercial 4.0
+International License. To view a copy of this license, visit
+https://creativecommons.org/licenses/by-nc/4.0/ or see the full legal code at
+https://creativecommons.org/licenses/by-nc/4.0/legalcode.
+
+In short: you are free to share and adapt this work for any noncommercial
+purpose, with attribution, as long as you indicate if changes were made.
+
+## Why this license
+
+This repository builds directly on data and model outputs that carry their
+own noncommercial restrictions, verified directly from their sources:
+
+- The CONCH slide embeddings (data/gtex.4_tissues.0.5mpp.224px.conch.h5ad)
+  are archived on Zenodo (10.5281/zenodo.20709093) under CC BY-NC 4.0.
+- CONCH's own license (Mahmood Lab, https://github.com/mahmoodlab/CONCH)
+  extends its noncommercial restriction to "datasets created from the CONCH
+  model" and "models trained on outputs from the CONCH model", which is
+  exactly what the embeddings file and the classifiers trained on it in this
+  repository are.
+
+Licensing this repository under CC BY-NC 4.0 keeps every original piece here
+(the site, the notebook, the analysis code) under terms no broader than what
+the underlying data and model actually permit, while remaining free to use,
+adapt, and redistribute for any noncommercial purpose with attribution.
+
+GTEx's own data license (https://gtexportal.org/home/license) is more
+permissive and does not itself require noncommercial use; the constraint
+here comes from CONCH and the Zenodo-archived embeddings, not from GTEx.
