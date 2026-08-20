@@ -1,5 +1,9 @@
 # Tissue Clocks: a hands-on minicourse
 
+[![Course site](https://img.shields.io/badge/course%20site-live-brightgreen)](https://ryanwangk.github.io/tissue-clocks-minicourse/)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ryanwangk/tissue-clocks-minicourse/blob/main/notebooks/tissue_clock_handson.ipynb)
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/license-CC%20BY--NC%204.0-lightgrey.svg)](LICENSE)
+
 A MICCAI Educational Challenge (MEC) 2026 minicourse on **tissue clocks**: deep-learning
 predictors of biological age from histology images, built on the real, pre-extracted
 CONCH slide embeddings released alongside Abila, Buljan, Zheng et al., Rendeiro, A. F.,
