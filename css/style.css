@@ -161,8 +161,8 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .hero-top {
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 36px;
+  grid-template-columns: 1fr 1.35fr;
+  gap: 32px;
   align-items: center;
   margin-bottom: 32px;
 }
@@ -171,7 +171,7 @@ img { max-width: 100%; height: auto; display: block; }
   border-radius: var(--radius);
   background: var(--surface-1);
   padding: 20px;
-  align-self: stretch;
+  align-self: center;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -179,6 +179,17 @@ img { max-width: 100%; height: auto; display: block; }
   gap: 10px;
 }
 .hero-visual svg { width: 100%; height: auto; max-width: 320px; }
+.hero-visual img { width: 100%; height: auto; max-width: 560px; border-radius: 2px; }
+/* the hero scatter figure is a raster image, not a themed inline SVG, so it
+   ships as two pre-rendered files and we show/hide between them, following
+   the same light/dark guard used for the CSS variables themselves. */
+.hero-visual .theme-dark-only { display: none; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .hero-visual .theme-light-only { display: none; }
+  :root:not([data-theme="light"]) .hero-visual .theme-dark-only { display: block; }
+}
+:root[data-theme="dark"] .hero-visual .theme-light-only { display: none; }
+:root[data-theme="dark"] .hero-visual .theme-dark-only { display: block; }
 .hero-visual-caption {
   font-size: 12px;
   color: var(--text-muted);
@@ -188,6 +199,7 @@ img { max-width: 100%; height: auto; display: block; }
   .hero-top { grid-template-columns: 1fr; }
   .hero-visual { order: -1; }
   .hero-visual svg { max-width: 280px; }
+  .hero-visual img { max-width: 100%; }
 }
 
 .hero h1 {
@@ -333,6 +345,37 @@ strong { font-weight: 700; }
   color: var(--text-muted);
 }
 .diagram-card.wide svg { max-width: 100%; }
+
+.wsi-pyramid { display: flex; flex-direction: column; align-items: center; gap: 18px; }
+.wsi-pyramid-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+.wsi-pyramid-item { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.wsi-pyramid-item img {
+  display: block;
+  border: 1px solid var(--border-hairline);
+  border-radius: 2px;
+}
+.wsi-pyramid-item span, .wsi-pyramid-tile span {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+}
+.wsi-pyramid-arrow { color: var(--text-muted); font-size: 12px; text-align: center; }
+.wsi-pyramid-tile { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.wsi-pyramid-tile img {
+  display: block;
+  width: 100px;
+  height: 100px;
+  border: 1px solid var(--accent-orange);
+  border-radius: 2px;
+}
+.wsi-pyramid-tile span { max-width: 360px; }
 
 .two-up {
   display: grid;

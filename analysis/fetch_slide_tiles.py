@@ -98,10 +98,37 @@ for dr in range(-1, 2):
 full_res.save(f"{OUT_DIR}/fullres_crop_level{MAX_LEVEL}.png")
 print(f"Saved full-res crop: {OUT_DIR}/fullres_crop_level{MAX_LEVEL}.png")
 
+# --- 2b. A 4x4 grid of real, individually-saved adjacent tiles, for the
+#         tiling diagram in Section 04 (real tissue, not abstract squares) ---
+GRID_DIR = f"{OUT_DIR}/grid"
+os.makedirs(GRID_DIR, exist_ok=True)
+for dr in range(-2, 2):
+    for dc in range(-2, 2):
+        tile = fetch_tile(MAX_LEVEL, center_col + dc, center_row + dr)
+        if tile is not None:
+            tile.save(f"{GRID_DIR}/tile_{dr+2}_{dc+2}.png")
+print(f"Saved 4x4 real tile grid to {GRID_DIR}/")
+
 # --- 3. One single 224x224-ish tile for the "this is one tile" visual ---
 single = fetch_tile(MAX_LEVEL, center_col, center_row)
 if single is not None:
     single.save(f"{OUT_DIR}/single_tile_level{MAX_LEVEL}.png")
     print(f"Saved single tile: {OUT_DIR}/single_tile_level{MAX_LEVEL}.png")
+
+# --- 4. A couple of smaller real whole-slide overviews, for an actual
+#        real-image pyramid figure instead of a schematic one ---
+for lvl in (8, 9):
+    lw, lh = level_dims(lvl)
+    lc = math.ceil(lw / TILE)
+    lr = math.ceil(lh / TILE)
+    print(f"\nPyramid level {lvl}: {lw}x{lh}px, {lc}x{lr} tiles")
+    im = Image.new("RGB", (lw, lh), "white")
+    for row in range(lr):
+        for col in range(lc):
+            tile = fetch_tile(lvl, col, row)
+            if tile is not None:
+                im.paste(tile, (col * TILE, row * TILE))
+    im.save(f"{OUT_DIR}/overview_level{lvl}.png")
+    print(f"Saved: {OUT_DIR}/overview_level{lvl}.png ({lw}x{lh})")
 
 print("\nDone.")

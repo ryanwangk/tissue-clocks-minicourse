@@ -29,7 +29,7 @@
     <div class="hero-copy">
       <div class="kicker">MICCAI Educational Challenge · Minicourse</div>
       <h1>Tissue Clocks</h1>
-      <p class="subtitle">What a lung biopsy can tell you about how fast you're aging: a tissue-specific age predictor built from real, pre-extracted pathology foundation model embeddings from 4,791 real donor tissue slides.</p>
+      <p class="subtitle">What a tissue biopsy can tell you about how fast you're aging: a tissue-specific age predictor built from real, pre-extracted pathology foundation model embeddings from 4,791 real donor tissue slides.</p>
       <div class="authors">Ryan Khalloqi<sup>1</sup> · Jun Ma<sup>2</sup><br>
         <span class="affil"><sup>1</sup>Department of Electrical and Computer Engineering, Carnegie Mellon University · <sup>2</sup>Princess Margaret Cancer Centre &amp; AI Hub, University Health Network</span>
       </div>
@@ -40,47 +40,9 @@
       </div>
     </div>
     <div class="hero-visual">
-      <svg viewBox="0 0 360 240" role="img" aria-label="Diagram: whole-slide tiles are embedded by a foundation model into a vector, which a classifier turns into a predicted age">
-        <g>
-          <rect x="10"  y="77"  width="26" height="26" rx="2" style="fill:var(--accent-blue);fill-opacity:1"   stroke="var(--border-hairline)"/>
-          <rect x="40"  y="77"  width="26" height="26" rx="2" style="fill:var(--accent-blue);fill-opacity:0.55" stroke="var(--border-hairline)"/>
-          <rect x="70"  y="77"  width="26" height="26" rx="2" style="fill:var(--accent-blue);fill-opacity:0.8"  stroke="var(--border-hairline)"/>
-          <rect x="10"  y="107" width="26" height="26" rx="2" style="fill:var(--accent-blue);fill-opacity:0.7"  stroke="var(--border-hairline)"/>
-          <rect x="40"  y="107" width="26" height="26" rx="2" style="fill:var(--accent-blue);fill-opacity:1"    stroke="var(--border-hairline)"/>
-          <rect x="70"  y="107" width="26" height="26" rx="2" style="fill:var(--accent-blue);fill-opacity:0.5"  stroke="var(--border-hairline)"/>
-          <rect x="10"  y="137" width="26" height="26" rx="2" style="fill:var(--accent-blue);fill-opacity:0.85" stroke="var(--border-hairline)"/>
-          <rect x="40"  y="137" width="26" height="26" rx="2" style="fill:var(--accent-blue);fill-opacity:0.6"  stroke="var(--border-hairline)"/>
-          <rect x="70"  y="137" width="26" height="26" rx="2" style="fill:var(--accent-blue);fill-opacity:1"    stroke="var(--border-hairline)"/>
-        </g>
-        <g style="stroke:var(--text-muted)" stroke-width="2" fill="none">
-          <line x1="104" y1="120" x2="134" y2="120"/>
-          <polyline points="126,113 134,120 126,127"/>
-        </g>
-        <g style="fill:var(--accent-aqua)">
-          <rect x="144" y="100" width="9" height="40" rx="1.5"/>
-          <rect x="157" y="75"  width="9" height="65" rx="1.5" fill-opacity="0.8"/>
-          <rect x="170" y="110" width="9" height="30" rx="1.5" fill-opacity="0.6"/>
-          <rect x="183" y="60"  width="9" height="80" rx="1.5"/>
-          <rect x="196" y="90"  width="9" height="50" rx="1.5" fill-opacity="0.75"/>
-          <rect x="209" y="50"  width="9" height="90" rx="1.5"/>
-          <rect x="222" y="105" width="9" height="35" rx="1.5" fill-opacity="0.65"/>
-          <rect x="235" y="80"  width="9" height="60" rx="1.5" fill-opacity="0.85"/>
-        </g>
-        <g style="stroke:var(--text-muted)" stroke-width="2" fill="none">
-          <line x1="252" y1="120" x2="282" y2="120"/>
-          <polyline points="274,113 282,120 274,127"/>
-        </g>
-        <g>
-          <circle cx="320" cy="120" r="34" style="fill:var(--surface-1);stroke:var(--text-primary)" stroke-width="2"/>
-          <line x1="320" y1="120" x2="331" y2="109" style="stroke:var(--accent-orange)" stroke-width="3" stroke-linecap="round"/>
-          <line x1="320" y1="120" x2="299" y2="108" style="stroke:var(--accent-orange)" stroke-width="3" stroke-linecap="round"/>
-          <circle cx="320" cy="120" r="3" style="fill:var(--accent-orange)"/>
-        </g>
-        <text x="48"  y="185" text-anchor="middle" font-size="10" style="fill:var(--text-muted)">tiles</text>
-        <text x="192" y="185" text-anchor="middle" font-size="10" style="fill:var(--text-muted)">embedding</text>
-        <text x="320" y="185" text-anchor="middle" font-size="10" style="fill:var(--text-muted)">age gap</text>
-      </svg>
-      <div class="hero-visual-caption">Whole-slide tiles → foundation-model embedding → predicted age</div>
+      <img class="theme-light-only" src="assets/figures/hero_age_gap_scatter.png" alt="Scatter plot of real predicted age gap versus chronological age for all 169 Lung samples in the held-out test set, with four genuine tissue crops from real GTEx slides attached to their actual data points at age gaps of plus 30, plus 10, 0, and minus 30 years, in the style of the tissue-clocks paper's own Figure 1.">
+      <img class="theme-dark-only" src="assets/figures/hero_age_gap_scatter_dark.png" alt="Scatter plot of real predicted age gap versus chronological age for all 169 Lung samples in the held-out test set, with four genuine tissue crops from real GTEx slides attached to their actual data points at age gaps of plus 30, plus 10, 0, and minus 30 years, in the style of the tissue-clocks paper's own Figure 1.">
+      <div class="hero-visual-caption">Real predicted age gap vs. chronological age, Lung, held-out test set (n=169)</div>
     </div>
   </div>
   <div class="hero-stats">
@@ -101,31 +63,26 @@
   <p>Different tissues age at different rates because they face different kinds of wear. Skin absorbs decades of UV exposure directly. Lungs filter every inhaled particle and pathogen a person ever breathes. The colon lining replaces itself every few days, giving cellular errors many more chances to accumulate over a lifetime than a barely-dividing tissue like the brain. Same person, same birthday, but each organ is running its own, separate clock, shaped by its own history of damage and repair.</p>
 
   <figure class="diagram-card">
-    <svg viewBox="0 0 680 210" role="img" aria-label="Diagram: for one 55-year-old donor, skin and colon read biologically younger than their chronological age while brain and lung read older">
-      <line x1="60" y1="150" x2="620" y2="150" stroke="var(--baseline-axis)" stroke-width="1.5"/>
-      <line x1="340" y1="40" x2="340" y2="160" stroke="var(--text-muted)" stroke-width="1.5" stroke-dasharray="3 3"/>
-      <text x="340" y="28" text-anchor="middle" font-size="12" font-weight="700" style="fill:var(--text-primary)">chronological age: 55</text>
-
-      <line x1="220" y1="150" x2="220" y2="95" stroke="var(--accent-aqua)" stroke-width="2"/>
-      <circle cx="220" cy="150" r="5" style="fill:var(--accent-aqua)"/>
-      <text x="220" y="82" text-anchor="middle" font-size="12" font-weight="700" style="fill:var(--text-primary)">Skin</text>
-
-      <line x1="290" y1="150" x2="290" y2="118" stroke="var(--accent-aqua)" stroke-width="2"/>
-      <circle cx="290" cy="150" r="5" style="fill:var(--accent-aqua)"/>
-      <text x="290" y="105" text-anchor="middle" font-size="12" font-weight="700" style="fill:var(--text-primary)">Colon</text>
-
-      <line x1="390" y1="150" x2="390" y2="112" stroke="var(--accent-orange)" stroke-width="2"/>
-      <circle cx="390" cy="150" r="5" style="fill:var(--accent-orange)"/>
-      <text x="390" y="99" text-anchor="middle" font-size="12" font-weight="700" style="fill:var(--text-primary)">Brain</text>
-
-      <line x1="460" y1="150" x2="460" y2="80" stroke="var(--accent-orange)" stroke-width="2"/>
-      <circle cx="460" cy="150" r="5" style="fill:var(--accent-orange)"/>
-      <text x="460" y="67" text-anchor="middle" font-size="12" font-weight="700" style="fill:var(--text-primary)">Lung</text>
-
-      <text x="80" y="178" text-anchor="start" font-size="12" font-weight="700" style="fill:var(--accent-aqua)">← reads younger</text>
-      <text x="600" y="178" text-anchor="end" font-size="12" font-weight="700" style="fill:var(--accent-orange)">reads older →</text>
-    </svg>
-    <figcaption>One hypothetical 55-year-old donor: each tissue's predicted age diverges from the shared chronological-age line by a different amount and in a different direction: the core observation a tissue clock is built to measure.</figcaption>
+    <svg viewBox="-283 38 3089 3584" role="img" aria-label="Real illustrated anatomical diagram (Mikael Haggstrom, public domain) with real donor GTEX-1E2YA's per-organ age gaps marked: brain +10 years, lung -30 years, colon 0 years, skin -10 years">
+    <image href="assets/figures/organs/adult_male_with_organs.png" x="0" y="0" width="2543" height="3623"/>
+    <line x1="1208" y1="260" x2="-3" y2="118" stroke="var(--accent-orange)" stroke-width="4" stroke-dasharray="10 8"/>
+    <circle cx="1208" cy="260" r="14" style="fill:var(--accent-orange);stroke:white;stroke-width:4"/>
+    <text x="-3" y="104" text-anchor="end" font-size="64" font-weight="700" style="fill:var(--text-primary)">Brain</text>
+    <text x="-3" y="176" text-anchor="end" font-size="64" font-weight="700" style="fill:var(--accent-orange)">+10 yr</text>
+    <line x1="860" y1="1920" x2="-3" y2="1538" stroke="var(--accent-aqua)" stroke-width="4" stroke-dasharray="10 8"/>
+    <circle cx="860" cy="1920" r="14" style="fill:var(--accent-aqua);stroke:white;stroke-width:4"/>
+    <text x="-3" y="1524" text-anchor="end" font-size="64" font-weight="700" style="fill:var(--text-primary)">Lung</text>
+    <text x="-3" y="1596" text-anchor="end" font-size="64" font-weight="700" style="fill:var(--accent-aqua)">-30 yr</text>
+    <line x1="1550" y1="3300" x2="2546" y2="3088" stroke="var(--text-primary)" stroke-width="4" stroke-dasharray="10 8"/>
+    <circle cx="1550" cy="3300" r="14" style="fill:var(--text-primary);stroke:white;stroke-width:4"/>
+    <text x="2546" y="3074" text-anchor="start" font-size="64" font-weight="700" style="fill:var(--text-primary)">Colon</text>
+    <text x="2546" y="3146" text-anchor="start" font-size="64" font-weight="700" style="fill:var(--text-primary)">0 yr</text>
+    <line x1="1610" y1="1290" x2="2546" y2="338" stroke="var(--accent-aqua)" stroke-width="4" stroke-dasharray="10 8"/>
+    <circle cx="1610" cy="1290" r="14" style="fill:var(--accent-aqua);stroke:white;stroke-width:4"/>
+    <text x="2546" y="324" text-anchor="start" font-size="64" font-weight="700" style="fill:var(--text-primary)">Skin</text>
+    <text x="2546" y="396" text-anchor="start" font-size="64" font-weight="700" style="fill:var(--accent-aqua)">-10 yr</text>
+  </svg>
+    <figcaption>Each tissue's real predicted age gap diverges from chronological age by a different amount and in a different direction, skin and lung read younger, brain reads older, colon reads about the same: the core observation a tissue clock is built to measure.</figcaption>
   </figure>
 
   <p>Most of what we know about measuring this comes from blood: methylation clocks, protein panels, blood-based organ-age scores. A paper published in <em>Nature Medicine</em> (Abila, Buljan, Zheng et al., Aug 14 2026) asked a different question: <strong>can you read biological age directly off the tissue itself, from an ordinary pathology slide?</strong></p>
@@ -166,39 +123,31 @@
   <p>Most aging clocks are built from molecular data. DNA methylation patterns ("epigenetic clocks," like the well-known Horvath clock) and blood protein levels ("proteomic clocks") are the two most established families. Both work from a blood or saliva sample run through a lab assay. A <strong>tissue clock</strong>, the kind this course builds, is a newer, third approach: instead of a molecular signal, it reads the physical structure of tissue itself, captured in a pathology image, and predicts age from what that tissue looks like under a microscope. Section 09 puts this in context against the wider clock landscape.</p>
 
   <figure class="diagram-card">
-    <svg viewBox="0 0 680 190" role="img" aria-label="Diagram comparing three aging clock families: epigenetic clocks from DNA methylation, proteomic clocks from blood protein levels, and tissue clocks from histology images, the approach this course builds">
-      <line x1="60" y1="55" x2="160" y2="55" stroke="var(--border-hairline)" stroke-width="2"/>
-      <circle cx="70"  cy="55" r="5" style="fill:var(--accent-blue)"/>
-      <circle cx="90"  cy="55" r="5" style="fill:var(--surface-1);stroke:var(--accent-blue)" stroke-width="1.5"/>
-      <circle cx="110" cy="55" r="5" style="fill:var(--accent-blue)"/>
-      <circle cx="130" cy="55" r="5" style="fill:var(--surface-1);stroke:var(--accent-blue)" stroke-width="1.5"/>
-      <circle cx="150" cy="55" r="5" style="fill:var(--accent-blue)"/>
-      <text x="110" y="100" text-anchor="middle" font-size="13" font-weight="700" style="fill:var(--text-primary)">Epigenetic</text>
-      <text x="110" y="118" text-anchor="middle" font-size="11" style="fill:var(--text-secondary)">DNA methylation pattern</text>
-      <text x="110" y="136" text-anchor="middle" font-size="10.5" style="fill:var(--text-muted)">input: blood / saliva</text>
+    <svg viewBox="0 0 680 172" role="img" aria-label="Diagram comparing three aging clock families: epigenetic clocks from DNA methylation, proteomic clocks from blood protein levels, and tissue clocks from histology images, the approach this course builds, each illustrated with a real photo or image">
+      <defs>
+        <clipPath id="clip-epi"><rect x="65" y="8" width="90" height="90" rx="6"/></clipPath>
+        <clipPath id="clip-prot"><rect x="295" y="8" width="90" height="90" rx="6"/></clipPath>
+        <clipPath id="clip-tissue"><rect x="525" y="8" width="90" height="90" rx="6"/></clipPath>
+      </defs>
 
-      <circle cx="310" cy="50" r="7" style="fill:var(--accent-blue);fill-opacity:1"/>
-      <circle cx="335" cy="63" r="5" style="fill:var(--accent-blue);fill-opacity:0.65"/>
-      <circle cx="356" cy="44" r="6" style="fill:var(--accent-blue);fill-opacity:0.85"/>
-      <circle cx="371" cy="60" r="4" style="fill:var(--accent-blue);fill-opacity:0.55"/>
-      <circle cx="326" cy="38" r="4" style="fill:var(--accent-blue);fill-opacity:0.75"/>
-      <text x="340" y="100" text-anchor="middle" font-size="13" font-weight="700" style="fill:var(--text-primary)">Proteomic</text>
-      <text x="340" y="118" text-anchor="middle" font-size="11" style="fill:var(--text-secondary)">Blood protein panel</text>
-      <text x="340" y="136" text-anchor="middle" font-size="10.5" style="fill:var(--text-muted)">input: blood draw</text>
+      <image href="assets/figures/clocks/dna_double_helix.jpg" x="65" y="8" width="90" height="90" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-epi)"/>
+      <rect x="65" y="8" width="90" height="90" rx="6" style="fill:none;stroke:var(--border-hairline);stroke-width:1.5"/>
+      <text x="110" y="120" text-anchor="middle" font-size="13" font-weight="700" style="fill:var(--text-primary)">Epigenetic</text>
+      <text x="110" y="138" text-anchor="middle" font-size="11" style="fill:var(--text-secondary)">DNA methylation pattern</text>
+      <text x="110" y="156" text-anchor="middle" font-size="10.5" style="fill:var(--text-muted)">input: blood / saliva</text>
 
-      <rect x="470" y="12" width="200" height="160" rx="4" style="fill:var(--accent-orange);fill-opacity:0.07;stroke:var(--accent-orange);stroke-opacity:0.4"/>
-      <rect x="543" y="28" width="16" height="16" rx="2" style="fill:var(--accent-blue);fill-opacity:1"/>
-      <rect x="562" y="28" width="16" height="16" rx="2" style="fill:var(--accent-blue);fill-opacity:0.6"/>
-      <rect x="581" y="28" width="16" height="16" rx="2" style="fill:var(--accent-blue);fill-opacity:0.8"/>
-      <rect x="543" y="47" width="16" height="16" rx="2" style="fill:var(--accent-blue);fill-opacity:0.7"/>
-      <rect x="562" y="47" width="16" height="16" rx="2" style="fill:var(--accent-blue);fill-opacity:1"/>
-      <rect x="581" y="47" width="16" height="16" rx="2" style="fill:var(--accent-blue);fill-opacity:0.5"/>
-      <rect x="543" y="66" width="16" height="16" rx="2" style="fill:var(--accent-blue);fill-opacity:0.85"/>
-      <rect x="562" y="66" width="16" height="16" rx="2" style="fill:var(--accent-blue);fill-opacity:0.6"/>
-      <rect x="581" y="66" width="16" height="16" rx="2" style="fill:var(--accent-blue);fill-opacity:1"/>
-      <text x="570" y="100" text-anchor="middle" font-size="13" font-weight="700" style="fill:var(--accent-orange)">Tissue (this course)</text>
-      <text x="570" y="118" text-anchor="middle" font-size="11" style="fill:var(--text-secondary)">Histology image structure</text>
-      <text x="570" y="136" text-anchor="middle" font-size="10.5" style="fill:var(--text-muted)">input: pathology slide</text>
+      <image href="assets/figures/clocks/blood_tubes.jpg" x="295" y="8" width="90" height="90" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-prot)"/>
+      <rect x="295" y="8" width="90" height="90" rx="6" style="fill:none;stroke:var(--border-hairline);stroke-width:1.5"/>
+      <text x="340" y="120" text-anchor="middle" font-size="13" font-weight="700" style="fill:var(--text-primary)">Proteomic</text>
+      <text x="340" y="138" text-anchor="middle" font-size="11" style="fill:var(--text-secondary)">Blood protein panel</text>
+      <text x="340" y="156" text-anchor="middle" font-size="10.5" style="fill:var(--text-muted)">input: blood draw</text>
+
+      <rect x="470" y="0" width="200" height="164" rx="4" style="fill:var(--accent-orange);fill-opacity:0.07;stroke:var(--accent-orange);stroke-opacity:0.4"/>
+      <image href="assets/figures/slide_tiles/single_tile_level16.png" x="525" y="8" width="90" height="90" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-tissue)"/>
+      <rect x="525" y="8" width="90" height="90" rx="6" style="fill:none;stroke:var(--border-hairline);stroke-width:1.5"/>
+      <text x="570" y="120" text-anchor="middle" font-size="13" font-weight="700" style="fill:var(--accent-orange)">Tissue (this course)</text>
+      <text x="570" y="138" text-anchor="middle" font-size="11" style="fill:var(--text-secondary)">Histology image structure</text>
+      <text x="570" y="156" text-anchor="middle" font-size="10.5" style="fill:var(--text-muted)">input: pathology slide</text>
     </svg>
     <figcaption>Three families of aging clock, distinguished by what signal they read: methylation marks, circulating proteins, or (the approach this course builds) the physical structure of tissue itself.</figcaption>
   </figure>
@@ -236,29 +185,35 @@
   <p>That image looks small on this page. It isn't. The actual file is <strong>41,831 × 20,575 pixels, about 861 megapixels.</strong> A typical phone photo is around 12 megapixels; this single slide is roughly 70 phone photos' worth of pixels, and pathology labs generate thousands of these. That scale is <em>why</em> whole-slide image (WSI) analysis is its own subfield of medical image computing: you cannot simply feed an image this size into a neural network, and you can't even display it on a normal screen at full resolution. Both problems are solved the same way image mapping software solves them: the file isn't stored as one flat image, but as a <strong>pyramid</strong> of the same slide at several resolutions.</p>
 
   <figure class="diagram-card">
-    <svg viewBox="0 0 640 260" role="img" aria-label="Diagram of a whole-slide image pyramid: the same slide stored at five resolutions, from a full-resolution tiled base up to a small thumbnail">
-      <rect x="50"  y="220" width="420" height="30" rx="2" style="fill:var(--accent-blue);fill-opacity:1"   stroke="var(--border-hairline)"/>
-      <rect x="100" y="184" width="320" height="30" rx="2" style="fill:var(--accent-blue);fill-opacity:0.8" stroke="var(--border-hairline)"/>
-      <rect x="145" y="148" width="230" height="30" rx="2" style="fill:var(--accent-blue);fill-opacity:0.65" stroke="var(--border-hairline)"/>
-      <rect x="185" y="112" width="150" height="30" rx="2" style="fill:var(--accent-blue);fill-opacity:0.5" stroke="var(--border-hairline)"/>
-      <rect x="215" y="76"  width="90"  height="30" rx="2" style="fill:var(--accent-blue);fill-opacity:0.35" stroke="var(--border-hairline)"/>
-
-      <text x="485" y="239" font-size="12" font-weight="700" style="fill:var(--text-primary)">Level 0</text>
-      <text x="485" y="253" font-size="10.5" style="fill:var(--text-muted)">full resolution, tiled</text>
-      <text x="485" y="203" font-size="12" font-weight="700" style="fill:var(--text-primary)">Level 1</text>
-      <text x="485" y="167" font-size="12" font-weight="700" style="fill:var(--text-primary)">Level 2</text>
-      <text x="485" y="131" font-size="12" font-weight="700" style="fill:var(--text-primary)">Level 3</text>
-      <text x="485" y="95"  font-size="12" font-weight="700" style="fill:var(--text-primary)">Level 4</text>
-      <text x="485" y="109" font-size="10.5" style="fill:var(--text-muted)">thumbnail</text>
-    </svg>
-    <figcaption>A whole-slide image is stored as a pyramid, the same slide downsampled at each level, so a viewer can fetch only the resolution and region it currently needs. GTEx Portal's Deep Zoom tile server is what let us fetch both the low-resolution overview and the full-resolution crop above without downloading the entire 861-megapixel file.</figcaption>
+    <div class="wsi-pyramid">
+      <div class="wsi-pyramid-row">
+        <div class="wsi-pyramid-item">
+          <img src="assets/figures/slide_tiles/overview_level8.png" width="55" height="27" alt="The real slide at Deep Zoom level 8, a tiny 164 by 81 pixel thumbnail">
+          <span>Level 8<br>164 &times; 81 px</span>
+        </div>
+        <div class="wsi-pyramid-item">
+          <img src="assets/figures/slide_tiles/overview_level9.png" width="109" height="54" alt="The real slide at Deep Zoom level 9, a 327 by 161 pixel overview">
+          <span>Level 9<br>327 &times; 161 px</span>
+        </div>
+        <div class="wsi-pyramid-item">
+          <img src="assets/figures/slide_tiles/overview_level11.png" width="380" height="187" alt="The real slide at Deep Zoom level 11, a 1,308 by 643 pixel overview, the same image shown at the top of this section">
+          <span>Level 11<br>1,308 &times; 643 px</span>
+        </div>
+      </div>
+      <div class="wsi-pyramid-arrow">↓ zooming in continues, level by level, all the way to Level 16 ↓</div>
+      <div class="wsi-pyramid-tile">
+        <img src="assets/figures/slide_tiles/single_tile_level16.png" alt="One real 254 by 254 pixel tile at Deep Zoom level 16, full resolution">
+        <span>One real tile at Level 16, full resolution. The whole level is 41,831 &times; 20,575 px, far too large to show as a single image; it only exists as thousands of tiles like this one.</span>
+      </div>
+    </div>
+    <figcaption>Three real levels of the same slide's actual Deep Zoom pyramid, each one genuinely fetched from GTEx Portal's tile server, not a mockup. A viewer fetches only the resolution and region it currently needs, which is also how we pulled the overview and full-resolution crop above without downloading the entire 861-megapixel file.</figcaption>
   </figure>
 
   <p>Zoom into the exact same slide, and here's what one tiny patch actually looks like at full resolution:</p>
 
   <div class="figure">
-    <img src="assets/figures/slide_tiles/fullres_crop_level16.png" alt="Full-resolution crop showing individual cell nuclei and alveolar structure">
-    <div class="figure-caption">Same slide, full resolution. Individual cell nuclei, alveolar spaces, and what appear to be red blood cells, consistent with the pathologist's own note of "congestion."</div>
+    <img src="assets/figures/slide_tiles/fullres_crop_level16.png" alt="Full-resolution crop showing individual cell nuclei and lung tissue architecture, including small vessels and open airspace">
+    <div class="figure-caption">Same slide, full resolution. Individual cell nuclei (purple) and tissue architecture are now visible, including small vessels and open, airspace-like regions between them.</div>
   </div>
 
   <p>This is the level of detail a pathologist reads, and the level of detail a tissue clock has to learn from.</p>
@@ -278,27 +233,38 @@
   <p>We use <strong>CONCH</strong> (Lu et al., <em>Nature Medicine</em> 2024, Mahmood Lab), a vision-language model pretrained via contrastive learning on 1.17 million histopathology image-caption pairs. In plain terms: during pretraining, CONCH saw millions of (tile image, pathologist caption) pairs and learned to pull the two into the same numeric space, so tiles that look structurally similar end up with similar vectors, whether or not they came from the same slide. That's what makes the output useful downstream: "similar tissue" becomes "nearby vectors," a shape a classifier can learn from. CONCH turns each 224×224 tile into a 512-dimensional vector. All the tile-level vectors for one slide are then mean-pooled into a single 512-dimensional slide-level embedding: one number per slide, per dimension, summarizing the whole tissue.</p>
 
   <figure class="diagram-card wide">
-    <svg viewBox="0 0 720 240" role="img" aria-label="Diagram: a grid of thousands of tissue tiles is embedded tile-by-tile by CONCH into many 512-dimensional vectors, which are then mean-pooled into one slide-level embedding">
+    <svg viewBox="96 28 546 172" role="img" aria-label="Diagram: 16 real tissue tiles from the slide shown earlier, each embedded by CONCH into a 512-dimensional vector, which are then mean-pooled into one slide-level embedding">
       <g transform="translate(95,0)">
       <g>
-        <rect x="20" y="60"  width="24" height="24" rx="2" style="fill:var(--accent-blue);fill-opacity:1"   stroke="var(--border-hairline)"/>
-        <rect x="47" y="60"  width="24" height="24" rx="2" style="fill:var(--accent-blue);fill-opacity:0.6" stroke="var(--border-hairline)"/>
-        <rect x="74" y="60"  width="24" height="24" rx="2" style="fill:var(--accent-blue);fill-opacity:0.85" stroke="var(--border-hairline)"/>
-        <rect x="101" y="60" width="24" height="24" rx="2" style="fill:var(--accent-blue);fill-opacity:0.5" stroke="var(--border-hairline)"/>
-        <rect x="20" y="87"  width="24" height="24" rx="2" style="fill:var(--accent-blue);fill-opacity:0.7" stroke="var(--border-hairline)"/>
-        <rect x="47" y="87"  width="24" height="24" rx="2" style="fill:var(--accent-blue);fill-opacity:1"   stroke="var(--border-hairline)"/>
-        <rect x="74" y="87"  width="24" height="24" rx="2" style="fill:var(--accent-blue);fill-opacity:0.55" stroke="var(--border-hairline)"/>
-        <rect x="101" y="87" width="24" height="24" rx="2" style="fill:var(--accent-blue);fill-opacity:0.8" stroke="var(--border-hairline)"/>
-        <rect x="20" y="114" width="24" height="24" rx="2" style="fill:var(--accent-blue);fill-opacity:0.85" stroke="var(--border-hairline)"/>
-        <rect x="47" y="114" width="24" height="24" rx="2" style="fill:var(--accent-blue);fill-opacity:0.6" stroke="var(--border-hairline)"/>
-        <rect x="74" y="114" width="24" height="24" rx="2" style="fill:var(--accent-blue);fill-opacity:1"   stroke="var(--border-hairline)"/>
-        <rect x="101" y="114" width="24" height="24" rx="2" style="fill:var(--accent-blue);fill-opacity:0.65" stroke="var(--border-hairline)"/>
-        <rect x="20" y="141" width="24" height="24" rx="2" style="fill:var(--accent-blue);fill-opacity:0.5" stroke="var(--border-hairline)"/>
-        <rect x="47" y="141" width="24" height="24" rx="2" style="fill:var(--accent-blue);fill-opacity:0.9" stroke="var(--border-hairline)"/>
-        <rect x="74" y="141" width="24" height="24" rx="2" style="fill:var(--accent-blue);fill-opacity:0.7" stroke="var(--border-hairline)"/>
-        <rect x="101" y="141" width="24" height="24" rx="2" style="fill:var(--accent-blue);fill-opacity:1"   stroke="var(--border-hairline)"/>
+        <image href="assets/figures/slide_tiles/grid/tile_0_0.png" x="20" y="60" width="24" height="24"/>
+        <image href="assets/figures/slide_tiles/grid/tile_0_1.png" x="47" y="60" width="24" height="24"/>
+        <image href="assets/figures/slide_tiles/grid/tile_0_2.png" x="74" y="60" width="24" height="24"/>
+        <image href="assets/figures/slide_tiles/grid/tile_0_3.png" x="101" y="60" width="24" height="24"/>
+        <image href="assets/figures/slide_tiles/grid/tile_1_0.png" x="20" y="87" width="24" height="24"/>
+        <image href="assets/figures/slide_tiles/grid/tile_1_1.png" x="47" y="87" width="24" height="24"/>
+        <image href="assets/figures/slide_tiles/grid/tile_1_2.png" x="74" y="87" width="24" height="24"/>
+        <image href="assets/figures/slide_tiles/grid/tile_1_3.png" x="101" y="87" width="24" height="24"/>
+        <image href="assets/figures/slide_tiles/grid/tile_2_0.png" x="20" y="114" width="24" height="24"/>
+        <image href="assets/figures/slide_tiles/grid/tile_2_1.png" x="47" y="114" width="24" height="24"/>
+        <image href="assets/figures/slide_tiles/grid/tile_2_2.png" x="74" y="114" width="24" height="24"/>
+        <image href="assets/figures/slide_tiles/grid/tile_2_3.png" x="101" y="114" width="24" height="24"/>
+        <image href="assets/figures/slide_tiles/grid/tile_3_0.png" x="20" y="141" width="24" height="24"/>
+        <image href="assets/figures/slide_tiles/grid/tile_3_1.png" x="47" y="141" width="24" height="24"/>
+        <image href="assets/figures/slide_tiles/grid/tile_3_2.png" x="74" y="141" width="24" height="24"/>
+        <image href="assets/figures/slide_tiles/grid/tile_3_3.png" x="101" y="141" width="24" height="24"/>
+        <g fill="none" stroke="var(--surface-1)" stroke-width="1.5">
+          <rect x="20" y="60" width="24" height="24"/><rect x="47" y="60" width="24" height="24"/>
+          <rect x="74" y="60" width="24" height="24"/><rect x="101" y="60" width="24" height="24"/>
+          <rect x="20" y="87" width="24" height="24"/><rect x="47" y="87" width="24" height="24"/>
+          <rect x="74" y="87" width="24" height="24"/><rect x="101" y="87" width="24" height="24"/>
+          <rect x="20" y="114" width="24" height="24"/><rect x="47" y="114" width="24" height="24"/>
+          <rect x="74" y="114" width="24" height="24"/><rect x="101" y="114" width="24" height="24"/>
+          <rect x="20" y="141" width="24" height="24"/><rect x="47" y="141" width="24" height="24"/>
+          <rect x="74" y="141" width="24" height="24"/><rect x="101" y="141" width="24" height="24"/>
+        </g>
+        <rect x="18.5" y="58.5" width="108" height="108" rx="2" fill="none" stroke="var(--border-hairline)"/>
       </g>
-      <text x="72" y="180" text-anchor="middle" font-size="11" style="fill:var(--text-muted)">thousands of 224×224 tiles</text>
+      <text x="72" y="180" text-anchor="middle" font-size="11" style="fill:var(--text-muted)">real tissue tiles</text>
 
       <g stroke="var(--text-muted)" stroke-width="2" fill="none">
         <line x1="140" y1="110" x2="178" y2="110"/>
@@ -684,6 +650,8 @@ adata = ad.read_h5ad(<span class="s">"gtex.4_tissues.0.5mpp.224px.conch.h5ad"</s
       <p>Lu, M. Y. et al. "A visual-language foundation model for computational pathology." <em>Nat. Med.</em> (2024). CONCH, Mahmood Lab: <a href="https://github.com/mahmoodlab/CONCH">github.com/mahmoodlab/CONCH</a></p>
       <p>GTEx Consortium. Genotype-Tissue Expression (GTEx) Project: <a href="https://gtexportal.org">gtexportal.org</a></p>
       <p>Built with <a href="https://scikit-learn.org">scikit-learn</a> and <a href="https://anndata.readthedocs.io">anndata</a></p>
+      <p>Anatomical illustration (Background section): Mikael H&auml;ggstr&ouml;m, CC0, via <a href="https://commons.wikimedia.org/wiki/File:Adult_male_with_organs.png">Wikimedia Commons</a>.</p>
+      <p>DNA double helix (Vocabulary section): National Human Genome Research Institute, public domain, via <a href="https://commons.wikimedia.org/wiki/File:DNA_Double_Helix_by_NHGRI.jpg">Wikimedia Commons</a>. Blood tubes: Tannim101, CC BY 3.0, via <a href="https://commons.wikimedia.org/wiki/File:Vacutainer_blood_bottles.jpg">Wikimedia Commons</a>.</p>
     </div>
   </div>
   <div style="margin-top:20px;">AI-assistance disclosure: drafted with Claude Code assistance; all analysis, figures, and results were independently computed and verified by the authors.</div>
