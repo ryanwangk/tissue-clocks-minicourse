@@ -18,6 +18,7 @@
   <a href="#data" class="nav-link">Data</a>
   <a href="#model" class="nav-link">Model</a>
   <a href="#evaluation" class="nav-link">Evaluation</a>
+  <a href="#clinical" class="nav-link">Clinical relevance</a>
   <a href="#handson" class="nav-link">Hands-on</a>
   <a href="#landscape" class="nav-link">Landscape</a>
   <a href="#takeaways" class="nav-link">Takeaways</a>
@@ -29,7 +30,7 @@
     <div class="hero-copy">
       <div class="kicker">MICCAI Educational Challenge · Minicourse</div>
       <h1>Tissue Clocks</h1>
-      <p class="subtitle">What a tissue biopsy can tell you about how fast you're aging: a tissue-specific age predictor built from real, pre-extracted pathology foundation model embeddings from 4,791 real donor tissue slides.</p>
+      <p class="subtitle">What a tissue biopsy can tell you about how fast you're aging: a tissue-specific age predictor trained on pre-extracted pathology foundation model embeddings from 4,791 real donor tissue slides.</p>
       <div class="authors">Ryan Khalloqi<sup>1</sup> · Jun Ma<sup>2</sup><br>
         <span class="affil"><sup>1</sup>Department of Electrical and Computer Engineering, Carnegie Mellon University · <sup>2</sup>Princess Margaret Cancer Centre &amp; AI Hub, University Health Network</span>
       </div>
@@ -94,9 +95,9 @@
     <div class="stat"><div class="num">4.9 yr</div><div class="label">mean prediction error</div></div>
   </div>
 
-  <p>They analyzed those 25,712 whole-slide histopathology images across 40 tissue types from 983 people in GTEx, a large public archive of donated tissue samples, and built "tissue clocks": deep-learning predictors of biological age from tissue architecture alone, with no molecular assay involved. Their clocks correlated with telomere attrition, subclinical pathology, and comorbidities, and predicted disease-relevant organ aging across eight conditions including Alzheimer's disease, stroke, and Crohn's disease.</p>
+  <p>They analyzed 25,712 whole-slide histopathology images across 40 tissue types from 983 people in GTEx, a large public archive of donated tissue samples, and built "tissue clocks": deep-learning predictors of biological age from tissue architecture alone, with no molecular assay involved. Their clocks correlated with telomere attrition, subclinical pathology, and comorbidities. They also predicted disease-relevant organ aging across eight conditions, including Alzheimer's disease, stroke, and Crohn's disease.</p>
 
-  <p>This minicourse builds a small version of that idea ourselves, end to end, on real data, with real (if humbler) results, and shows you exactly where the real engineering effort in a project like this actually goes: from a raw gigapixel image, through a foundation model, to a number you can sanity-check against clinical metadata the model never saw.</p>
+  <p>This minicourse builds a small version of that idea end to end, on real data, with real, if humbler, results. It shows you where the engineering effort in a project like this actually goes: from a raw gigapixel image, through a foundation model, to a number you can sanity-check against clinical metadata the model never saw.</p>
 
   <details class="check-understanding">
     <summary>Check your understanding</summary>
@@ -120,7 +121,7 @@
 
   <p>A positive age gap means the model thinks that person (or that specific tissue) looks older than their birthday says; a negative gap means it looks younger. The entire premise of the field is that this gap isn't noise: it correlates with real outcomes like mortality, disease risk, and organ function.</p>
 
-  <p>Most aging clocks are built from molecular data. DNA methylation patterns ("epigenetic clocks," like the well-known Horvath clock) and blood protein levels ("proteomic clocks") are the two most established families. Both work from a blood or saliva sample run through a lab assay. A <strong>tissue clock</strong>, the kind this course builds, is a newer, third approach: instead of a molecular signal, it reads the physical structure of tissue itself, captured in a pathology image, and predicts age from what that tissue looks like under a microscope. Section 09 puts this in context against the wider clock landscape.</p>
+  <p>Most aging clocks are built from molecular data. DNA methylation patterns ("epigenetic clocks," like the well-known Horvath clock) and blood protein levels ("proteomic clocks") are the two most established families. Both work from a blood or saliva sample run through a lab assay. A <strong>tissue clock</strong>, the kind this course builds, is a newer, third approach: instead of a molecular signal, it reads the physical structure of tissue itself, captured in a pathology image, and predicts age from what that tissue looks like under a microscope. Section 10 puts this in context against the wider clock landscape.</p>
 
   <figure class="diagram-card">
     <svg viewBox="0 0 680 172" role="img" aria-label="Diagram comparing three aging clock families: epigenetic clocks from DNA methylation, proteomic clocks from blood protein levels, and tissue clocks from histology images, the approach this course builds, each illustrated with a real photo or image">
@@ -163,7 +164,7 @@
   <div class="section-eyebrow"><span class="section-num">03</span><span class="kicker-text">The imaging modality</span></div>
   <h2 class="section-title">What is a whole-slide image?</h2>
 
-  <p class="lede">Before any model, it's worth actually looking at what we're working with. We pulled one real, de-identified slide from the GTEx histology archive.</p>
+  <p class="lede">A direct look at what we're actually working with: one real, de-identified slide pulled from the GTEx histology archive.</p>
 
   <p>A whole-slide image starts as a thin physical section of tissue, cut from a biopsy or autopsy sample, mounted on a glass slide and stained so structures that would otherwise be near-transparent become visible under a microscope. GTEx, like most pathology archives, uses <strong>H&amp;E staining</strong> (hematoxylin and eosin): hematoxylin binds to DNA and stains cell nuclei blue-purple, eosin stains proteins and other structures pink, and the contrast between the two is what lets a pathologist, or a model, read tissue architecture at all. A slide scanner then digitizes the whole glass slide at gigapixel resolution. That digitized file is the "whole-slide image" (WSI) this section is about.</p>
 
@@ -182,7 +183,7 @@
     </dl>
   </div>
 
-  <p>That image looks small on this page. It isn't. The actual file is <strong>41,831 × 20,575 pixels, about 861 megapixels.</strong> A typical phone photo is around 12 megapixels; this single slide is roughly 70 phone photos' worth of pixels, and pathology labs generate thousands of these. That scale is <em>why</em> whole-slide image (WSI) analysis is its own subfield of medical image computing: you cannot simply feed an image this size into a neural network, and you can't even display it on a normal screen at full resolution. Both problems are solved the same way image mapping software solves them: the file isn't stored as one flat image, but as a <strong>pyramid</strong> of the same slide at several resolutions.</p>
+  <p>That image looks small on this page. It isn't. The actual file is <strong>41,831 × 20,575 pixels, about 861 megapixels.</strong> A typical phone photo is around 12 megapixels, so this single slide holds roughly 70 phone photos' worth of pixels, and pathology labs generate thousands of these files. That scale is <em>why</em> whole-slide image (WSI) analysis is its own subfield of medical image computing. You cannot feed an image this size into a neural network directly, and you cannot even display it on a normal screen at full resolution. Image-mapping software solves both problems at once: instead of storing the file as one flat image, it stores a <strong>pyramid</strong> of the same slide at several resolutions.</p>
 
   <figure class="diagram-card">
     <div class="wsi-pyramid">
@@ -206,7 +207,7 @@
         <span>One real tile at Level 16, full resolution. The whole level is 41,831 &times; 20,575 px, far too large to show as a single image; it only exists as thousands of tiles like this one.</span>
       </div>
     </div>
-    <figcaption>Three real levels of the same slide's actual Deep Zoom pyramid, each one genuinely fetched from GTEx Portal's tile server, not a mockup. A viewer fetches only the resolution and region it currently needs, which is also how we pulled the overview and full-resolution crop above without downloading the entire 861-megapixel file.</figcaption>
+    <figcaption>Three levels of the same slide's Deep Zoom pyramid, fetched from GTEx Portal's tile server. A viewer fetches only the resolution and region it currently needs, which is also how we pulled the overview and full-resolution crop above without downloading the entire 861-megapixel file.</figcaption>
   </figure>
 
   <p>Zoom into the exact same slide, and here's what one tiny patch actually looks like at full resolution:</p>
@@ -230,7 +231,7 @@
 
   <p><strong>Step 2: embed.</strong> Each tile is fed through a <em>pathology foundation model</em>, a neural network pretrained on massive amounts of histology data, which outputs a compact numerical fingerprint (an "embedding") capturing what's visually and structurally in that tile. The paper tested this step with 25 different feature extractors: 18 pathology foundation models (including CONCH, UNI, GigaPath, Virchow, TITAN, Phikon, and PRISM, several of the most prominent models in computational pathology today), a vision-language model, 5 ImageNet-pretrained CNNs, and one model fine-tuned by the authors themselves on GTEx.</p>
 
-  <p>We use <strong>CONCH</strong> (Lu et al., <em>Nature Medicine</em> 2024, Mahmood Lab), a vision-language model pretrained via contrastive learning on 1.17 million histopathology image-caption pairs. In plain terms: during pretraining, CONCH saw millions of (tile image, pathologist caption) pairs and learned to pull the two into the same numeric space, so tiles that look structurally similar end up with similar vectors, whether or not they came from the same slide. That's what makes the output useful downstream: "similar tissue" becomes "nearby vectors," a shape a classifier can learn from. CONCH turns each 224×224 tile into a 512-dimensional vector. All the tile-level vectors for one slide are then mean-pooled into a single 512-dimensional slide-level embedding: one number per slide, per dimension, summarizing the whole tissue.</p>
+  <p>We use <strong>CONCH</strong> (Lu et al., <em>Nature Medicine</em> 2024, Mahmood Lab), a vision-language model pretrained via contrastive learning on 1.17 million histopathology image-caption pairs. During pretraining, CONCH saw millions of (tile image, pathologist caption) pairs and learned to map both into the same numeric space, so structurally similar tiles end up with similar vectors, whether or not they came from the same slide. This is what makes the embedding useful downstream: visually similar tissue ends up as nearby vectors, a representation a classifier can learn from. CONCH turns each 224×224 tile into a 512-dimensional vector. All the tile-level vectors for one slide are then mean-pooled into a single 512-dimensional slide-level embedding: one number per slide, per dimension, summarizing the whole tissue.</p>
 
   <figure class="diagram-card wide">
     <svg viewBox="96 28 546 172" role="img" aria-label="Diagram: 16 real tissue tiles from the slide shown earlier, each embedded by CONCH into a 512-dimensional vector, which are then mean-pooled into one slide-level embedding">
@@ -316,7 +317,7 @@
 
   <div class="callout">
     <strong>What we skip, and why</strong>
-    Running CONCH over 4,791 gigapixel slides needs real GPU time most of us don't have for an afternoon tutorial. Instead, the tissue-clocks authors already did this and published the resulting slide-level embeddings, tiny files, since a 512-number vector per slide is kilobytes, not gigabytes. That's what we build on next.
+    Running CONCH over 4,791 gigapixel slides needs real GPU time most of us don't have for an afternoon tutorial. The tissue-clocks authors already did this and published the resulting slide-level embeddings: a 512-number vector per slide, kilobytes per file. We build on that directly.
   </div>
 
   <details class="check-understanding">
@@ -330,9 +331,11 @@
   <div class="section-eyebrow"><span class="section-num">05</span><span class="kicker-text">Data</span></div>
   <h2 class="section-title">Data for the clock</h2>
 
-  <p class="lede">We use the exact CONCH embedding file the paper's own authors published, openly archived on Zenodo (10.5281/zenodo.20709093), 10.6&nbsp;MB.</p>
+  <p class="lede">We use the exact CONCH embedding file the paper's own authors published, openly archived on Zenodo (<a href="https://doi.org/10.5281/zenodo.20709093">10.5281/zenodo.20709093</a>), 10.6&nbsp;MB.</p>
 
   <p>That embedding file traces back to <strong>GTEx</strong> (the Genotype-Tissue Expression project), a large NIH-funded resource built from post-mortem tissue donations across dozens of organs from roughly 1,000 donors. GTEx's original purpose was studying how genetic variation shapes gene expression across tissues, not aging, but every sample that goes through the pipeline gets a histology slide captured as a routine quality-control step, checked by a pathologist before the tissue is approved for the genomic assays GTEx is actually built for. That quality-control side effect is why a large, richly-annotated, openly-licensed histology archive exists at all, and it's what the tissue-clocks paper (and this course) repurposes for an entirely different question.</p>
+
+  <p>The paper trains its tissue clocks on far more than what we reproduce here: 25,712 slides across 40 tissue types from 983 donors (Section 01), predicting each donor's exact chronological age directly, by regression. This course works from a public slice of that: 6 tissues, 971 donors, split 776 for training and 195 held out for testing at the donor level (more on why in Section 06). The target is coarser too. We predict a six-bucket Age Bracket instead of exact age, since exact age lives behind GTEx's restricted-access phenotype data and never made it into the openly-shared embeddings file. Section 07 covers what that trade-off actually costs in accuracy.</p>
 
   <div class="stat-strip">
     <div class="stat"><div class="num">4,791</div><div class="label">slides</div></div>
@@ -341,7 +344,14 @@
     <div class="stat"><div class="num">512</div><div class="label">embedding dims</div></div>
   </div>
 
-  <p>Also bundled in the same file, for free: <strong>Sex</strong>, <strong>Hardy Scale</strong> (a standardized 5-category classification of the circumstances of death, used throughout GTEx), and free-text pathology notes from the original slide review. Age is bucketed into six brackets for donor privacy (20–29 through 70–79), a real constraint we work within, not a simplification we chose. We don't use Hardy Scale as a model input; we hold it in reserve to sanity-check the model's predictions later, in Evaluation.</p>
+  <div class="callout">
+    <strong>Input and label of our model</strong>
+    Input: one 512-dimensional CONCH embedding per slide, frozen and pre-extracted; the model never sees a pixel of the original image.
+    <br><br>
+    Output: a predicted Age Bracket, one of six buckets, compared against the donor's real (ground truth) Age Bracket to train and evaluate the model. There's no separately-measured "biological age" anywhere in this pipeline; the age gap from Section 02 is a comparison computed only afterward, at evaluation time, never something the model sees or optimizes for directly.
+  </div>
+
+  <p>The same file also includes <strong>Sex</strong>, <strong>Hardy Scale</strong> (a standardized 5-category classification of the circumstances of death, used throughout GTEx), and free-text pathology notes from the original slide review. None of these are used for training; they're held out and used afterward, in Evaluation, to sanity-check predictions. Age itself is bucketed into six brackets (20–29 through 70–79) for donor privacy, a constraint of the public release.</p>
 
   <table class="data-table">
     <thead><tr><th>Hardy Scale category</th><th>What it means</th></tr></thead>
@@ -367,7 +377,7 @@
     </div>
   </div>
 
-  <p>One honest note: GTEx donors skew older, and the six age brackets are unevenly sized: 176 slides in the 70–79 bracket versus 1,681 in 60–69. That imbalance directly shapes what the model can and can't learn well, as you'll see in Evaluation.</p>
+  <p>GTEx donors skew older, and the six age brackets are far from evenly sized, from 176 slides in the 70–79 bracket to 1,681 in 60–69. That imbalance limits how well the model can learn the oldest and youngest brackets specifically, a pattern the per-bracket accuracy in Evaluation shows directly.</p>
 </section>
 
 <!-- ============================================================ 06 -->
@@ -375,13 +385,13 @@
   <div class="section-eyebrow"><span class="section-num">06</span><span class="kicker-text">Architecture &amp; training</span></div>
   <h2 class="section-title">Building a tissue clock</h2>
 
-  <p class="lede">Now for the part that turns embeddings into predictions.</p>
+  <p class="lede">This section covers the last step: turning a 512-number embedding into an age prediction.</p>
 
-  <p>Using only the pre-extracted CONCH vectors and the bundled age-bracket labels, we train a small model (gradient-boosted trees, <code>HistGradientBoostingClassifier</code>, scikit-learn) to predict a slide's age bracket from its 512-dimensional embedding.</p>
+  <p>Using only the pre-extracted CONCH vectors and the bundled age-bracket labels, we train a small model (gradient-boosted trees, <code>HistGradientBoostingClassifier</code>, scikit-learn) to predict a slide's age bracket from its 512-dimensional embedding. The full script could be found at: <a href="https://github.com/ryanwangk/tissue-clocks-minicourse/blob/main/analysis/train_tissue_clock.py"><code>analysis/train_tissue_clock.py</code></a>.</p>
 
-  <p><strong>Why gradient-boosted trees, not another neural network?</strong> All the heavy image-understanding work already happened inside CONCH: by this point, each slide is just a 512-number vector, a structured, tabular input, not a raw image. Gradient boosting builds an ensemble of small decision trees one at a time, where each new tree is trained specifically to correct the errors the ensemble has made so far, and the final prediction sums their votes. On tabular inputs like this, that approach is a standard, fast, strong baseline, and it trains on 4,791 samples in seconds rather than the hours a deep network would need.</p>
+  <p><strong>Model choice: gradient-boosted trees, not another neural network.</strong> All the heavy image-understanding work already happened inside CONCH, so by this point each slide is just a 512-number vector: a structured, tabular input, not an image. Gradient boosting builds small decision trees one at a time, each one trained to correct the errors the ensemble has made so far, and sums their votes for a final prediction. On tabular data like this, it is a fast, strong default that trains on 4,791 samples in seconds rather than the hours a deep network would need.</p>
 
-  <p>We train <strong>one model per tissue</strong>, matching the paper's own tissue-specific framing (a "tissue clock," not one clock for all organs), and we split by <strong>donor</strong>, not by slide, putting all of one person's samples entirely in either train or test.</p>
+  <p>We train <strong>one model per tissue</strong>, matching the paper's own tissue-specific framing: a "tissue clock," not one clock for every organ. We also split by <strong>donor</strong>, not by slide, so all of one person's samples land entirely in train or entirely in test.</p>
 
   <figure class="diagram-card wide">
     <svg viewBox="0 0 680 220" role="img" aria-label="Diagram comparing a slide-level split, where one donor's samples leak across train and test, against a donor-level split, where every sample from one donor stays entirely on one side">
@@ -434,8 +444,8 @@
   </figure>
 
   <div class="callout">
-    <strong>A mistake worth naming</strong>
-    Skipping the donor-level split would let the model implicitly learn a donor's identity across their own multiple tissue samples, and report misleadingly good numbers. It's an easy mistake to make by accident: we split 776 donors into training and 195 into a held-out test set that the model never sees during training.
+    <strong>The leak this avoids</strong>
+    Skipping the donor-level split would let the model implicitly learn a donor's identity across their own multiple tissue samples, and report misleadingly good numbers, an easy mistake to make by accident. To avoid it, we split 776 donors into training and 195 into a held-out test set that the model never sees during training.
   </div>
 
   <div class="code-block"><span class="c"># the split that matters: by donor, not by slide</span>
@@ -453,19 +463,28 @@ train_idx, test_idx = <span class="k">next</span>(gss.split(X, groups=obs[<span 
 
   <p class="lede">Reporting only the wins would be dishonest, so here's everything, including the parts that didn't work well.</p>
 
-  <p>We report two metrics throughout. <strong>Mean absolute error (MAE)</strong> is the average, across all held-out test slides, of how many years off the model's prediction was from the true age, in either direction, in years; smaller is better, and it's directly comparable to the baseline in the same units. The confusion matrix below is <strong>row-normalized</strong>, meaning each row (one true age bracket) sums to 1.0, so a cell's value is "of the slides that were actually this age, what fraction did the model predict as that age," not a raw count that would be dominated by whichever bracket has the most slides.</p>
+  <p>We report two metrics throughout. <strong>Mean absolute error (MAE)</strong> is the average number of years the model's prediction was off from the true age, in either direction, across all held-out test slides. Smaller is better, and it's directly comparable to the baseline in the same units. The confusion matrix below is <strong>row-normalized</strong>: each row (one true age bracket) sums to 1.0. A cell's value is "of the slides that were actually this age, what fraction did the model predict as that age," not a raw count, which would be dominated by whichever bracket has the most slides.</p>
+
+  <p>Every number below traces back to <a href="https://github.com/ryanwangk/tissue-clocks-minicourse/blob/main/analysis/test_predictions.csv"><code>test_predictions.csv</code></a>, one row per held-out test slide, with its predicted and actual age, Hardy Scale, and pathology notes.</p>
 
   <div class="chart-wrap">
     <div class="chart-title">Mean absolute error: the tissue clock vs. a naive baseline</div>
-    <div class="chart-subtitle">Baseline = always predict the majority age bracket. Lower is better.</div>
+    <div class="chart-subtitle">Baseline = always predict the majority age bracket, our own naive baseline, not a number from the paper. Lower is better.</div>
     <div id="chart-mae" data-chart></div>
   </div>
 
-  <p>Five of six tissues clearly beat the naive baseline by 3–5 years of mean absolute error: real signal, learned from nothing but frozen foundation-model embeddings and a lightweight classifier.</p>
+  <p>Five of six tissues clearly beat the naive baseline by 3–5 years of mean absolute error, using nothing more than frozen foundation-model embeddings and a lightweight classifier.</p>
+
+  <div class="callout">
+    <strong>Comparing to the paper's numbers</strong>
+    <p>The paper's headline number, 4.9 years mean error across all 40 tissues, comes from their own fine-tuned vision model predicting <em>exact</em> chronological age by regression. This course can't do that: the public embeddings release only includes the six-bucket Age Bracket field, not exact age, which sits behind GTEx's restricted-access phenotype data. So we predict a bracket and score against its midpoint, a coarser task with a quantization penalty regression never faces.</p>
+    <p>A fairer comparison is the paper's own CONCH results on these same four tissue categories (Extended Data Fig. 3b): 5.4&ndash;6.6 years. Ours, built entirely on pre-extracted CONCH features with a bracket classifier instead of continuous regression, lands in the 7.4&ndash;10.0 year range on 6 tissues, a smaller and more explicable gap than the headline number suggests. What label you're allowed to predict, and what you build on top of the embeddings, both matter.</p>
+  </div>
 
   <div class="callout honest">
     <strong>Where it didn't work</strong>
-    Brain-Cortex did not beat baseline (7.44 vs. 7.33 years). The model performs essentially the same as just guessing the majority bracket. That's very likely because Brain-Cortex has the fewest training examples of any tissue here (337, vs. 795 for the largest). This is a real limitation of training a lightweight model quickly on limited data, not a property of tissue clocks in general; the published paper, trained on far more data with a more sophisticated pipeline, reaches 4.9 years mean error <em>across all 40 tissues</em>. Ours, built entirely on pre-extracted features, lands in the 7.4–10.0 year range on 6 tissues. That gap is itself the honest lesson: foundation-model embeddings get you real signal fast, but data scale and modeling choices on top still matter enormously. One more honest note: that 0.11-year margin is thin enough to flip. <code>HistGradientBoostingClassifier</code> isn't bit-reproducible across machines, and it already has: a Colab run of this same notebook put Brain-Cortex at 7.09 years, beating baseline. The other five tissues beat baseline by 2 to 6 years, margins wide enough that this kind of run-to-run noise wouldn't change their outcome.
+    <p>Brain-Cortex did not beat baseline (7.44 vs. 7.33 years, our own baseline, not the paper's). The model performs about the same as guessing the majority bracket, most likely because Brain-Cortex has the fewest training examples of any tissue here (337, versus 795 for the largest).</p>
+    <p>That 0.11-year margin is also thin enough to flip. <code>HistGradientBoostingClassifier</code> isn't bit-reproducible across machines, and it already has: a Colab run of this same notebook put Brain-Cortex at 7.09 years, beating baseline. The other five tissues beat baseline by 2 to 6 years, margins wide enough that this kind of run-to-run noise wouldn't likely change their outcome.</p>
   </div>
 
   <div class="chart-wrap">
@@ -474,17 +493,7 @@ train_idx, test_idx = <span class="k">next</span>(gss.split(X, groups=obs[<span 
     <div id="chart-confusion" data-chart></div>
   </div>
 
-  <p>The model is noticeably better at the youngest bracket (20–29, predicted correctly 35% of the time, more than double random chance for 6 classes) than at distinguishing older brackets from each other, where it increasingly collapses toward predicting "60–69", a direct consequence of the class imbalance in section 05. The clearest case of that collapse: the model never predicts "70–79" at all, for any slide, including ones that actually are 70–79. That bracket has the fewest slides of any age group in the whole dataset (176; see Data), and the confusion matrix's rightmost column reflects it exactly: 0.00 in every row.</p>
-
-  <p><strong>Does the age gap mean anything clinically?</strong> We checked this against the real Hardy Scale metadata bundled in the same file, a classification of how each donor died, something the model was never trained on.</p>
-
-  <div class="chart-wrap">
-    <div class="chart-title">Predicted age gap by cause-of-death classification</div>
-    <div class="chart-subtitle">Pooled model, held-out test set. Error bars = SEM. Hover a bar.</div>
-    <div id="chart-hardy-gap" data-chart></div>
-  </div>
-
-  <p>Donors classified as <strong>"Ventilator case"</strong> (n=441, on a ventilator before death, a marker of prolonged critical illness) show a mean predicted age gap of <strong>+6.5 years</strong>, the largest of any group. Donors with an <strong>"Intermediate death"</strong> classification (n=74) show a <em>negative</em> mean gap of &minus;3.0 years. This is a real, independently-computed association (the model was never told cause of death), and it echoes exactly the kind of clinical-relevance finding the original paper reports. We'd flag the Intermediate-death result as needing a larger sample before reading too much into it; the Ventilator-case result, with the largest sample in the dataset, is a more plausible real signal.</p>
+  <p>The model correctly identifies the youngest bracket (20–29) 35% of the time, more than double random chance for six classes. Its errors here don't concentrate on "60–69" the way every other bracket's do. As true age increases past 20–29, the model increasingly defaults to predicting "60–69" regardless of the actual bracket, a direct consequence of the class imbalance in Section 05. This collapse is also why "60–69" shows the highest diagonal value in the matrix, 67% correct, much of it reflecting the model's default guess landing on the majority class rather than clean separation from its neighbors. Interestingly, the model never predicts "70–79" at all, for any slide, including ones actually 70–79. This bracket has the fewest slides of any age group in the whole dataset (176; see Data), and its column in the confusion matrix shows 0.00 correct in every row.</p>
 
   <details class="check-understanding">
     <summary>Check your understanding</summary>
@@ -493,8 +502,48 @@ train_idx, test_idx = <span class="k">next</span>(gss.split(X, groups=obs[<span 
 </section>
 
 <!-- ============================================================ 08 -->
+<section class="course-section wide" id="clinical">
+  <div class="section-eyebrow"><span class="section-num">08</span><span class="kicker-text">Clinical relevance</span></div>
+  <h2 class="section-title">Does the age gap mean anything clinically?</h2>
+
+  <p class="lede">A model that predicts chronological age accurately isn't automatically useful. The real test of a tissue clock is whether its errors mean something.</p>
+
+  <p>Everything in Section 07 measures whether the model predicts chronological age accurately. Section 02's premise is that the age gap itself correlates with something real, so it should also track independent signals of a donor's health that the model was never given. We checked this against the real Hardy Scale metadata bundled in the same file (Section 05), a classification of how each donor died. The model was never trained on Hardy Scale, and never saw it until every prediction had already been made.</p>
+
+  <p>This is the same kind of check the original paper runs, at a much larger scale. It validated its own tissue clocks against eight real disease conditions the model never saw during training, including Alzheimer's disease, stroke, and Crohn's disease (Section 01), and found real, disease-relevant associations. Hardy Scale is a much blunter instrument than a documented diagnosis, but the logic is identical. If a model's errors were just noise, they shouldn't correlate with anything real. If the model is picking up genuine biological signal, they should.</p>
+
+  <div class="chart-wrap">
+    <div class="chart-title">Predicted age gap by cause-of-death classification</div>
+    <div class="chart-subtitle">Pooled model, held-out test set. Error bars = SEM. Hover a bar.</div>
+    <div id="chart-hardy-gap" data-chart></div>
+  </div>
+
+  <table class="data-table">
+    <thead><tr><th>Hardy Scale category</th><th>Mean age gap</th><th>n</th></tr></thead>
+    <tbody>
+      <tr><td>Ventilator case</td><td>+6.5 yr</td><td>441</td></tr>
+      <tr><td>Fast death (violent)</td><td>+4.1 yr</td><td>17</td></tr>
+      <tr><td>Slow death</td><td>+3.4 yr</td><td>152</td></tr>
+      <tr><td>Fast death (natural causes)</td><td>+2.8 yr</td><td>275</td></tr>
+      <tr><td>Intermediate death</td><td>&minus;3.0 yr</td><td>74</td></tr>
+    </tbody>
+  </table>
+
+  <p>Donors classified as <strong>"Ventilator case"</strong> show the largest gap of any group, +6.5 years, and it's also the largest sample by far (n=441). A ventilator case means someone was on life support before death, a marker of prolonged critical illness, the kind of sustained physiological stress that could plausibly leave a real mark on tissue structure. <strong>"Slow death"</strong> (+3.4 yr, n=152) and <strong>"fast death, natural causes"</strong> (+2.8 yr, n=275) are both smaller but still positive, broadly consistent with that same story.</p>
+
+  <p><strong>"Intermediate death"</strong> breaks that pattern. It's the only negative mean gap (&minus;3.0 yr), and tied for the smallest sample (n=74, alongside violent deaths at n=17). A negative result on the second-smallest group is the kind of finding that needs more data before it's trustworthy. With only 74 donors, a handful of atypical cases can swing the mean substantially. There's also no obvious clinical story, unlike Ventilator case, for why a 1&ndash;24 hour terminal phase would predict <em>younger</em>-looking tissue. We'd flag this one as needing replication.</p>
+
+  <p>This association was computed independently. The model was never told cause of death, was never trained on it, and only saw the classification after every prediction had already been made. It echoes the same kind of clinical-relevance finding the original paper reports, at a much smaller scale. Ventilator case has the largest sample and the clearest clinical mechanism behind it. Intermediate death has the smallest comparable sample and no clear mechanism, the caveat that comes with it.</p>
+
+  <details class="check-understanding">
+    <summary>Check your understanding</summary>
+    <div class="answer">Why should the Ventilator-case result carry more weight than the Intermediate-death result, even though Intermediate death shows the more dramatic (negative) age gap? <br><br><em>Sample size and mechanism: Ventilator case has the largest sample in the dataset (n=441) and a clear clinical rationale (prolonged critical illness plausibly affecting tissue structure). Intermediate death has one of the smallest samples (n=74) and no obvious mechanism, so its result is far more likely to be sampling noise than a real effect.</em></div>
+  </details>
+</section>
+
+<!-- ============================================================ 09 -->
 <section class="course-section" id="handson">
-  <div class="section-eyebrow"><span class="section-num">08</span><span class="kicker-text">Hands-on</span></div>
+  <div class="section-eyebrow"><span class="section-num">09</span><span class="kicker-text">Hands-on</span></div>
   <h2 class="section-title">Run it yourself</h2>
 
   <p class="lede">Everything above is reproducible in a few minutes, no GPU required.</p>
@@ -537,7 +586,7 @@ train_idx, test_idx = <span class="k">next</span>(gss.split(X, groups=obs[<span 
     <figcaption>The full pipeline behind every number and figure on this page, in the order the notebook runs it, the same six steps described below.</figcaption>
   </figure>
 
-  <p>Concretely, the notebook: <strong>(1)</strong> downloads the 10.6 MB embeddings file directly from Zenodo, no authentication needed; <strong>(2)</strong> loads it with <code>anndata</code>, giving you the 512-dim CONCH vectors in <code>adata.X</code> and the Sex / Hardy Scale / Age Bracket / Tissue metadata in <code>adata.obs</code>; <strong>(3)</strong> builds the donor-level train/test split from Section 06; <strong>(4)</strong> trains one <code>HistGradientBoostingClassifier</code> per tissue on the training donors; <strong>(5)</strong> evaluates each model on its held-out donors, computing MAE against the naive baseline and the confusion matrix from Section 07; and <strong>(6)</strong> joins the test-set predictions back to Hardy Scale to reproduce the clinical-relevance check. Every chart on this page was generated by this exact code, not a separate, cleaned-up version of it.</p>
+  <p>The notebook: <strong>(1)</strong> downloads the 10.6 MB embeddings file directly from Zenodo, no authentication needed; <strong>(2)</strong> loads it with <code>anndata</code>, giving you the 512-dim CONCH vectors in <code>adata.X</code> and the Sex / Hardy Scale / Age Bracket / Tissue metadata in <code>adata.obs</code>; <strong>(3)</strong> builds the donor-level train/test split from Section 06; <strong>(4)</strong> trains one <code>HistGradientBoostingClassifier</code> per tissue on the training donors; <strong>(5)</strong> evaluates each model on its held-out donors, computing MAE against the naive baseline and the confusion matrix from Section 07; and <strong>(6)</strong> joins the test-set predictions back to Hardy Scale to reproduce the clinical-relevance check from Section 08. Every chart on this page was generated by this exact code, not a separate, cleaned-up version of it.</p>
 
   <div class="code-block"><span class="c"># 1. fetch the real embeddings (10.6 MB, open access)</span>
 
@@ -554,37 +603,39 @@ adata = ad.read_h5ad(<span class="s">"gtex.4_tissues.0.5mpp.224px.conch.h5ad"</s
   <p><a href="https://colab.research.google.com/github/ryanwangk/tissue-clocks-minicourse/blob/main/notebooks/tissue_clock_handson.ipynb" class="btn btn-primary">Open the full notebook in Colab ↗</a></p>
 </section>
 
-<!-- ============================================================ 09 -->
+<!-- ============================================================ 10 -->
 <section class="course-section" id="landscape">
-  <div class="section-eyebrow"><span class="section-num">09</span><span class="kicker-text">Broader landscape</span></div>
+  <div class="section-eyebrow"><span class="section-num">10</span><span class="kicker-text">Broader landscape</span></div>
   <h2 class="section-title">Tissue clocks are one of many</h2>
 
   <p class="lede">Tissue clocks are one of roughly 30 biological aging clocks we catalogued while researching this course, spanning epigenetic (DNA methylation), proteomic (blood protein), and other modalities, in a companion open-source repository with ~19 of them vendored as ready-to-run Python packages.</p>
 
-  <p>A few concrete points of comparison: the original Horvath clock (2013) and its epigenetic successors like PhenoAge and GrimAge predict age, and in GrimAge's case mortality risk, purely from DNA methylation marks measured in blood. OrganAge (Oh et al., <em>Nature</em> 2023) is proteomic but organ-specific, much like this course's tissue clock, except it infers organ-level aging from blood protein panels rather than from imaging the organ's tissue directly: the same underlying question, answered from a completely different signal.</p>
+  <p>Every one of them shares the same basic structure defined in Section 02: some measurable signal from a person, run through a model, compared against chronological age. What differs, clock to clock, is the signal. A few concrete examples show the range.</p>
 
-  <p>One connection worth naming: the same paper that gives us tissue clocks also showed that tissue-specific age gaps can be <em>predicted from blood gene-expression data alone</em>, once you know the histology-derived age gap to train against, bridging the imaging-based approach in this course back to the blood-based omics clocks that dominate the rest of the field. Different data type, same underlying question: is this person's tissue aging faster than their birthday says?</p>
+  <p>The original Horvath clock (2013) and its epigenetic successors like PhenoAge and GrimAge predict age, and in GrimAge's case mortality risk, purely from DNA methylation marks measured in blood. OrganAge (Oh et al., <em>Nature</em> 2023) is proteomic but organ-specific, much like this course's tissue clock, except it infers organ-level aging from blood protein panels rather than from imaging the organ's tissue directly: the same underlying question, answered from a completely different signal.</p>
+
+  <p>The same paper that introduces tissue clocks also showed something else. Tissue-specific age gaps can be <em>predicted from blood gene-expression data alone</em>, once you know the histology-derived age gap to train against. That connects the imaging-based approach in this course back to the blood-based omics clocks that dominate the rest of the field. Different data type, same underlying question: is this person's tissue aging faster than their birthday says?</p>
 
   <p><a href="https://github.com/medfm-flare/BiologicalAgingClocks">Explore the full aging-clocks catalog →</a></p>
 </section>
 
-<!-- ============================================================ 10 -->
+<!-- ============================================================ 11 -->
 <section class="course-section" id="takeaways">
-  <div class="section-eyebrow"><span class="section-num">10</span><span class="kicker-text">Takeaways</span></div>
+  <div class="section-eyebrow"><span class="section-num">11</span><span class="kicker-text">Takeaways</span></div>
   <h2 class="section-title">Recap and quiz</h2>
 
   <ul>
     <li>A whole-slide image is gigapixel-scale; foundation models turn it into a small, ML-ready embedding via tiling + pooling: that <em>is</em> the medical-image-computing step, not the model layered on top of it.</li>
     <li>Pre-extracted embeddings let you build and evaluate a real, if modest, model without WSI-scale compute, a fast way to get real signal.</li>
     <li>Donor-level (not slide-level) splitting matters whenever one person contributes multiple samples.</li>
-    <li>Report honest per-group results, not just an aggregate number: that's where the Brain-Cortex failure and the Hardy Scale finding both live.</li>
+    <li>Report per-group results, not just an aggregate number. The Brain-Cortex failure and the Hardy Scale finding both live in that per-group detail.</li>
   </ul>
 
   <div class="quiz-block" data-explain="a donor-level split prevents the model from implicitly memorizing a person's identity across their own multiple tissue samples.">
     <div class="quiz-q">Why did we split train/test by donor instead of by slide?</div>
     <div class="quiz-options">
-      <button class="quiz-option" data-correct="false">It's faster to compute</button>
       <button class="quiz-option" data-correct="true">To prevent the same donor's tissue appearing in both train and test</button>
+      <button class="quiz-option" data-correct="false">It's faster to compute</button>
       <button class="quiz-option" data-correct="false">Because CONCH requires it</button>
     </div>
     <div class="quiz-feedback"></div>
@@ -594,8 +645,8 @@ adata = ad.read_h5ad(<span class="s">"gtex.4_tissues.0.5mpp.224px.conch.h5ad"</s
     <div class="quiz-q">Which tissue's model failed to beat the naive baseline, and why?</div>
     <div class="quiz-options">
       <button class="quiz-option" data-correct="false">Lung: because lung tissue is structurally too uniform</button>
-      <button class="quiz-option" data-correct="true">Brain-Cortex: because it had the smallest training set</button>
       <button class="quiz-option" data-correct="false">Skin: because sun exposure adds noise</button>
+      <button class="quiz-option" data-correct="true">Brain-Cortex: because it had the smallest training set</button>
     </div>
     <div class="quiz-feedback"></div>
   </div>
@@ -610,11 +661,11 @@ adata = ad.read_h5ad(<span class="s">"gtex.4_tissues.0.5mpp.224px.conch.h5ad"</s
     <div class="quiz-feedback"></div>
   </div>
 
-  <div class="quiz-block" data-explain="a single pooled number averages over tissues and hides exactly the kind of per-group failure (Brain-Cortex essentially tying a naive baseline, by a margin thin enough that it has already flipped on a different machine) that the honest, tissue-by-tissue breakdown surfaces.">
+  <div class="quiz-block" data-explain="a single pooled number averages over tissues and hides exactly the kind of per-group failure (Brain-Cortex essentially tying a naive baseline, by a margin thin enough that it has already flipped on a different machine) that the tissue-by-tissue breakdown surfaces.">
     <div class="quiz-q">If we had only reported one pooled, all-tissue accuracy number instead of the per-tissue breakdown, what real finding would it have hidden?</div>
     <div class="quiz-options">
-      <button class="quiz-option" data-correct="false">That CONCH embeddings are 512-dimensional</button>
       <button class="quiz-option" data-correct="true">That Brain-Cortex performed no better than guessing the majority age bracket, while five other tissues clearly beat that baseline</button>
+      <button class="quiz-option" data-correct="false">That CONCH embeddings are 512-dimensional</button>
       <button class="quiz-option" data-correct="false">That the model trains in under a minute</button>
     </div>
     <div class="quiz-feedback"></div>
@@ -624,8 +675,8 @@ adata = ad.read_h5ad(<span class="s">"gtex.4_tissues.0.5mpp.224px.conch.h5ad"</s
     <div class="quiz-q">A tissue clock predicts age 48 for a sample from a 55-year-old donor. What's the age gap, and what does it suggest?</div>
     <div class="quiz-options">
       <button class="quiz-option" data-correct="false">+7 years: the tissue looks older than the donor's chronological age</button>
-      <button class="quiz-option" data-correct="true">−7 years: that tissue appears to be aging slower than the donor's chronological age</button>
       <button class="quiz-option" data-correct="false">0: predicted and chronological age always average out</button>
+      <button class="quiz-option" data-correct="true">−7 years: that tissue appears to be aging slower than the donor's chronological age</button>
     </div>
     <div class="quiz-feedback"></div>
   </div>
