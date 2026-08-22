@@ -36,17 +36,25 @@ flipped between two independent runs of this same pipeline.
 ├── notebooks/
 │   └── tissue_clock_handson.ipynb   # fully worked, Colab-ready reproduction of the whole pipeline
 │
-├── analysis/                # the scripts that actually produced every number on the site
+├── analysis/                # the scripts that actually produced every number and figure on the site
 │   ├── train_tissue_clock.py        # donor-level split; per-tissue + pooled model training
 │   ├── age_gap_analysis.py          # predicted age gap vs. Hardy Scale / Sex / Tissue
 │   ├── make_figures.py              # renders the 5 static PNGs used as reference figures
+│   ├── make_hero_figure.py          # renders the real scatter+tissue-crop hero figure (light/dark)
 │   ├── fetch_slide_tiles.py         # pulls real WSI tiles from GTEx Portal's Deep Zoom server
+│   ├── fetch_sample_crop.py         # pulls a real tissue crop for an arbitrary GTEx sample
+│   ├── build_body_diagram_v3_organs_illustrated.py  # renders the real Background-section body diagram
+│   │                                 # (v1/v2 kept alongside as earlier, superseded iterations)
 │   ├── results.json                 # per-tissue + pooled accuracy, MAE, baseline MAE
 │   ├── test_predictions.csv         # per-slide predictions on the held-out test set
 │   └── gap_by_*.csv                 # age-gap summaries used by the site's charts
 │
 ├── assets/figures/          # static PNGs (distribution plots, MAE chart, confusion matrix,
-│   └── slide_tiles/         #   age-gap-by-Hardy-Scale, and real WSI overview/crop images)
+│   │                         #   age-gap-by-Hardy-Scale, hero figure, and real WSI images)
+│   ├── slide_tiles/         # real GTEx WSI overview/crop/tile images (Deep Zoom server)
+│   ├── samples/             # real per-donor tissue crops used in the hero figure
+│   ├── organs/              # real, public-domain anatomical illustration + prior iterations
+│   └── clocks/              # real, free-licensed DNA/blood images for the clock-family diagram
 │
 └── data/
     └── gtex.4_tissues.0.5mpp.224px.conch.h5ad   # the real embeddings (10.6 MB, see Data below)
